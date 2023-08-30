@@ -1,0 +1,56 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do problema1_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/intelFPGA_lite/18.1/LAB2 {C:/intelFPGA_lite/18.1/LAB2/problema1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:09:18 on Aug 23,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/intelFPGA_lite/18.1/LAB2" C:/intelFPGA_lite/18.1/LAB2/problema1.sv 
+# -- Compiling module problema1
+# 
+# Top level modules:
+# 	problema1
+# End time: 14:09:18 on Aug 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/intelFPGA_lite/18.1/LAB2 {C:/intelFPGA_lite/18.1/LAB2/problema1_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:09:18 on Aug 23,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/intelFPGA_lite/18.1/LAB2" C:/intelFPGA_lite/18.1/LAB2/problema1_tb.sv 
+# -- Compiling module problema1_tb
+# 
+# Top level modules:
+# 	problema1_tb
+# End time: 14:09:18 on Aug 23,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  problema1_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" problema1_tb 
+# Start time: 14:09:18 on Aug 23,2023
+# Loading sv_std.std
+# Loading work.problema1_tb
+# Loading work.problema1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Input: 0010, Display: 0100100
+# Input: 1100, Display: 1000110
+# Input: 0000, Display: 1000000
+# ** Note: $finish    : C:/intelFPGA_lite/18.1/LAB2/problema1_tb.sv(29)
+#    Time: 30 ps  Iteration: 0  Instance: /problema1_tb
+# 1
+# Break in Module problema1_tb at C:/intelFPGA_lite/18.1/LAB2/problema1_tb.sv line 29
+# End time: 14:10:24 on Aug 23,2023, Elapsed time: 0:01:06
+# Errors: 0, Warnings: 0

@@ -1,0 +1,46 @@
+module TopModule_tb;
+    // Inputs
+    logic clk;
+    logic reset;
+
+    // Outputs
+    logic [6:0] display_segment;
+
+    // Instantiate the module to be tested
+    TopModule top_module (
+        .clk(clk),
+        .reset(reset),
+        .display_segment(display_segment)
+    );
+
+    // Clock generation
+    initial begin
+        clk = 0;
+        forever #5 clk = ~clk;
+    end
+
+    // Reset generation
+    initial begin
+        reset = 1;
+        #10 reset = 0;
+        #100 reset = 1; // Optional: Reset after some simulation time
+        #100 $finish;   // Finish simulation after a certain time
+    end
+
+    // Simulation control
+    initial begin
+        // Wait a bit before starting simulation
+        #20;
+
+        // Simulate for a while
+        #500;
+
+        // Finish simulation
+        $finish;
+    end
+endmodule
+
+// Compile and run the testbench
+module tb_top;
+    TopModule_tb tb();
+endmodule

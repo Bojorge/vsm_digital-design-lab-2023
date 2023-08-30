@@ -1,0 +1,119 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Bojtronic/Desktop/CountDownCounter/simulation/modelsim
+vCountDownCounter
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1693182997
+!i10b 1
+!s100 <Ykg9CYXTEfiz3KMl6Y;k1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I`a3CnPG=gagiWe>1:lW4X1
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1693094691
+8C:/Users/Bojtronic/Desktop/CountDownCounter/CountDownCounter.sv
+FC:/Users/Bojtronic/Desktop/CountDownCounter/CountDownCounter.sv
+!i122 0
+L0 1 8
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1693182997.000000
+!s107 C:/Users/Bojtronic/Desktop/CountDownCounter/CountDownCounter.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bojtronic/Desktop/CountDownCounter|C:/Users/Bojtronic/Desktop/CountDownCounter/CountDownCounter.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/Bojtronic/Desktop/CountDownCounter
+Z9 tCvgOpt 0
+n@count@down@counter
+vDisplay
+R1
+R2
+!i10b 1
+!s100 ?EO6GS9UfGR;8]C[dgZ<=1
+R3
+I>WM_oIoL5SUYIZQfIIQM51
+R4
+S1
+R0
+w1693074595
+8C:/Users/Bojtronic/Desktop/CountDownCounter/Display.sv
+FC:/Users/Bojtronic/Desktop/CountDownCounter/Display.sv
+!i122 1
+L0 1 16
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Bojtronic/Desktop/CountDownCounter/Display.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bojtronic/Desktop/CountDownCounter|C:/Users/Bojtronic/Desktop/CountDownCounter/Display.sv|
+!i113 1
+R7
+R8
+R9
+n@display
+vTopModule
+R1
+Z10 !s110 1693182998
+!i10b 1
+!s100 R598C2JoiY;I<OCYcJBm20
+R3
+I`1;TZ9[JJkOm@8cZ8=zWF3
+R4
+S1
+R0
+w1693089169
+8C:/Users/Bojtronic/Desktop/CountDownCounter/TopModule.sv
+FC:/Users/Bojtronic/Desktop/CountDownCounter/TopModule.sv
+!i122 2
+L0 1 21
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Bojtronic/Desktop/CountDownCounter/TopModule.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bojtronic/Desktop/CountDownCounter|C:/Users/Bojtronic/Desktop/CountDownCounter/TopModule.sv|
+!i113 1
+R7
+R8
+R9
+n@top@module
+vTopModule_tb
+R1
+R10
+!i10b 1
+!s100 GzRY9=AQg^[6T<27?YaX=0
+R3
+ILec@VJ8c<PEGnTEW7DRd@0
+R4
+S1
+R0
+w1693182928
+8C:/Users/Bojtronic/Desktop/CountDownCounter/TopModule_tb.sv
+FC:/Users/Bojtronic/Desktop/CountDownCounter/TopModule_tb.sv
+!i122 3
+L0 1 42
+R5
+r1
+!s85 0
+31
+!s108 1693182998.000000
+!s107 C:/Users/Bojtronic/Desktop/CountDownCounter/TopModule_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bojtronic/Desktop/CountDownCounter|C:/Users/Bojtronic/Desktop/CountDownCounter/TopModule_tb.sv|
+!i113 1
+R7
+R8
+R9
+n@top@module_tb

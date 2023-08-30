@@ -1,0 +1,8 @@
+module CountDownCounter #(parameter N = 7)
+                    (input clk,
+                    input reset,
+                    output reg [N-1:0] q);
+    always @ (posedge clk or posedge reset)
+        if (reset) q <= (1 << N) - 1; // Carga el valor máximo en el reset
+        else q <= q - 1;
+endmodule
