@@ -1,0 +1,18 @@
+// registers.sv
+
+module registers #(parameter N_bits = 4) (
+    input wire clk,
+  input wire reset,
+  input logic [N_bits-1:0] data_in,
+  output logic [N_bits-1:0] data_out
+);
+
+  always_ff @(posedge clk or posedge reset) begin
+    if (reset) begin
+      data_out <= '0;
+    end else begin
+      data_out <= data_in;
+    end
+  end
+
+endmodule

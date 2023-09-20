@@ -1,0 +1,154 @@
+module TopModule (
+  input [3:0] opcode,
+  output logic N,
+  output logic Z,
+  output logic C,
+  output logic V
+);
+
+  // Señales internas para los módulos ALU
+  logic [7:0] a, b, result;
+  
+  // Instancias de los módulos anteriores
+  suma sum (
+    .a(a),
+    .b(b),
+    .c(result)
+  );
+  
+  resta sub (
+    .a(a),
+    .b(b),
+    .c(result)
+  );
+  
+  multiplicacion mul (
+    .a(a),
+    .b(b),
+    .c(result)
+  );
+  
+  division div (
+    .a(a),
+    .b(b),
+    .c(result)
+  );
+  
+  modulo mod (
+    .a(a),
+    .b(b),
+    .c(result)
+  );
+  
+  and_gate and (
+    .a(a[0]),
+    .b(b[0]),
+    .c(result[0])
+  );
+  
+  or_gate or (
+    .a(a[0]),
+    .b(b[0]),
+    .c(result[0])
+  );
+  
+  xor_gate xor (
+    .a(a[0]),
+    .b(b[0]),
+    .c(result[0])
+  );
+  
+  shiftLeft shl (
+    .a(a),
+    .b(b),
+    .c(result)
+  );
+  
+  shiftRight shr (
+    .a(a),
+    .b(b),
+    .c(result)
+  );
+
+  // Lógica de control de selección del módulo ALU según el opcode
+  always_comb begin
+    case (opcode)
+      4'b0000: // Suma
+        sum.a = a;
+        sum.b = b;
+        N = result[7];
+        Z = (result == 8'b00000000);
+        C = 0; // Define la lógica para la bandera de acarreo según sea necesario
+        V = 0; // Define la lógica para la bandera de desbordamiento según sea necesario
+      4'b0001: // Resta
+        sub.a = a;
+        sub.b = b;
+        N = result[7];
+        Z = (result == 8'b00000000);
+        C = 0; // Define la lógica para la bandera de acarreo según sea necesario
+        V = 0; // Define la lógica para la bandera de desbordamiento según sea necesario
+      4'b0010: // Multiplicación
+        mul.a = a;
+        mul.b = b;
+        N = result[7];
+        Z = (result == 8'b00000000);
+        C = 0; // Define la lógica para la bandera de acarreo según sea necesario
+        V = 0; // Define la lógica para la bandera de desbordamiento según sea necesario
+      4'b0011: // División
+        div.a = a;
+        div.b = b;
+        N = result[7];
+        Z = (result == 8'b00000000);
+        C = 0; // Define la lógica para la bandera de acarreo según sea necesario
+        V = 0; // Define la lógica para la bandera de desbordamiento según sea necesario
+      4'b0100: // Módulo
+        mod.a = a;
+        mod.b = b;
+        N = result[7];
+        Z = (result == 8'b00000000);
+        C = 0; // Define la lógica para la bandera de acarreo según sea necesario
+        V = 0; // Define la lógica para la bandera de desbordamiento según sea necesario
+      4'b0101: // AND
+        and.a = a[0];
+        and.b = b[0];
+        N = result[0];
+        Z = (result == 1'b0);
+        C = 0; // Define la lógica para la bandera de acarreo según sea necesario
+        V = 0; // Define la lógica para la bandera de desbordamiento según sea necesario
+      4'b0110: // OR
+        or.a = a[0];
+        or.b = b[0];
+        N = result[0];
+        Z = (result == 1'b0);
+        C = 0; // Define la lógica para la bandera de acarreo según sea necesario
+        V = 0; // Define la lógica para la bandera de desbordamiento según sea necesario
+      4'b0111: // XOR
+        xor.a = a[0];
+        xor.b = b[0];
+        N = result[0];
+        Z = (result == 1'b0);
+        C = 0; // Define la lógica para la bandera de acarreo según sea necesario
+        V = 0; // Define la lógica para la bandera de desbordamiento según sea necesario
+      4'b1000: // Desplazamiento a la izquierda
+        shl.a = a;
+        shl.b = b;
+        N = result[7];
+        Z = (result == 8'b00000000);
+        C = 0; // Define la lógica para la bandera de acarreo según sea necesario
+        V = 0; // Define la lógica para la bandera de desbordamiento según sea necesario
+      4'b1001: // Desplazamiento a la derecha
+        shr.a = a;
+        shr.b = b;
+        N = result[7];
+        Z = (result == 8'b00000000);
+        C = 0; // Define la lógica para la bandera de acarreo según sea necesario
+        V = 0; // Define la lógica para la bandera de desbordamiento según sea necesario
+      default: // Opción no válida
+        N = 0;
+        Z = 0;
+        C = 0;
+        V = 0;
+    endcase
+  end
+
+endmodule

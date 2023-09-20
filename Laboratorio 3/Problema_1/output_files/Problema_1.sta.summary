@@ -1,0 +1,37 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'testN'
+Slack : 1.048
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'testN'
+Slack : 8.893
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'testN'
+Slack : 1.353
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'testN'
+Slack : 8.634
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'testN'
+Slack : 7.770
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'testN'
+Slack : 6.106
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'testN'
+Slack : 8.528
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'testN'
+Slack : 5.821
+TNS   : 0.000
+
+------------------------------------------------------------

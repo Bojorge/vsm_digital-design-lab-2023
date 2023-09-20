@@ -1,0 +1,64 @@
+module TopModule_tb;
+
+  // Entradas
+  reg [3:0] opcode;
+  // Salidas
+  wire N, Z, C, V;
+
+  // Instancia del módulo bajo prueba
+  TopModule #(8) uut (
+    .opcode(opcode),
+    .N(N),
+    .Z(Z),
+    .C(C),
+    .V(V)
+  );
+
+  // Clock y reset (si es necesario)
+  reg clk = 0;
+  always begin
+    #5 clk = ~clk;
+  end
+
+  initial begin
+    // Inicialización de las señales de entrada
+    opcode = 4'b0000; // Cambia el valor del opcode según la operación que desees probar
+
+    // Ciclo de prueba
+    // Inserta aquí tus casos de prueba
+    // Por ejemplo:
+    #10 opcode = 4'b0001; // Cambia a otra operación
+    #10 opcode = 4'b0010; // Cambia a otra operación
+
+    // Verificación de las salidas
+    if (N) begin
+      $display("Resultado: N = 1");
+    end else begin
+      $display("Resultado: N = 0");
+    end
+
+    if (Z) begin
+      $display("Resultado: Z = 1");
+    end else begin
+      $display("Resultado: Z = 0");
+    end
+
+    if (C) begin
+      $display("Resultado: C = 1");
+    end else begin
+      $display("Resultado: C = 0");
+    end
+
+    if (V) begin
+      $display("Resultado: V = 1");
+    end else begin
+      $display("Resultado: V = 0");
+    end
+
+    // Puedes continuar con más casos de prueba aquí
+
+    // Finaliza la simulación
+    $finish;
+  end
+
+endmodule

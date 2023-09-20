@@ -1,0 +1,47 @@
+module shiftLeft_tb;
+
+  logic [7:0] a;
+  logic [2:0] b;
+  logic [7:0] c;
+
+  shiftLeft uut (
+    .a(a),
+    .b(b),
+    .c(c)
+  );
+
+  initial begin
+    a = 8'h00;
+    b = 3'b000;
+    
+    // Prueba 1: Desplazamiento de ceros
+    #10;
+    if (c == (a << b)) begin
+      $display("Prueba 1 OK: a << b = c");
+    end else begin
+      $display("Prueba 1 FAIL: a << b != c");
+    end
+    
+    // Prueba 2: Desplazamiento de unos a la izquierda
+    a = 8'hFF;
+    b = 3'b001;
+    #10;
+    if (c == (a << b)) begin
+      $display("Prueba 2 OK: a << b = c");
+    end else begin
+      $display("Prueba 2 FAIL: a << b != c");
+    end
+    
+    // Prueba 3: Desplazamiento de unos a la derecha
+    a = 8'hFF;
+    b = 3'b010;
+    #10;
+    if (c == (a << b)) begin
+      $display("Prueba 3 OK: a << b = c");
+    end else begin
+      $display("Prueba 3 FAIL: a << b != c");
+    end
+    
+  end
+
+endmodule

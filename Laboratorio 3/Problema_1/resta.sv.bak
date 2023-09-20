@@ -1,0 +1,14 @@
+module resta(
+    input logic signed a,
+    input logic signed b,
+    output logic signed c
+);
+
+always_comb begin
+    if (a >= b)
+        c = a - b;
+    else
+        c = -(b - a);
+end
+
+endmodule

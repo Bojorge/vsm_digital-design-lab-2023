@@ -1,0 +1,47 @@
+module suma_tb;
+
+  // Declaración de señales de entrada y salida
+  logic a, b, c;
+
+  // Instancia el módulo "suma" que deseas probar
+  suma uut (
+    .a(a),
+    .b(b),
+    .c(c)
+  );
+
+  // Restablece las señales de entrada al principio de la simulación
+  initial begin
+    a = 4'b0000;
+    b = 4'b0000;
+    // Activa las señales de entrada con los valores deseados
+    // Por ejemplo:
+    // a = 4'b0010;
+    // b = 4'b0011;
+    
+    // Espera un corto período de tiempo antes de verificar el resultado
+    #10;
+    
+    // Verifica el resultado
+    if (c == (a + b)) begin
+      $display("Test OK: a + b = c");
+    end else begin
+      $display("Test FAIL: a + b != c");
+    end
+    
+    $finish; // Finaliza la simulación
+  end
+
+endmodule
+
+// Punto de entrada para la simulación
+initial begin
+  suma_tb tb; // Instancia el testbench
+  $dumpfile("suma_tb.vcd"); // Crea un archivo VCD para la simulación
+  $dumpvars(0, tb); // Volcar variables en el archivo VCD
+  $display("Iniciando simulación");
+  // Ejecuta la simulación durante cierto tiempo
+  #1000; // Simula durante 1000 unidades de tiempo
+  $display("Simulación completada");
+  $finish; // Finaliza la simulación
+end

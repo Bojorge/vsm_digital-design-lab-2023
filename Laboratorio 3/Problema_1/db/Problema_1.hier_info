@@ -1,0 +1,263 @@
+|TopModule
+clk => clk.IN2
+reset => reset.IN2
+opcode[0] => opcode[0].IN1
+opcode[1] => opcode[1].IN1
+opcode[2] => opcode[2].IN1
+opcode[3] => opcode[3].IN1
+a[0] => a[0].IN11
+a[1] => a[1].IN11
+a[2] => a[2].IN11
+a[3] => a[3].IN11
+b[0] => b[0].IN10
+b[1] => b[1].IN10
+b[2] => b[2].IN10
+b[3] => b[3].IN10
+N << N.DB_MAX_OUTPUT_PORT_TYPE
+Z << Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C << C.DB_MAX_OUTPUT_PORT_TYPE
+V << LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+result[0] << result[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] << result[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] << result[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] << result[3].DB_MAX_OUTPUT_PORT_TYPE
+segments[0] << WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] << WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] << WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] << WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] << WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|registers:input_reg
+clk => data_out[0]~reg0.CLK
+clk => data_out[1]~reg0.CLK
+clk => data_out[2]~reg0.CLK
+clk => data_out[3]~reg0.CLK
+reset => data_out[0]~reg0.ACLR
+reset => data_out[1]~reg0.ACLR
+reset => data_out[2]~reg0.ACLR
+reset => data_out[3]~reg0.ACLR
+data_in[0] => data_out[0]~reg0.DATAIN
+data_in[1] => data_out[1]~reg0.DATAIN
+data_in[2] => data_out[2]~reg0.DATAIN
+data_in[3] => data_out[3]~reg0.DATAIN
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|registers:output_reg
+clk => data_out[0]~reg0.CLK
+clk => data_out[1]~reg0.CLK
+clk => data_out[2]~reg0.CLK
+clk => data_out[3]~reg0.CLK
+reset => data_out[0]~reg0.ACLR
+reset => data_out[1]~reg0.ACLR
+reset => data_out[2]~reg0.ACLR
+reset => data_out[3]~reg0.ACLR
+data_in[0] => data_out[0]~reg0.DATAIN
+data_in[1] => data_out[1]~reg0.DATAIN
+data_in[2] => data_out[2]~reg0.DATAIN
+data_in[3] => data_out[3]~reg0.DATAIN
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|suma:generate_sumas[0].add
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+result <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|suma:generate_sumas[1].add
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+result <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|suma:generate_sumas[2].add
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+result <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|suma:generate_sumas[3].add
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+result <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|suma:generate_restas[0].sub
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+result <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|suma:generate_restas[1].sub
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+result <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|suma:generate_restas[2].sub
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+result <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|suma:generate_restas[3].sub
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+result <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|multiplicacion:mult
+a[0] => Mult0.IN3
+a[1] => Mult0.IN2
+a[2] => Mult0.IN1
+a[3] => Mult0.IN0
+b[0] => Mult0.IN7
+b[1] => Mult0.IN6
+b[2] => Mult0.IN5
+b[3] => Mult0.IN4
+result[0] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|division:div
+a[0] => Div0.IN3
+a[1] => Div0.IN2
+a[2] => Div0.IN1
+a[3] => Div0.IN0
+b[0] => Div0.IN7
+b[0] => Equal0.IN31
+b[1] => Div0.IN6
+b[1] => Equal0.IN30
+b[2] => Div0.IN5
+b[2] => Equal0.IN29
+b[3] => Div0.IN4
+b[3] => Equal0.IN28
+result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|modulo:mod
+a[0] => Mod0.IN3
+a[1] => Mod0.IN2
+a[2] => Mod0.IN1
+a[3] => Mod0.IN0
+b[0] => Mod0.IN7
+b[0] => Equal0.IN31
+b[1] => Mod0.IN6
+b[1] => Equal0.IN30
+b[2] => Mod0.IN5
+b[2] => Equal0.IN29
+b[3] => Mod0.IN4
+b[3] => Equal0.IN28
+result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|and_gate:and_gate
+a[0] => result.IN0
+a[1] => ~NO_FANOUT~
+a[2] => ~NO_FANOUT~
+a[3] => ~NO_FANOUT~
+b[0] => result.IN1
+b[1] => ~NO_FANOUT~
+b[2] => ~NO_FANOUT~
+b[3] => ~NO_FANOUT~
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|or_gate:or_gate
+a[0] => WideOr0.IN0
+a[1] => WideOr0.IN1
+a[2] => WideOr0.IN2
+a[3] => WideOr0.IN3
+b[0] => WideOr1.IN0
+b[1] => WideOr1.IN1
+b[2] => WideOr1.IN2
+b[3] => WideOr1.IN3
+result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= <GND>
+result[2] <= <GND>
+result[3] <= <GND>
+
+
+|TopModule|xor_gate:xor_gate
+a[0] => result.IN0
+a[1] => result.IN0
+a[2] => result.IN0
+a[3] => result.IN0
+b[0] => result.IN1
+b[1] => result.IN1
+b[2] => result.IN1
+b[3] => result.IN1
+result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|shiftLeft:shl
+a[0] => ShiftLeft0.IN4
+a[1] => ShiftLeft0.IN3
+a[2] => ShiftLeft0.IN2
+a[3] => ShiftLeft0.IN1
+b[0] => ShiftLeft0.IN8
+b[1] => ShiftLeft0.IN7
+b[2] => ShiftLeft0.IN6
+b[3] => ShiftLeft0.IN5
+result[0] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|shiftRight:shr
+a[0] => ShiftRight0.IN4
+a[1] => ShiftRight0.IN3
+a[2] => ShiftRight0.IN2
+a[3] => ShiftRight0.IN1
+b[0] => ShiftRight0.IN8
+b[1] => ShiftRight0.IN7
+b[2] => ShiftRight0.IN6
+b[3] => ShiftRight0.IN5
+result[0] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
+
+

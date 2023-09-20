@@ -1,0 +1,69 @@
+module multiplicacion_tb;
+
+  // Declaración de señales de entrada y salida
+  logic a, b, c;
+
+  // Instancia el módulo "multiplicacion" que deseas probar
+  multiplicacion uut (
+    .a(a),
+    .b(b),
+    .c(c)
+  );
+
+  // Restablece las señales de entrada al principio de la simulación
+  initial begin
+    a = 0;
+    b = 0;
+    
+    // Prueba 1: a y b son cero
+    #10;
+    if (c == (a * b)) begin
+      $display("Prueba 1 OK: a * b = c");
+    end else begin
+      $display("Prueba 1 FAIL: a * b != c");
+    end
+    
+    // Prueba 2: a es cero y b es uno
+    b = 1;
+    #10;
+    if (c == (a * b)) begin
+      $display("Prueba 2 OK: a * b = c");
+    end else begin
+      $display("Prueba 2 FAIL: a * b != c");
+    end
+    
+    // Prueba 3: a es uno y b es cero
+    a = 1;
+    b = 0;
+    #10;
+    if (c == (a * b)) begin
+      $display("Prueba 3 OK: a * b = c");
+    end else begin
+      $display("Prueba 3 FAIL: a * b != c");
+    end
+    
+    // Prueba 4: a y b son unos
+    b = 1;
+    #10;
+    if (c == (a * b)) begin
+      $display("Prueba 4 OK: a * b = c");
+    end else begin
+      $display("Prueba 4 FAIL: a * b != c");
+    end
+    
+    $finish; // Finaliza la simulación
+  end
+
+endmodule
+
+// Punto de entrada para la simulación
+initial begin
+  multiplicacion_tb tb; // Instancia el testbench
+  $dumpfile("multiplicacion_tb.vcd"); // Crea un archivo VCD para la simulación
+  $dumpvars(0, tb); // Volcar variables en el archivo VCD
+  $display("Iniciando simulación");
+  // Ejecuta la simulación durante cierto tiempo
+  #1000; // Simula durante 1000 unidades de tiempo
+  $display("Simulación completada");
+  $finish; // Finaliza la simulación
+end
