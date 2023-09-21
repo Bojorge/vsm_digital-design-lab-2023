@@ -13,7 +13,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:12:47 on Sep 12,2023
+# Start time: 12:53:43 on Sep 13,2023
 # vlog -reportprogress 300 -vlog01compat -work altera_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v 
 # -- Compiling module global
 # -- Compiling module carry
@@ -95,7 +95,7 @@
 # 	alt_iobuf_diff
 # 	alt_bidir_diff
 # 	alt_bidir_buf
-# End time: 22:12:47 on Sep 12,2023, Elapsed time: 0:00:00
+# End time: 12:53:46 on Sep 13,2023, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/lpm_ver
@@ -106,7 +106,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work lpm_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:12:48 on Sep 12,2023
+# Start time: 12:53:47 on Sep 13,2023
 # vlog -reportprogress 300 -vlog01compat -work lpm_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v 
 # -- Compiling module LPM_MEMORY_INITIALIZATION
 # -- Compiling module LPM_HINT_EVALUATION
@@ -170,7 +170,7 @@
 # 	lpm_inpad
 # 	lpm_outpad
 # 	lpm_bipad
-# End time: 22:12:48 on Sep 12,2023, Elapsed time: 0:00:00
+# End time: 12:53:48 on Sep 13,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/sgate_ver
@@ -181,7 +181,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work sgate_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:12:48 on Sep 12,2023
+# Start time: 12:53:49 on Sep 13,2023
 # vlog -reportprogress 300 -vlog01compat -work sgate_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v 
 # -- Compiling module oper_add
 # -- Compiling module oper_addsub
@@ -223,7 +223,7 @@
 # 	oper_decoder
 # 	oper_bus_mux
 # 	oper_latch
-# End time: 22:12:49 on Sep 12,2023, Elapsed time: 0:00:01
+# End time: 12:53:49 on Sep 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_mf_ver
@@ -234,7 +234,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_mf_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:12:49 on Sep 12,2023
+# Start time: 12:53:50 on Sep 13,2023
 # vlog -reportprogress 300 -vlog01compat -work altera_mf_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v 
 # -- Compiling module lcell
 # -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
@@ -364,7 +364,7 @@
 # 	alt_fault_injection
 # 	sld_virtual_jtag_basic
 # 	altsource_probe
-# End time: 22:12:50 on Sep 12,2023, Elapsed time: 0:00:01
+# End time: 12:53:54 on Sep 13,2023, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_lnsim_ver
@@ -375,7 +375,7 @@
 # Modifying modelsim.ini
 # vlog -sv -work altera_lnsim_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:12:50 on Sep 12,2023
+# Start time: 12:53:55 on Sep 13,2023
 # vlog -reportprogress 300 -sv -work altera_lnsim_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv 
 # -- Compiling package altera_lnsim_functions
 # -- Compiling package altera_generic_pll_functions
@@ -458,7 +458,7 @@
 # 	altera_iopll
 # 	fourteennm_altera_iopll
 # 	fourteennm_simple_iopll
-# End time: 22:12:51 on Sep 12,2023, Elapsed time: 0:00:01
+# End time: 12:53:58 on Sep 13,2023, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_ver
@@ -469,7 +469,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:12:52 on Sep 12,2023
+# Start time: 12:53:58 on Sep 13,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -483,19 +483,19 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 22:12:54 on Sep 12,2023, Elapsed time: 0:00:02
+# End time: 12:54:09 on Sep 13,2023, Elapsed time: 0:00:11
 # Errors: 0, Warnings: 10
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:12:54 on Sep 12,2023
+# Start time: 12:54:09 on Sep 13,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 22:12:56 on Sep 12,2023, Elapsed time: 0:00:02
+# End time: 12:54:14 on Sep 13,2023, Elapsed time: 0:00:05
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:12:56 on Sep 12,2023
+# Start time: 12:54:15 on Sep 13,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.v 
 # -- Compiling UDP CYCLONEV_PRIM_DFFE
 # -- Compiling UDP CYCLONEV_PRIM_DFFEAS
@@ -635,7 +635,7 @@
 # 	cyclonev_mem_phy
 # 	cyclonev_oscillator
 # 	cyclonev_hps_interface_fpga2sdram
-# End time: 22:12:57 on Sep 12,2023, Elapsed time: 0:00:01
+# End time: 12:54:17 on Sep 13,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_hssi_ver
@@ -646,15 +646,15 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:12:57 on Sep 12,2023
+# Start time: 12:54:18 on Sep 13,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 22:12:59 on Sep 12,2023, Elapsed time: 0:00:02
+# End time: 12:54:26 on Sep 13,2023, Elapsed time: 0:00:08
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:12:59 on Sep 12,2023
+# Start time: 12:54:26 on Sep 13,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.v 
 # -- Compiling module cyclonev_hssi_8g_pcs_aggregate
 # -- Compiling module cyclonev_hssi_8g_rx_pcs
@@ -754,7 +754,7 @@
 # 	arriav_hssi_avmm_interface
 # 	arriav_hssi_pma_hi_pmaif
 # 	arriav_hssi_pma_hi_xcvrif
-# End time: 22:13:00 on Sep 12,2023, Elapsed time: 0:00:01
+# End time: 12:54:28 on Sep 13,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_pcie_hip_ver
@@ -765,7 +765,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:13:00 on Sep 12,2023
+# Start time: 12:54:29 on Sep 13,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -775,18 +775,18 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 22:13:03 on Sep 12,2023, Elapsed time: 0:00:03
+# End time: 12:54:38 on Sep 13,2023, Elapsed time: 0:00:09
 # Errors: 0, Warnings: 6
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:13:03 on Sep 12,2023
+# Start time: 12:54:38 on Sep 13,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v 
 # -- Compiling module cyclonev_hd_altpe2_hip_top
 # -- Compiling module arriav_hd_altpe2_hip_top
 # 
 # Top level modules:
 # 	cyclonev_hd_altpe2_hip_top
-# End time: 22:13:03 on Sep 12,2023, Elapsed time: 0:00:00
+# End time: 12:54:39 on Sep 13,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # if {[file exists rtl_work]} {
@@ -798,121 +798,121 @@
 # vmap work rtl_work 
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio\ 3/Problema_1 {C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/suma.sv}
+# vlog -sv -work work +incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA {C:/Users/Bojtronic/Desktop/ALU_FPGA/suma.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:13:04 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1" C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/suma.sv 
+# Start time: 12:54:40 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA" C:/Users/Bojtronic/Desktop/ALU_FPGA/suma.sv 
 # -- Compiling module suma
 # 
 # Top level modules:
 # 	suma
-# End time: 22:13:04 on Sep 12,2023, Elapsed time: 0:00:00
+# End time: 12:54:40 on Sep 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio\ 3/Problema_1 {C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/and_gate.sv}
+# vlog -sv -work work +incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA {C:/Users/Bojtronic/Desktop/ALU_FPGA/and_gate.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:13:04 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1" C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/and_gate.sv 
+# Start time: 12:54:40 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA" C:/Users/Bojtronic/Desktop/ALU_FPGA/and_gate.sv 
 # -- Compiling module and_gate
 # 
 # Top level modules:
 # 	and_gate
-# End time: 22:13:04 on Sep 12,2023, Elapsed time: 0:00:00
+# End time: 12:54:40 on Sep 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio\ 3/Problema_1 {C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/multiplicacion.sv}
+# vlog -sv -work work +incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA {C:/Users/Bojtronic/Desktop/ALU_FPGA/multiplicacion.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:13:04 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1" C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/multiplicacion.sv 
+# Start time: 12:54:41 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA" C:/Users/Bojtronic/Desktop/ALU_FPGA/multiplicacion.sv 
 # -- Compiling module multiplicacion
 # 
 # Top level modules:
 # 	multiplicacion
-# End time: 22:13:04 on Sep 12,2023, Elapsed time: 0:00:00
+# End time: 12:54:41 on Sep 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio\ 3/Problema_1 {C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/division.sv}
+# vlog -sv -work work +incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA {C:/Users/Bojtronic/Desktop/ALU_FPGA/division.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:13:04 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1" C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/division.sv 
+# Start time: 12:54:41 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA" C:/Users/Bojtronic/Desktop/ALU_FPGA/division.sv 
 # -- Compiling module division
 # 
 # Top level modules:
 # 	division
-# End time: 22:13:04 on Sep 12,2023, Elapsed time: 0:00:00
+# End time: 12:54:41 on Sep 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio\ 3/Problema_1 {C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/modulo.sv}
+# vlog -sv -work work +incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA {C:/Users/Bojtronic/Desktop/ALU_FPGA/modulo.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:13:04 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1" C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/modulo.sv 
+# Start time: 12:54:41 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA" C:/Users/Bojtronic/Desktop/ALU_FPGA/modulo.sv 
 # -- Compiling module modulo
 # 
 # Top level modules:
 # 	modulo
-# End time: 22:13:04 on Sep 12,2023, Elapsed time: 0:00:00
+# End time: 12:54:41 on Sep 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio\ 3/Problema_1 {C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/or_gate.sv}
+# vlog -sv -work work +incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA {C:/Users/Bojtronic/Desktop/ALU_FPGA/or_gate.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:13:04 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1" C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/or_gate.sv 
+# Start time: 12:54:41 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA" C:/Users/Bojtronic/Desktop/ALU_FPGA/or_gate.sv 
 # -- Compiling module or_gate
 # 
 # Top level modules:
 # 	or_gate
-# End time: 22:13:04 on Sep 12,2023, Elapsed time: 0:00:00
+# End time: 12:54:42 on Sep 13,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio\ 3/Problema_1 {C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/xor_gate.sv}
+# vlog -sv -work work +incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA {C:/Users/Bojtronic/Desktop/ALU_FPGA/xor_gate.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:13:04 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1" C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/xor_gate.sv 
+# Start time: 12:54:42 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA" C:/Users/Bojtronic/Desktop/ALU_FPGA/xor_gate.sv 
 # -- Compiling module xor_gate
 # 
 # Top level modules:
 # 	xor_gate
-# End time: 22:13:05 on Sep 12,2023, Elapsed time: 0:00:01
+# End time: 12:54:42 on Sep 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio\ 3/Problema_1 {C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/shiftLeft.sv}
+# vlog -sv -work work +incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA {C:/Users/Bojtronic/Desktop/ALU_FPGA/shiftLeft.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:13:05 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1" C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/shiftLeft.sv 
+# Start time: 12:54:42 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA" C:/Users/Bojtronic/Desktop/ALU_FPGA/shiftLeft.sv 
 # -- Compiling module shiftLeft
 # 
 # Top level modules:
 # 	shiftLeft
-# End time: 22:13:05 on Sep 12,2023, Elapsed time: 0:00:00
+# End time: 12:54:42 on Sep 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio\ 3/Problema_1 {C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/shiftRight.sv}
+# vlog -sv -work work +incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA {C:/Users/Bojtronic/Desktop/ALU_FPGA/shiftRight.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:13:05 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1" C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/shiftRight.sv 
+# Start time: 12:54:42 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA" C:/Users/Bojtronic/Desktop/ALU_FPGA/shiftRight.sv 
 # -- Compiling module shiftRight
 # 
 # Top level modules:
 # 	shiftRight
-# End time: 22:13:05 on Sep 12,2023, Elapsed time: 0:00:00
+# End time: 12:54:42 on Sep 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio\ 3/Problema_1 {C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/TopModule.sv}
+# vlog -sv -work work +incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA {C:/Users/Bojtronic/Desktop/ALU_FPGA/TopModule.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:13:05 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1" C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/TopModule.sv 
+# Start time: 12:54:43 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA" C:/Users/Bojtronic/Desktop/ALU_FPGA/TopModule.sv 
 # -- Compiling module TopModule
 # 
 # Top level modules:
 # 	TopModule
-# End time: 22:13:05 on Sep 12,2023, Elapsed time: 0:00:00
+# End time: 12:54:43 on Sep 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio\ 3/Problema_1 {C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/TopModule_tb.sv}
+# vlog -sv -work work +incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA {C:/Users/Bojtronic/Desktop/ALU_FPGA/TopModule_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:13:05 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1" C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/TopModule_tb.sv 
+# Start time: 12:54:43 on Sep 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA" C:/Users/Bojtronic/Desktop/ALU_FPGA/TopModule_tb.sv 
 # -- Compiling module TopModule_tb
 # 
 # Top level modules:
 # 	TopModule_tb
-# End time: 22:13:05 on Sep 12,2023, Elapsed time: 0:00:00
+# End time: 12:54:43 on Sep 13,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  TopModule_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" TopModule_tb 
-# Start time: 22:13:05 on Sep 12,2023
+# Start time: 12:54:44 on Sep 13,2023
 # Loading sv_std.std
 # Loading work.TopModule_tb
 # Loading work.TopModule
@@ -926,10 +926,12 @@
 # Loading work.shiftRight
 # Loading work.suma
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 9, found 8.
-#    Time: 0 ps  Iteration: 0  Instance: /TopModule_tb/uut File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/TopModule_tb.sv Line: 11
-# ** Warning: (vsim-3722) C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/TopModule_tb.sv(11): [TFMPC] - Missing connection for port 'segments'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'result'. The port definition is at: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/and_gate.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /TopModule_tb/uut/and_gate File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/TopModule.sv Line: 124
+#    Time: 0 ps  Iteration: 0  Instance: /TopModule_tb/uut File: C:/Users/Bojtronic/Desktop/ALU_FPGA/TopModule_tb.sv Line: 14
+# ** Warning: (vsim-3722) C:/Users/Bojtronic/Desktop/ALU_FPGA/TopModule_tb.sv(14): [TFMPC] - Missing connection for port 'segments'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (4) for port 'result'. The port definition is at: C:/Users/Bojtronic/Desktop/ALU_FPGA/and_gate.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /TopModule_tb/uut/and_gate File: C:/Users/Bojtronic/Desktop/ALU_FPGA/TopModule.sv Line: 124
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (4) for port 'result'. The port definition is at: C:/Users/Bojtronic/Desktop/ALU_FPGA/or_gate.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /TopModule_tb/uut/or_gate File: C:/Users/Bojtronic/Desktop/ALU_FPGA/TopModule.sv Line: 133
 # 
 # add wave *
 # view structure
@@ -937,14 +939,57 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# Suma >>> Resultado: 00000000000000000000000000000011, a: 00000000000000000000000000000000, b: 00000000000000000000000000000011, N: 0, Z: 0, C: 0, V: 0
-# Suma >>> Resultado: 00000000000000000000000000001110, a: 00000000000000000000000000001000, b: 00000000000000000000000000000110, N: 0, Z: 0, C: 0, V: 0
-# Suma >>> Resultado: 00000000000000000000000100011101, a: 00000000000000000000000000101010, b: 00000000000000000000000011110011, N: 0, Z: 0, C: 0, V: 0
-# Suma >>> Resultado: 00000000000000001010101010101011, a: 00000000000000000000000000000000, b: 00000000000000001010101010101011, N: 0, Z: 0, C: 0, V: 0
-# Suma >>> Resultado: 01010101010101110101010101010110, a: 10101010101010111010101010101011, b: 10101010101010111010101010101011, N: 0, Z: 0, C: 1, V: 0
-# ** Note: $finish    : C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/TopModule_tb.sv(54)
-#    Time: 50 ps  Iteration: 0  Instance: /TopModule_tb
-# 1
-# Break in Module TopModule_tb at C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/TopModule_tb.sv line 54
-# End time: 22:38:52 on Sep 12,2023, Elapsed time: 0:25:47
-# Errors: 0, Warnings: 3
+# -------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------
+# Suma >>> Resultado: 1110, a: 1000, b: 0110, N: 0, Z: 0, C: 0, V: 0
+# Suma >>> Resultado: 1111, a: 0111, b: 1000, N: 0, Z: 0, C: 0, V: 0
+# Suma >>> Resultado: 0000, a: 0000, b: 0000, N: 0, Z: 1, C: 0, V: 0
+# -------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------
+# Resta >>> Resultado: 0110, a: 1000, b: 0010, N: 0, Z: 0, C: 1, V: 0
+# Resta >>> Resultado: 0110, a: 0010, b: 1000, N: 1, Z: 0, C: 0, V: 0
+# Resta >>> Resultado: 0000, a: 0000, b: 0000, N: 0, Z: 1, C: 0, V: 0
+# -------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------
+# Multiplicacion >>> Resultado: 1001, a: 0011, b: 0011, N: 0, Z: 0, C: 0, V: 0
+# Multiplicacion >>> Resultado: 1110, a: 0111, b: 0010, N: 0, Z: 0, C: 0, V: 0
+# Multiplicacion >>> Resultado: 0000, a: 1000, b: 0010, N: 0, Z: 1, C: 0, V: 0
+# -------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------
+# Division >>> Resultado: 0010, a: 0100, b: 0010, N: 0, Z: 0, C: 0, V: 0
+# Division >>> Resultado: 0011, a: 1001, b: 0011, N: 0, Z: 0, C: 0, V: 0
+# Division >>> Resultado: 0001, a: 1001, b: 0110, N: 0, Z: 0, C: 0, V: 0
+# -------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------
+# Modulo >>> Resultado: 0011, a: 1111, b: 0100, N: 0, Z: 0, C: 0, V: 0
+# Modulo >>> Resultado: 0000, a: 0110, b: 0010, N: 0, Z: 1, C: 0, V: 0
+# Modulo >>> Resultado: 0100, a: 1010, b: 0110, N: 0, Z: 0, C: 0, V: 0
+# -------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------
+# And >>> Resultado: 0000, a: 1010, b: 1001, N: 0, Z: 1, C: 0, V: 0
+# And >>> Resultado: 0000, a: 0110, b: 0110, N: 0, Z: 1, C: 0, V: 0
+# And >>> Resultado: 0000, a: 0000, b: 0000, N: 0, Z: 1, C: 0, V: 0
+# -------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------
+# Or >>> Resultado: 0001, a: 1010, b: 1001, N: 0, Z: 0, C: 0, V: 0
+# Or >>> Resultado: 0000, a: 0110, b: 0110, N: 0, Z: 1, C: 0, V: 0
+# Or >>> Resultado: 0000, a: 0000, b: 0000, N: 0, Z: 1, C: 0, V: 0
+# -------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------
+# Xor >>> Resultado: 1100, a: 1010, b: 0110, N: 0, Z: 0, C: 0, V: 0
+# Xor >>> Resultado: 0011, a: 0101, b: 0110, N: 0, Z: 0, C: 0, V: 0
+# Xor >>> Resultado: 0011, a: 1010, b: 1001, N: 0, Z: 0, C: 0, V: 0
+# -------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------
+# Shift left >>> Resultado: 0100, a: 0010, b: 0001, N: 0, Z: 0, C: 0, V: 0
+# Shift left >>> Resultado: 1000, a: 0001, b: 0011, N: 0, Z: 0, C: 0, V: 0
+# Shift left >>> Resultado: 1000, a: 0010, b: 0010, N: 0, Z: 0, C: 0, V: 0
+# -------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------
+# Shift right >>> Resultado: 0001, a: 0010, b: 0001, N: 0, Z: 0, C: 0, V: 0
+# Shift right >>> Resultado: 0001, a: 1000, b: 0011, N: 0, Z: 0, C: 0, V: 0
+# Shift right >>> Resultado: 0100, a: 1000, b: 0001, N: 0, Z: 0, C: 0, V: 0
+# -------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------
+# End time: 13:00:50 on Sep 13,2023, Elapsed time: 0:06:06
+# Errors: 0, Warnings: 4

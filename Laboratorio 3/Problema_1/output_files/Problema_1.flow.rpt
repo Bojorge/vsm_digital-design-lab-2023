@@ -1,6 +1,6 @@
 Flow report for Problema_1
-Wed Sep 13 10:00:34 2023
-Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Wed Sep 13 13:11:13 2023
+Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
 ---------------------
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Wed Sep 13 10:00:34 2023          ;
-; Quartus Prime Version           ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
+; Flow Status                     ; Successful - Wed Sep 13 13:11:13 2023          ;
+; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; Problema_1                                     ;
 ; Top-level Entity Name           ; TopModule                                      ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSEMA5F31C6                                   ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 65 / 32,070 ( < 1 % )                          ;
+; Logic utilization (in ALMs)     ; 61 / 32,070 ( < 1 % )                          ;
 ; Total registers                 ; 0                                              ;
-; Total pins                      ; 29 / 457 ( 6 % )                               ;
+; Total pins                      ; 27 / 457 ( 6 % )                               ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                          ;
 ; Total DSP Blocks                ; 1 / 87 ( 1 % )                                 ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/13/2023 09:59:04 ;
+; Start date & time ; 09/13/2023 13:08:07 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Problema_1          ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 91763578605.169462434431240            ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 202492450877544.169463208704160        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; multiplicacion_tb                 ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; and_gate_tb                       ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; resta_tb                          ;
@@ -150,12 +150,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4869 MB             ; 00:00:23                           ;
-; Fitter               ; 00:01:03     ; 1.0                     ; 6935 MB             ; 00:03:15                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 4882 MB             ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.2                     ; 5192 MB             ; 00:00:05                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4727 MB             ; 00:00:01                           ;
-; Total                ; 00:01:25     ; --                      ; --                  ; 00:03:50                           ;
+; Analysis & Synthesis ; 00:00:29     ; 1.0                     ; 4804 MB             ; 00:00:41                           ;
+; Fitter               ; 00:01:51     ; 1.0                     ; 6131 MB             ; 00:02:17                           ;
+; Assembler            ; 00:00:22     ; 1.0                     ; 4875 MB             ; 00:00:16                           ;
+; Timing Analyzer      ; 00:00:13     ; 1.0                     ; 5111 MB             ; 00:00:12                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4732 MB             ; 00:00:03                           ;
+; Total                ; 00:02:58     ; --                      ; --                  ; 00:03:29                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -164,11 +164,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; LAPTOP-K404SFJS  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; LAPTOP-K404SFJS  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; LAPTOP-K404SFJS  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; LAPTOP-K404SFJS  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LAPTOP-K404SFJS  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-9N886CO  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-9N886CO  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-9N886CO  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-9N886CO  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-9N886CO  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

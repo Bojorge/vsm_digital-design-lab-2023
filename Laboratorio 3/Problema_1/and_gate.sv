@@ -4,6 +4,6 @@ module and_gate #(parameter N_bits = 4)(
 		output logic result
 );
  
-    assign result = a & b;
+        assign result = a & b;
              
 endmodule

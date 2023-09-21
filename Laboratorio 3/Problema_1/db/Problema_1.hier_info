@@ -1,71 +1,51 @@
 |TopModule
-clk => clk.IN2
-reset => reset.IN2
-opcode[0] => opcode[0].IN1
-opcode[1] => opcode[1].IN1
-opcode[2] => opcode[2].IN1
-opcode[3] => opcode[3].IN1
-a[0] => a[0].IN11
-a[1] => a[1].IN11
-a[2] => a[2].IN11
-a[3] => a[3].IN11
-b[0] => b[0].IN10
-b[1] => b[1].IN10
-b[2] => b[2].IN10
-b[3] => b[3].IN10
-N << N.DB_MAX_OUTPUT_PORT_TYPE
-Z << Equal0.DB_MAX_OUTPUT_PORT_TYPE
-C << C.DB_MAX_OUTPUT_PORT_TYPE
-V << LessThan0.DB_MAX_OUTPUT_PORT_TYPE
-result[0] << result[0].DB_MAX_OUTPUT_PORT_TYPE
-result[1] << result[1].DB_MAX_OUTPUT_PORT_TYPE
-result[2] << result[2].DB_MAX_OUTPUT_PORT_TYPE
-result[3] << result[3].DB_MAX_OUTPUT_PORT_TYPE
-segments[0] << WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-segments[1] << WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-segments[2] << WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-segments[3] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-segments[4] << WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-segments[5] << WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-segments[6] << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TopModule|registers:input_reg
-clk => data_out[0]~reg0.CLK
-clk => data_out[1]~reg0.CLK
-clk => data_out[2]~reg0.CLK
-clk => data_out[3]~reg0.CLK
-reset => data_out[0]~reg0.ACLR
-reset => data_out[1]~reg0.ACLR
-reset => data_out[2]~reg0.ACLR
-reset => data_out[3]~reg0.ACLR
-data_in[0] => data_out[0]~reg0.DATAIN
-data_in[1] => data_out[1]~reg0.DATAIN
-data_in[2] => data_out[2]~reg0.DATAIN
-data_in[3] => data_out[3]~reg0.DATAIN
-data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TopModule|registers:output_reg
-clk => data_out[0]~reg0.CLK
-clk => data_out[1]~reg0.CLK
-clk => data_out[2]~reg0.CLK
-clk => data_out[3]~reg0.CLK
-reset => data_out[0]~reg0.ACLR
-reset => data_out[1]~reg0.ACLR
-reset => data_out[2]~reg0.ACLR
-reset => data_out[3]~reg0.ACLR
-data_in[0] => data_out[0]~reg0.DATAIN
-data_in[1] => data_out[1]~reg0.DATAIN
-data_in[2] => data_out[2]~reg0.DATAIN
-data_in[3] => data_out[3]~reg0.DATAIN
-data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+opcode[0] => Mux0.IN10
+opcode[0] => Mux1.IN10
+opcode[0] => Mux2.IN10
+opcode[0] => Mux3.IN10
+opcode[0] => Equal1.IN3
+opcode[0] => Equal2.IN0
+opcode[1] => Mux0.IN9
+opcode[1] => Mux1.IN9
+opcode[1] => Mux2.IN9
+opcode[1] => Mux3.IN9
+opcode[1] => Equal1.IN2
+opcode[1] => Equal2.IN3
+opcode[2] => Mux0.IN8
+opcode[2] => Mux1.IN8
+opcode[2] => Mux2.IN8
+opcode[2] => Mux3.IN8
+opcode[2] => Equal1.IN1
+opcode[2] => Equal2.IN2
+opcode[3] => Mux0.IN7
+opcode[3] => Mux1.IN7
+opcode[3] => Mux2.IN7
+opcode[3] => Mux3.IN7
+opcode[3] => Equal1.IN0
+opcode[3] => Equal2.IN1
+a[0] => a[0].IN10
+a[1] => a[1].IN10
+a[2] => a[2].IN10
+a[3] => a[3].IN10
+b[0] => b[0].IN9
+b[1] => b[1].IN9
+b[2] => b[2].IN9
+b[3] => b[3].IN9
+N <= N.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+V <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+result[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopModule|suma:generate_sumas[0].add
@@ -202,18 +182,15 @@ result <= result.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopModule|or_gate:or_gate
-a[0] => WideOr0.IN0
-a[1] => WideOr0.IN1
-a[2] => WideOr0.IN2
-a[3] => WideOr0.IN3
-b[0] => WideOr1.IN0
-b[1] => WideOr1.IN1
-b[2] => WideOr1.IN2
-b[3] => WideOr1.IN3
-result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= <GND>
-result[2] <= <GND>
-result[3] <= <GND>
+a[0] => result.IN0
+a[1] => ~NO_FANOUT~
+a[2] => ~NO_FANOUT~
+a[3] => ~NO_FANOUT~
+b[0] => result.IN1
+b[1] => ~NO_FANOUT~
+b[2] => ~NO_FANOUT~
+b[3] => ~NO_FANOUT~
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopModule|xor_gate:xor_gate

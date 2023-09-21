@@ -45,18 +45,18 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -sv -work work +incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio\ 3/Problema_1 {C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/suma.sv}
-vlog -sv -work work +incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio\ 3/Problema_1 {C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/and_gate.sv}
-vlog -sv -work work +incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio\ 3/Problema_1 {C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/multiplicacion.sv}
-vlog -sv -work work +incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio\ 3/Problema_1 {C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/division.sv}
-vlog -sv -work work +incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio\ 3/Problema_1 {C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/modulo.sv}
-vlog -sv -work work +incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio\ 3/Problema_1 {C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/or_gate.sv}
-vlog -sv -work work +incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio\ 3/Problema_1 {C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/xor_gate.sv}
-vlog -sv -work work +incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio\ 3/Problema_1 {C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/shiftLeft.sv}
-vlog -sv -work work +incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio\ 3/Problema_1 {C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/shiftRight.sv}
-vlog -sv -work work +incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio\ 3/Problema_1 {C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/TopModule.sv}
+vlog -sv -work work +incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA {C:/Users/Bojtronic/Desktop/ALU_FPGA/suma.sv}
+vlog -sv -work work +incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA {C:/Users/Bojtronic/Desktop/ALU_FPGA/and_gate.sv}
+vlog -sv -work work +incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA {C:/Users/Bojtronic/Desktop/ALU_FPGA/multiplicacion.sv}
+vlog -sv -work work +incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA {C:/Users/Bojtronic/Desktop/ALU_FPGA/division.sv}
+vlog -sv -work work +incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA {C:/Users/Bojtronic/Desktop/ALU_FPGA/modulo.sv}
+vlog -sv -work work +incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA {C:/Users/Bojtronic/Desktop/ALU_FPGA/or_gate.sv}
+vlog -sv -work work +incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA {C:/Users/Bojtronic/Desktop/ALU_FPGA/xor_gate.sv}
+vlog -sv -work work +incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA {C:/Users/Bojtronic/Desktop/ALU_FPGA/shiftLeft.sv}
+vlog -sv -work work +incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA {C:/Users/Bojtronic/Desktop/ALU_FPGA/shiftRight.sv}
+vlog -sv -work work +incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA {C:/Users/Bojtronic/Desktop/ALU_FPGA/TopModule.sv}
 
-vlog -sv -work work +incdir+C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio\ 3/Problema_1 {C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/TopModule_tb.sv}
+vlog -sv -work work +incdir+C:/Users/Bojtronic/Desktop/ALU_FPGA {C:/Users/Bojtronic/Desktop/ALU_FPGA/TopModule_tb.sv}
 
 vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  TopModule_tb
 

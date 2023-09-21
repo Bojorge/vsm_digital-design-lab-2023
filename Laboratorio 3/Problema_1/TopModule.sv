@@ -1,7 +1,5 @@
 module TopModule #(parameter N_bits = 4) 
 (
-	input wire clk,          // Señal de reloj
-  input wire reset,        // Señal de reinicio
   input [3:0] opcode,
   input logic [N_bits-1:0] a,
   input logic [N_bits-1:0] b,
@@ -12,25 +10,6 @@ module TopModule #(parameter N_bits = 4)
   output logic [N_bits-1:0] result,
   output reg [6:0] segments
 );
-
-	 
-  // Instancia del registro de entrada
-  registers #(N_bits) input_reg (
-    .clk(clk),
-    .reset(reset),
-    .data_in({opcode, a, b}), // Conectar las entradas de tu módulo al registro de entrada
-    .data_out({opcode_reg, a_reg, b_reg}) // Conectar las salidas del registro de entrada a tus registros internos
-  );
-
-  // Instancia del registro de salida
-  registers #(N_bits) output_reg (
-    .clk(clk),
-    .reset(reset),
-    .data_in(result), // Conectar la salida de tu módulo al registro de salida
-    .data_out(result_out) // Conectar la salida del registro de salida a la señal de salida result_out
-  );
-  
-
 
   logic [N_bits-1:0] b_complemento;
   
@@ -228,7 +207,7 @@ module TopModule #(parameter N_bits = 4)
 		 Z = 1'b0;
 	 end
      
-	 if (result >= {N_bits{1'b1}}) begin
+	 if (result > {N_bits{1'b1}}) begin
 		 V = 1'b1;
 	 end else begin
 		 V = 1'b0;

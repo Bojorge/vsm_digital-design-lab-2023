@@ -1,6 +1,6 @@
 Fitter report for Problema_1
-Wed Sep 13 10:00:18 2023
-Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Wed Sep 13 13:10:28 2023
+Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
 ---------------------
@@ -60,16 +60,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +---------------------------------+------------------------------------------------+
-; Fitter Status                   ; Successful - Wed Sep 13 10:00:18 2023          ;
-; Quartus Prime Version           ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
+; Fitter Status                   ; Successful - Wed Sep 13 13:10:28 2023          ;
+; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; Problema_1                                     ;
 ; Top-level Entity Name           ; TopModule                                      ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSEMA5F31C6                                   ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 65 / 32,070 ( < 1 % )                          ;
+; Logic utilization (in ALMs)     ; 61 / 32,070 ( < 1 % )                          ;
 ; Total registers                 ; 0                                              ;
-; Total pins                      ; 29 / 457 ( 6 % )                               ;
+; Total pins                      ; 27 / 457 ( 6 % )                               ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                          ;
 ; Total RAM Blocks                ; 0 / 397 ( 0 % )                                ;
@@ -147,21 +147,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
-; Maximum used               ; 8           ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
-;     Processor 3            ;   0.2%      ;
-;     Processor 4            ;   0.2%      ;
-;     Processor 5            ;   0.1%      ;
-;     Processor 6            ;   0.1%      ;
-;     Processor 7            ;   0.1%      ;
-;     Processor 8            ;   0.1%      ;
+;     Processor 2            ;   0.4%      ;
 +----------------------------+-------------+
 
 
@@ -171,8 +165,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 168 ) ; 0.00 % ( 0 / 168 )         ; 0.00 % ( 0 / 168 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 168 ) ; 0.00 % ( 0 / 168 )         ; 0.00 % ( 0 / 168 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 161 ) ; 0.00 % ( 0 / 161 )         ; 0.00 % ( 0 / 161 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 161 ) ; 0.00 % ( 0 / 161 )         ; 0.00 % ( 0 / 161 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -195,7 +189,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 168 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 161 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -203,7 +197,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/output_files/Problema_1.pin.
+The pin-out file can be found in C:/Users/Bojtronic/Desktop/ALU_FPGA/output_files/Problema_1.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -211,14 +205,14 @@ The pin-out file can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_d
 +-------------------------------------------------------------+--------------------+-------+
 ; Resource                                                    ; Usage              ; %     ;
 +-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 65 / 32,070        ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 65                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 70 / 32,070        ; < 1 % ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 61 / 32,070        ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 61                 ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 62 / 32,070        ; < 1 % ;
 ;         [a] ALMs used for LUT logic and registers           ; 0                  ;       ;
-;         [b] ALMs used for LUT logic                         ; 70                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 62                 ;       ;
 ;         [c] ALMs used for registers                         ; 0                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 5 / 32,070         ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 1 / 32,070         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32,070         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -227,16 +221,16 @@ The pin-out file can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_d
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 14 / 3,207         ; < 1 % ;
-;     -- Logic LABs                                           ; 14                 ;       ;
+; Total LABs:  partially or completely used                   ; 8 / 3,207          ; < 1 % ;
+;     -- Logic LABs                                           ; 8                  ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 109                ;       ;
-;     -- 7 input functions                                    ; 6                  ;       ;
-;     -- 6 input functions                                    ; 13                 ;       ;
-;     -- 5 input functions                                    ; 24                 ;       ;
+; Combinational ALUT usage for logic                          ; 106                ;       ;
+;     -- 7 input functions                                    ; 5                  ;       ;
+;     -- 6 input functions                                    ; 11                 ;       ;
+;     -- 5 input functions                                    ; 25                 ;       ;
 ;     -- 4 input functions                                    ; 30                 ;       ;
-;     -- <=3 input functions                                  ; 36                 ;       ;
+;     -- <=3 input functions                                  ; 35                 ;       ;
 ; Combinational ALUT usage for route-throughs                 ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Dedicated logic registers                                   ; 0                  ;       ;
@@ -248,7 +242,7 @@ The pin-out file can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_d
 ;         -- Routing optimization registers                   ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
-; I/O pins                                                    ; 29 / 457           ; 6 %   ;
+; I/O pins                                                    ; 27 / 457           ; 6 %   ;
 ;     -- Clock pins                                           ; 1 / 8              ; 13 %  ;
 ;     -- Dedicated input pins                                 ; 0 / 21             ; 0 %   ;
 ;                                                             ;                    ;       ;
@@ -300,12 +294,12 @@ The pin-out file can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_d
 ; Oscillator blocks                                           ; 0 / 1              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 0.1% / 0.1% / 0.0% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 1.7% / 1.9% / 1.1% ;       ;
+; Average interconnect usage (total/H/V)                      ; 0.0% / 0.1% / 0.0% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 0.8% / 1.0% / 0.4% ;       ;
 ; Maximum fan-out                                             ; 30                 ;       ;
 ; Highest non-global fan-out                                  ; 30                 ;       ;
-; Total fan-out                                               ; 493                ;       ;
-; Average fan-out                                             ; 2.93               ;       ;
+; Total fan-out                                               ; 474                ;       ;
+; Average fan-out                                             ; 2.94               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -314,14 +308,14 @@ The pin-out file can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_d
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Statistic                                                   ; Top                  ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 65 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 65                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 70 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 61 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 61                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 62 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
 ;         [a] ALMs used for LUT logic and registers           ; 0                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 70                   ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 62                   ; 0                              ;
 ;         [c] ALMs used for registers                         ; 0                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 5 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 1 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32070 ( 0 % )    ; 0 / 32070 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                    ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                    ; 0                              ;
@@ -330,16 +324,16 @@ The pin-out file can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_d
 ;                                                             ;                      ;                                ;
 ; Difficulty packing design                                   ; Low                  ; Low                            ;
 ;                                                             ;                      ;                                ;
-; Total LABs:  partially or completely used                   ; 14 / 3207 ( < 1 % )  ; 0 / 3207 ( 0 % )               ;
-;     -- Logic LABs                                           ; 14                   ; 0                              ;
+; Total LABs:  partially or completely used                   ; 8 / 3207 ( < 1 % )   ; 0 / 3207 ( 0 % )               ;
+;     -- Logic LABs                                           ; 8                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
-; Combinational ALUT usage for logic                          ; 109                  ; 0                              ;
-;     -- 7 input functions                                    ; 6                    ; 0                              ;
-;     -- 6 input functions                                    ; 13                   ; 0                              ;
-;     -- 5 input functions                                    ; 24                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 106                  ; 0                              ;
+;     -- 7 input functions                                    ; 5                    ; 0                              ;
+;     -- 6 input functions                                    ; 11                   ; 0                              ;
+;     -- 5 input functions                                    ; 25                   ; 0                              ;
 ;     -- 4 input functions                                    ; 30                   ; 0                              ;
-;     -- <=3 input functions                                  ; 36                   ; 0                              ;
+;     -- <=3 input functions                                  ; 35                   ; 0                              ;
 ; Combinational ALUT usage for route-throughs                 ; 0                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
 ;     -- 64-address deep                                      ; 0                    ; 0                              ;
@@ -355,7 +349,7 @@ The pin-out file can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_d
 ;                                                             ;                      ;                                ;
 ;                                                             ;                      ;                                ;
 ; Virtual pins                                                ; 0                    ; 0                              ;
-; I/O pins                                                    ; 29                   ; 0                              ;
+; I/O pins                                                    ; 27                   ; 0                              ;
 ; I/O registers                                               ; 0                    ; 0                              ;
 ; Total block memory bits                                     ; 0                    ; 0                              ;
 ; Total block memory implementation bits                      ; 0                    ; 0                              ;
@@ -368,7 +362,7 @@ The pin-out file can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_d
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 505                  ; 0                              ;
+;     -- Total Connections                                    ; 486                  ; 0                              ;
 ;     -- Registered Connections                               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
@@ -376,7 +370,7 @@ The pin-out file can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_d
 ;     -- hard_block:auto_generated_inst                       ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Partition Interface                                         ;                      ;                                ;
-;     -- Input Ports                                          ; 14                   ; 0                              ;
+;     -- Input Ports                                          ; 12                   ; 0                              ;
 ;     -- Output Ports                                         ; 15                   ; 0                              ;
 ;     -- Bidir Ports                                          ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
@@ -401,20 +395,18 @@ The pin-out file can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_d
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name      ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; a[0]      ; AE11  ; 3A       ; 4            ; 0            ; 34           ; 18                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; a[0]      ; AE11  ; 3A       ; 4            ; 0            ; 34           ; 17                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; a[1]      ; AC9   ; 3A       ; 4            ; 0            ; 0            ; 17                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; a[2]      ; AD10  ; 3A       ; 4            ; 0            ; 17           ; 20                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; a[3]      ; AE12  ; 3A       ; 2            ; 0            ; 57           ; 18                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; b[0]      ; AB12  ; 3A       ; 12           ; 0            ; 17           ; 23                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; b[1]      ; AC12  ; 3A       ; 16           ; 0            ; 0            ; 19                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; a[2]      ; AD10  ; 3A       ; 4            ; 0            ; 17           ; 19                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; a[3]      ; AE12  ; 3A       ; 2            ; 0            ; 57           ; 17                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; b[0]      ; AB12  ; 3A       ; 12           ; 0            ; 17           ; 26                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; b[1]      ; AC12  ; 3A       ; 16           ; 0            ; 0            ; 21                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; b[2]      ; AF9   ; 3A       ; 8            ; 0            ; 34           ; 24                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; b[3]      ; AF10  ; 3A       ; 4            ; 0            ; 51           ; 30                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; clk       ; E12   ; 8A       ; 22           ; 81           ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 ; opcode[0] ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 13                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; opcode[1] ; AA15  ; 3B       ; 36           ; 0            ; 17           ; 16                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; opcode[2] ; W15   ; 3B       ; 40           ; 0            ; 0            ; 10                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; opcode[3] ; Y16   ; 3B       ; 40           ; 0            ; 17           ; 10                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; reset     ; AJ27  ; 4A       ; 80           ; 0            ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; opcode[1] ; AA15  ; 3B       ; 36           ; 0            ; 17           ; 13                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; opcode[2] ; W15   ; 3B       ; 40           ; 0            ; 0            ; 9                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; opcode[3] ; Y16   ; 3B       ; 40           ; 0            ; 17           ; 9                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -427,10 +419,10 @@ The pin-out file can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_d
 ; N           ; W16   ; 4A       ; 52           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; V           ; V17   ; 4A       ; 60           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; Z           ; V18   ; 4A       ; 80           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
-; result[0]   ; AG10  ; 3B       ; 18           ; 0            ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; result[1]   ; AH9   ; 3B       ; 18           ; 0            ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; result[2]   ; AG11  ; 3B       ; 18           ; 0            ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; result[3]   ; AF11  ; 3B       ; 18           ; 0            ; 40           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; result[0]   ; AG18  ; 4A       ; 58           ; 0            ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; result[1]   ; AH18  ; 4A       ; 56           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; result[2]   ; AD24  ; 4A       ; 88           ; 0            ; 35           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; result[3]   ; AE24  ; 4A       ; 88           ; 0            ; 52           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 ; segments[0] ; AE26  ; 5A       ; 89           ; 8            ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; segments[1] ; AE27  ; 5A       ; 89           ; 11           ; 77           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; segments[2] ; AE28  ; 5A       ; 89           ; 11           ; 94           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
@@ -449,8 +441,8 @@ The pin-out file can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_d
 ; B2L      ; 0 / 0 ( -- )    ; --            ; --           ; --            ;
 ; B1L      ; 0 / 0 ( -- )    ; --            ; --           ; --            ;
 ; 3A       ; 8 / 32 ( 25 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 3B       ; 8 / 48 ( 17 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 4A       ; 5 / 80 ( 6 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 3B       ; 4 / 48 ( 8 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 4A       ; 8 / 80 ( 10 % ) ; 2.5V          ; --           ; 2.5V          ;
 ; 5A       ; 7 / 32 ( 22 % ) ; 2.5V          ; --           ; 2.5V          ;
 ; 5B       ; 0 / 16 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
 ; 6B       ; 0 / 44 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
@@ -459,7 +451,7 @@ The pin-out file can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_d
 ; 7B       ; 0 / 22 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
 ; 7C       ; 0 / 12 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
 ; 7D       ; 0 / 14 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
-; 8A       ; 1 / 80 ( 1 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 8A       ; 0 / 80 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
 +----------+-----------------+---------------+--------------+---------------+
 
 
@@ -609,7 +601,7 @@ The pin-out file can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_d
 ; AD21     ; 197        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AD22     ;            ; --             ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AD23     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AD24     ; 211        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AD24     ; 211        ; 4A             ; result[2]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AD25     ; 213        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AD26     ; 240        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AD27     ; 222        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -639,7 +631,7 @@ The pin-out file can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_d
 ; AE21     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AE22     ; 191        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE23     ; 189        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AE24     ; 209        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AE24     ; 209        ; 4A             ; result[3]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AE25     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AE26     ; 220        ; 5A             ; segments[0]                     ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
 ; AE27     ; 229        ; 5A             ; segments[1]                     ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
@@ -656,7 +648,7 @@ The pin-out file can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_d
 ; AF8      ; 70         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF9      ; 67         ; 3A             ; b[2]                            ; input  ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AF10     ; 57         ; 3A             ; b[3]                            ; input  ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
-; AF11     ; 87         ; 3B             ; result[3]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AF11     ; 87         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF12     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AF13     ; 93         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF14     ; 114        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -685,15 +677,15 @@ The pin-out file can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_d
 ; AG7      ; 68         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG8      ; 65         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG9      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AG10     ; 86         ; 3B             ; result[0]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AG11     ; 85         ; 3B             ; result[2]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG10     ; 86         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AG11     ; 85         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG12     ; 103        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG13     ; 101        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG14     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AG15     ; 127        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG16     ; 134        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG17     ; 132        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AG18     ; 150        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AG18     ; 150        ; 4A             ; result[0]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AG19     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AG20     ; 157        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG21     ; 143        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -714,7 +706,7 @@ The pin-out file can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_d
 ; AH6      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AH7      ; 115        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH8      ; 113        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AH9      ; 84         ; 3B             ; result[1]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AH9      ; 84         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH10     ; 118        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH11     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AH12     ; 126        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -723,7 +715,7 @@ The pin-out file can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_d
 ; AH15     ; 125        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH16     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AH17     ; 147        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AH18     ; 145        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AH18     ; 145        ; 4A             ; result[1]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AH19     ; 148        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH20     ; 141        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH21     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -762,7 +754,7 @@ The pin-out file can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_d
 ; AJ24     ; 182        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ25     ; 180        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ26     ; 187        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AJ27     ; 195        ; 4A             ; reset                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AJ27     ; 195        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ28     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AJ29     ; 216        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AJ30     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -895,7 +887,7 @@ The pin-out file can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_d
 ; E9       ; 478        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E10      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; E11      ; 504        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; E12      ; 494        ; 8A             ; clk                             ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; E12      ; 494        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E13      ; 488        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E14      ; 454        ; 7D             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E15      ;            ; 7D             ; VCCIO7D_HPS                     ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -1373,8 +1365,6 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------+-------------------------------+
 ; Pin Name    ; Reason                        ;
 +-------------+-------------------------------+
-; clk         ; Incomplete set of assignments ;
-; reset       ; Incomplete set of assignments ;
 ; N           ; Incomplete set of assignments ;
 ; Z           ; Incomplete set of assignments ;
 ; C           ; Incomplete set of assignments ;
@@ -1402,8 +1392,6 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; opcode[1]   ; Incomplete set of assignments ;
 ; opcode[2]   ; Incomplete set of assignments ;
 ; opcode[3]   ; Incomplete set of assignments ;
-; clk         ; Missing location assignment   ;
-; reset       ; Missing location assignment   ;
 ; result[0]   ; Missing location assignment   ;
 ; result[1]   ; Missing location assignment   ;
 ; result[2]   ; Missing location assignment   ;
@@ -1416,25 +1404,24 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                     ; Entity Name         ; Library Name ;
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |TopModule                                ; 64.5 (34.5)          ; 69.5 (38.5)                      ; 5.0 (4.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 109 (50)            ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 1          ; 29   ; 0            ; |TopModule                                                                                                              ; TopModule           ; work         ;
-;    |division:div|                         ; 13.0 (1.5)           ; 13.0 (2.0)                       ; 0.0 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 26 (4)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|division:div                                                                                                 ; division            ; work         ;
-;       |lpm_divide:Div0|                   ; 11.0 (0.0)           ; 11.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|division:div|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_1am:auto_generated|  ; 11.0 (0.0)           ; 11.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated                                                   ; lpm_divide_1am      ; work         ;
-;             |sign_div_unsign_7kh:divider| ; 11.0 (0.0)           ; 11.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
-;                |alt_u_div_kse:divider|    ; 11.0 (11.0)          ; 11.0 (11.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (22)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
-;    |modulo:mod|                           ; 11.0 (0.5)           ; 11.0 (0.5)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 23 (1)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|modulo:mod                                                                                                   ; modulo              ; work         ;
-;       |lpm_divide:Mod0|                   ; 10.5 (0.0)           ; 10.5 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|modulo:mod|lpm_divide:Mod0                                                                                   ; lpm_divide          ; work         ;
-;          |lpm_divide_42m:auto_generated|  ; 10.5 (0.0)           ; 10.5 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated                                                     ; lpm_divide_42m      ; work         ;
-;             |sign_div_unsign_7kh:divider| ; 10.5 (0.0)           ; 10.5 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                         ; sign_div_unsign_7kh ; work         ;
-;                |alt_u_div_kse:divider|    ; 10.5 (10.5)          ; 10.5 (10.5)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (22)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider   ; alt_u_div_kse       ; work         ;
+; |TopModule                                ; 61.0 (31.5)          ; 62.0 (31.5)                      ; 1.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 106 (48)            ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 1          ; 27   ; 0            ; |TopModule                                                                                                              ; TopModule           ; work         ;
+;    |division:div|                         ; 13.0 (2.5)           ; 13.0 (2.5)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 26 (4)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|division:div                                                                                                 ; division            ; work         ;
+;       |lpm_divide:Div0|                   ; 10.5 (0.0)           ; 10.5 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|division:div|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_1am:auto_generated|  ; 10.5 (0.0)           ; 10.5 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated                                                   ; lpm_divide_1am      ; work         ;
+;             |sign_div_unsign_7kh:divider| ; 10.5 (0.0)           ; 10.5 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;                |alt_u_div_kse:divider|    ; 10.5 (10.5)          ; 10.5 (10.5)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (22)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
+;    |modulo:mod|                           ; 11.0 (0.0)           ; 11.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 23 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|modulo:mod                                                                                                   ; modulo              ; work         ;
+;       |lpm_divide:Mod0|                   ; 11.0 (0.0)           ; 11.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 23 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|modulo:mod|lpm_divide:Mod0                                                                                   ; lpm_divide          ; work         ;
+;          |lpm_divide_42m:auto_generated|  ; 11.0 (0.0)           ; 11.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 23 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated                                                     ; lpm_divide_42m      ; work         ;
+;             |sign_div_unsign_7kh:divider| ; 11.0 (0.0)           ; 11.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 23 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                         ; sign_div_unsign_7kh ; work         ;
+;                |alt_u_div_kse:divider|    ; 11.0 (11.0)          ; 11.0 (11.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 23 (23)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider   ; alt_u_div_kse       ; work         ;
 ;    |multiplicacion:mult|                  ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 1          ; 0    ; 0            ; |TopModule|multiplicacion:mult                                                                                          ; multiplicacion      ; work         ;
-;    |or_gate:or_gate|                      ; 1.0 (1.0)            ; 1.0 (1.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|or_gate:or_gate                                                                                              ; or_gate             ; work         ;
 ;    |shiftRight:shr|                       ; 1.0 (1.0)            ; 1.0 (1.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|shiftRight:shr                                                                                               ; shiftRight          ; work         ;
 ;    |suma:generate_restas[0].sub|          ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|suma:generate_restas[0].sub                                                                                  ; suma                ; work         ;
 ;    |suma:generate_restas[3].sub|          ; 1.5 (1.5)            ; 1.5 (1.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|suma:generate_restas[3].sub                                                                                  ; suma                ; work         ;
-;    |suma:generate_sumas[0].add|           ; 0.5 (0.5)            ; 1.0 (1.0)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|suma:generate_sumas[0].add                                                                                   ; suma                ; work         ;
+;    |suma:generate_sumas[0].add|           ; 1.0 (1.0)            ; 1.0 (1.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|suma:generate_sumas[0].add                                                                                   ; suma                ; work         ;
 ;    |suma:generate_sumas[2].add|           ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|suma:generate_sumas[2].add                                                                                   ; suma                ; work         ;
-;    |suma:generate_sumas[3].add|           ; 1.0 (1.0)            ; 1.5 (1.5)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|suma:generate_sumas[3].add                                                                                   ; suma                ; work         ;
+;    |suma:generate_sumas[3].add|           ; 1.0 (1.0)            ; 2.0 (2.0)                        ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopModule|suma:generate_sumas[3].add                                                                                   ; suma                ; work         ;
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1444,8 +1431,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 ; Name        ; Pin Type ; D1 ; D3_0 ; D3_1 ; D4 ; D5   ; D5 OE ; D5 OCT ; T11 (Postamble Gating) ; T11 (Postamble Ungating) ;
 +-------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
-; clk         ; Input    ; -- ; --   ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; reset       ; Input    ; -- ; --   ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; N           ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; Z           ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; C           ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
@@ -1461,17 +1446,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; segments[4] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; segments[5] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; segments[6] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; a[3]        ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; b[3]        ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; a[2]        ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; a[3]        ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; b[3]        ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; a[2]        ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; b[2]        ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; a[1]        ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; b[1]        ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; a[0]        ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; b[0]        ; Input    ; -- ; (0)  ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; a[0]        ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; b[0]        ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; opcode[0]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; opcode[1]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; opcode[2]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; opcode[2]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; opcode[3]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +-------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
@@ -1481,79 +1466,75 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+
 ; Source Pin / Fanout                                                                                                                            ; Pad To Core Index ; Setting ;
 +------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+
-; clk                                                                                                                                            ;                   ;         ;
-; reset                                                                                                                                          ;                   ;         ;
 ; a[3]                                                                                                                                           ;                   ;         ;
-;      - multiplicacion:mult|Mult0~mac                                                                                                           ; 1                 ; 0       ;
-;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_0_result_int[0]~1    ; 1                 ; 0       ;
-;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_0_result_int[0]~5  ; 1                 ; 0       ;
-;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_1_result_int[1]~9    ; 1                 ; 0       ;
-;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_1_result_int[1]~5  ; 1                 ; 0       ;
-;      - Mux0~4                                                                                                                                  ; 1                 ; 0       ;
-;      - Mux2~11                                                                                                                                 ; 1                 ; 0       ;
-;      - LessThan1~1                                                                                                                             ; 1                 ; 0       ;
-;      - or_gate:or_gate|result[0]                                                                                                               ; 1                 ; 0       ;
-;      - shiftRight:shr|ShiftRight0~0                                                                                                            ; 1                 ; 0       ;
-;      - Mux1~4                                                                                                                                  ; 1                 ; 0       ;
-;      - Mux0~0                                                                                                                                  ; 1                 ; 0       ;
-;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[0]~2                ; 1                 ; 0       ;
-;      - suma:generate_sumas[3].add|Add1~0                                                                                                       ; 1                 ; 0       ;
-;      - suma:generate_restas[3].sub|Add0~0                                                                                                      ; 1                 ; 0       ;
-;      - suma:generate_sumas[3].add|Add1~1                                                                                                       ; 1                 ; 0       ;
-;      - suma:generate_restas[3].sub|Add1~0                                                                                                      ; 1                 ; 0       ;
-;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[0]~1              ; 1                 ; 0       ;
-; b[3]                                                                                                                                           ;                   ;         ;
 ;      - multiplicacion:mult|Mult0~mac                                                                                                           ; 0                 ; 0       ;
-;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~9                       ; 0                 ; 0       ;
-;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~13                      ; 0                 ; 0       ;
-;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~17                      ; 0                 ; 0       ;
-;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~14                    ; 0                 ; 0       ;
-;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~10                    ; 0                 ; 0       ;
-;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~6                     ; 0                 ; 0       ;
+;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_0_result_int[0]~1    ; 0                 ; 0       ;
+;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_0_result_int[0]~5  ; 0                 ; 0       ;
+;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_1_result_int[1]~9    ; 0                 ; 0       ;
+;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_1_result_int[1]~5  ; 0                 ; 0       ;
+;      - Mux0~5                                                                                                                                  ; 0                 ; 0       ;
+;      - Mux2~12                                                                                                                                 ; 0                 ; 0       ;
 ;      - LessThan1~1                                                                                                                             ; 0                 ; 0       ;
-;      - division:div|Equal0~0                                                                                                                   ; 0                 ; 0       ;
-;      - Mux2~0                                                                                                                                  ; 0                 ; 0       ;
-;      - Mux2~2                                                                                                                                  ; 0                 ; 0       ;
-;      - division:div|result[1]~0                                                                                                                ; 0                 ; 0       ;
-;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[4]~0                ; 0                 ; 0       ;
-;      - Mux1~0                                                                                                                                  ; 0                 ; 0       ;
-;      - division:div|result[2]~1                                                                                                                ; 0                 ; 0       ;
+;      - shiftRight:shr|ShiftRight0~0                                                                                                            ; 0                 ; 0       ;
+;      - Mux1~4                                                                                                                                  ; 0                 ; 0       ;
 ;      - Mux0~0                                                                                                                                  ; 0                 ; 0       ;
-;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[5]~1                ; 0                 ; 0       ;
-;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[5]~3                ; 0                 ; 0       ;
-;      - Mux0~1                                                                                                                                  ; 0                 ; 0       ;
+;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[0]~3                ; 0                 ; 0       ;
 ;      - suma:generate_sumas[3].add|Add1~0                                                                                                       ; 0                 ; 0       ;
 ;      - suma:generate_restas[3].sub|Add0~0                                                                                                      ; 0                 ; 0       ;
 ;      - suma:generate_sumas[3].add|Add1~1                                                                                                       ; 0                 ; 0       ;
 ;      - suma:generate_restas[3].sub|Add1~0                                                                                                      ; 0                 ; 0       ;
-;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|selnose[5]                   ; 0                 ; 0       ;
-;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|selnose[10]                  ; 0                 ; 0       ;
-;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|selnose[10]                ; 0                 ; 0       ;
-;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[5]~0              ; 0                 ; 0       ;
-;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[5]~2              ; 0                 ; 0       ;
-;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|selnose[5]                 ; 0                 ; 0       ;
-;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[4]~3              ; 0                 ; 0       ;
+;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[0]~1              ; 0                 ; 0       ;
+; b[3]                                                                                                                                           ;                   ;         ;
+;      - multiplicacion:mult|Mult0~mac                                                                                                           ; 1                 ; 0       ;
+;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~9                       ; 1                 ; 0       ;
+;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~13                      ; 1                 ; 0       ;
+;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~17                      ; 1                 ; 0       ;
+;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~14                    ; 1                 ; 0       ;
+;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~10                    ; 1                 ; 0       ;
+;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~6                     ; 1                 ; 0       ;
+;      - LessThan1~1                                                                                                                             ; 1                 ; 0       ;
+;      - division:div|Equal0~0                                                                                                                   ; 1                 ; 0       ;
+;      - Mux2~0                                                                                                                                  ; 1                 ; 0       ;
+;      - Mux2~4                                                                                                                                  ; 1                 ; 0       ;
+;      - division:div|result[1]~0                                                                                                                ; 1                 ; 0       ;
+;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[4]~1                ; 1                 ; 0       ;
+;      - Mux1~0                                                                                                                                  ; 1                 ; 0       ;
+;      - division:div|result[2]~1                                                                                                                ; 1                 ; 0       ;
+;      - Mux0~0                                                                                                                                  ; 1                 ; 0       ;
+;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[5]~2                ; 1                 ; 0       ;
+;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[5]~4                ; 1                 ; 0       ;
+;      - Mux0~1                                                                                                                                  ; 1                 ; 0       ;
+;      - suma:generate_sumas[3].add|Add1~0                                                                                                       ; 1                 ; 0       ;
+;      - suma:generate_restas[3].sub|Add0~0                                                                                                      ; 1                 ; 0       ;
+;      - suma:generate_sumas[3].add|Add1~1                                                                                                       ; 1                 ; 0       ;
+;      - suma:generate_restas[3].sub|Add1~0                                                                                                      ; 1                 ; 0       ;
+;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|selnose[5]                   ; 1                 ; 0       ;
+;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|selnose[10]                  ; 1                 ; 0       ;
+;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|selnose[10]                ; 1                 ; 0       ;
+;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[5]~0              ; 1                 ; 0       ;
+;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[5]~2              ; 1                 ; 0       ;
+;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|selnose[5]                 ; 1                 ; 0       ;
+;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[4]~3              ; 1                 ; 0       ;
 ; a[2]                                                                                                                                           ;                   ;         ;
-;      - multiplicacion:mult|Mult0~mac                                                                                                           ; 0                 ; 0       ;
-;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_1_result_int[0]~5    ; 0                 ; 0       ;
-;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[1]~9    ; 0                 ; 0       ;
-;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_1_result_int[0]~9  ; 0                 ; 0       ;
-;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[1]~9  ; 0                 ; 0       ;
-;      - Mux1~7                                                                                                                                  ; 0                 ; 0       ;
-;      - LessThan1~1                                                                                                                             ; 0                 ; 0       ;
-;      - or_gate:or_gate|result[0]                                                                                                               ; 0                 ; 0       ;
-;      - shiftRight:shr|ShiftRight0~0                                                                                                            ; 0                 ; 0       ;
-;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[4]~0                ; 0                 ; 0       ;
-;      - Mux1~2                                                                                                                                  ; 0                 ; 0       ;
-;      - suma:generate_sumas[2].add|Add1~0                                                                                                       ; 0                 ; 0       ;
-;      - Add1~2                                                                                                                                  ; 0                 ; 0       ;
-;      - suma:generate_sumas[3].add|Add1~0                                                                                                       ; 0                 ; 0       ;
-;      - Add1~3                                                                                                                                  ; 0                 ; 0       ;
-;      - suma:generate_sumas[3].add|Add1~1                                                                                                       ; 0                 ; 0       ;
-;      - suma:generate_restas[3].sub|Add1~0                                                                                                      ; 0                 ; 0       ;
-;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[4]~3              ; 0                 ; 0       ;
-;      - Mux0~4                                                                                                                                  ; 0                 ; 0       ;
-;      - Mux2~11                                                                                                                                 ; 0                 ; 0       ;
+;      - multiplicacion:mult|Mult0~mac                                                                                                           ; 1                 ; 0       ;
+;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_1_result_int[0]~5    ; 1                 ; 0       ;
+;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[1]~9    ; 1                 ; 0       ;
+;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_1_result_int[0]~9  ; 1                 ; 0       ;
+;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[1]~9  ; 1                 ; 0       ;
+;      - Mux1~7                                                                                                                                  ; 1                 ; 0       ;
+;      - LessThan1~1                                                                                                                             ; 1                 ; 0       ;
+;      - shiftRight:shr|ShiftRight0~0                                                                                                            ; 1                 ; 0       ;
+;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[4]~1                ; 1                 ; 0       ;
+;      - Mux1~2                                                                                                                                  ; 1                 ; 0       ;
+;      - suma:generate_sumas[2].add|Add1~0                                                                                                       ; 1                 ; 0       ;
+;      - Add1~2                                                                                                                                  ; 1                 ; 0       ;
+;      - suma:generate_sumas[3].add|Add1~0                                                                                                       ; 1                 ; 0       ;
+;      - Add1~3                                                                                                                                  ; 1                 ; 0       ;
+;      - suma:generate_sumas[3].add|Add1~1                                                                                                       ; 1                 ; 0       ;
+;      - suma:generate_restas[3].sub|Add1~0                                                                                                      ; 1                 ; 0       ;
+;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[4]~3              ; 1                 ; 0       ;
+;      - Mux0~5                                                                                                                                  ; 1                 ; 0       ;
+;      - Mux2~12                                                                                                                                 ; 1                 ; 0       ;
 ; b[2]                                                                                                                                           ;                   ;         ;
 ;      - multiplicacion:mult|Mult0~mac                                                                                                           ; 0                 ; 0       ;
 ;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[2]~13   ; 0                 ; 0       ;
@@ -1563,13 +1544,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - LessThan1~1                                                                                                                             ; 0                 ; 0       ;
 ;      - division:div|Equal0~0                                                                                                                   ; 0                 ; 0       ;
 ;      - Mux2~0                                                                                                                                  ; 0                 ; 0       ;
-;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[4]~0                ; 0                 ; 0       ;
+;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[4]~1                ; 0                 ; 0       ;
 ;      - Mux1~2                                                                                                                                  ; 0                 ; 0       ;
 ;      - suma:generate_sumas[2].add|Add1~0                                                                                                       ; 0                 ; 0       ;
 ;      - Add0~1                                                                                                                                  ; 0                 ; 0       ;
 ;      - division:div|result[2]~1                                                                                                                ; 0                 ; 0       ;
-;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[5]~1                ; 0                 ; 0       ;
-;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[5]~3                ; 0                 ; 0       ;
+;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[5]~2                ; 0                 ; 0       ;
+;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[5]~4                ; 0                 ; 0       ;
 ;      - suma:generate_sumas[3].add|Add1~0                                                                                                       ; 0                 ; 0       ;
 ;      - suma:generate_restas[3].sub|Add0~0                                                                                                      ; 0                 ; 0       ;
 ;      - suma:generate_sumas[3].add|Add1~1                                                                                                       ; 0                 ; 0       ;
@@ -1585,18 +1566,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[0]~13 ; 0                 ; 0       ;
 ;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~9                       ; 0                 ; 0       ;
 ;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~14                    ; 0                 ; 0       ;
-;      - Mux2~11                                                                                                                                 ; 0                 ; 0       ;
+;      - Mux2~12                                                                                                                                 ; 0                 ; 0       ;
 ;      - LessThan1~0                                                                                                                             ; 0                 ; 0       ;
-;      - or_gate:or_gate|result[0]                                                                                                               ; 0                 ; 0       ;
 ;      - shiftRight:shr|ShiftRight0~0                                                                                                            ; 0                 ; 0       ;
-;      - LessThan1~2                                                                                                                             ; 0                 ; 0       ;
 ;      - Mux2~2                                                                                                                                  ; 0                 ; 0       ;
+;      - Mux2~4                                                                                                                                  ; 0                 ; 0       ;
+;      - suma:generate_sumas[0].add|Add0~0                                                                                                       ; 0                 ; 0       ;
 ;      - Add1~0                                                                                                                                  ; 0                 ; 0       ;
 ;      - suma:generate_sumas[0].add|Add0~1                                                                                                       ; 0                 ; 0       ;
 ;      - suma:generate_restas[0].sub|Add0~0                                                                                                      ; 0                 ; 0       ;
 ;      - Add1~1                                                                                                                                  ; 0                 ; 0       ;
 ;      - Mux1~4                                                                                                                                  ; 0                 ; 0       ;
-;      - Mux0~4                                                                                                                                  ; 0                 ; 0       ;
+;      - Mux0~5                                                                                                                                  ; 0                 ; 0       ;
 ; b[1]                                                                                                                                           ;                   ;         ;
 ;      - multiplicacion:mult|Mult0~mac                                                                                                           ; 1                 ; 0       ;
 ;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_1_result_int[1]~9    ; 1                 ; 0       ;
@@ -1605,78 +1586,80 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[1]~9  ; 1                 ; 0       ;
 ;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~9                       ; 1                 ; 0       ;
 ;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~14                    ; 1                 ; 0       ;
-;      - Mux0~4                                                                                                                                  ; 1                 ; 0       ;
+;      - Mux0~5                                                                                                                                  ; 1                 ; 0       ;
 ;      - Mux1~7                                                                                                                                  ; 1                 ; 0       ;
-;      - Mux2~11                                                                                                                                 ; 1                 ; 0       ;
+;      - Mux2~12                                                                                                                                 ; 1                 ; 0       ;
 ;      - LessThan1~0                                                                                                                             ; 1                 ; 0       ;
 ;      - division:div|Equal0~0                                                                                                                   ; 1                 ; 0       ;
 ;      - shiftRight:shr|ShiftRight0~0                                                                                                            ; 1                 ; 0       ;
 ;      - Add0~0                                                                                                                                  ; 1                 ; 0       ;
-;      - LessThan1~2                                                                                                                             ; 1                 ; 0       ;
-;      - Add1~0                                                                                                                                  ; 1                 ; 0       ;
-;      - suma:generate_sumas[0].add|Add0~1                                                                                                       ; 1                 ; 0       ;
-;      - suma:generate_restas[0].sub|Add0~0                                                                                                      ; 1                 ; 0       ;
-;      - Add1~1                                                                                                                                  ; 1                 ; 0       ;
-; a[0]                                                                                                                                           ;                   ;         ;
-;      - multiplicacion:mult|Mult0~mac                                                                                                           ; 1                 ; 0       ;
-;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~5                       ; 1                 ; 0       ;
-;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~18                    ; 1                 ; 0       ;
-;      - Mux0~4                                                                                                                                  ; 1                 ; 0       ;
-;      - Mux1~7                                                                                                                                  ; 1                 ; 0       ;
-;      - Mux3~3                                                                                                                                  ; 1                 ; 0       ;
-;      - LessThan1~0                                                                                                                             ; 1                 ; 0       ;
-;      - or_gate:or_gate|result[0]                                                                                                               ; 1                 ; 0       ;
-;      - modulo:mod|result[0]~0                                                                                                                  ; 1                 ; 0       ;
-;      - Mux3~0                                                                                                                                  ; 1                 ; 0       ;
-;      - shiftRight:shr|ShiftRight0~0                                                                                                            ; 1                 ; 0       ;
-;      - Mux3~1                                                                                                                                  ; 1                 ; 0       ;
+;      - Mux2~2                                                                                                                                  ; 1                 ; 0       ;
 ;      - suma:generate_sumas[0].add|Add0~0                                                                                                       ; 1                 ; 0       ;
 ;      - Add1~0                                                                                                                                  ; 1                 ; 0       ;
 ;      - suma:generate_sumas[0].add|Add0~1                                                                                                       ; 1                 ; 0       ;
 ;      - suma:generate_restas[0].sub|Add0~0                                                                                                      ; 1                 ; 0       ;
 ;      - Add1~1                                                                                                                                  ; 1                 ; 0       ;
-;      - Mux2~11                                                                                                                                 ; 1                 ; 0       ;
+;      - division:div|result[2]~1                                                                                                                ; 1                 ; 0       ;
+; a[0]                                                                                                                                           ;                   ;         ;
+;      - multiplicacion:mult|Mult0~mac                                                                                                           ; 0                 ; 0       ;
+;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~5                       ; 0                 ; 0       ;
+;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~18                    ; 0                 ; 0       ;
+;      - Mux0~5                                                                                                                                  ; 0                 ; 0       ;
+;      - Mux1~7                                                                                                                                  ; 0                 ; 0       ;
+;      - Mux3~3                                                                                                                                  ; 0                 ; 0       ;
+;      - LessThan1~0                                                                                                                             ; 0                 ; 0       ;
+;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[12]~0               ; 0                 ; 0       ;
+;      - Mux3~0                                                                                                                                  ; 0                 ; 0       ;
+;      - shiftRight:shr|ShiftRight0~0                                                                                                            ; 0                 ; 0       ;
+;      - Mux3~1                                                                                                                                  ; 0                 ; 0       ;
+;      - suma:generate_sumas[0].add|Add0~0                                                                                                       ; 0                 ; 0       ;
+;      - Add1~0                                                                                                                                  ; 0                 ; 0       ;
+;      - suma:generate_sumas[0].add|Add0~1                                                                                                       ; 0                 ; 0       ;
+;      - suma:generate_restas[0].sub|Add0~0                                                                                                      ; 0                 ; 0       ;
+;      - Add1~1                                                                                                                                  ; 0                 ; 0       ;
+;      - Mux2~12                                                                                                                                 ; 0                 ; 0       ;
 ; b[0]                                                                                                                                           ;                   ;         ;
 ;      - multiplicacion:mult|Mult0~mac                                                                                                           ; 0                 ; 0       ;
 ;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_0_result_int[0]~1    ; 0                 ; 0       ;
 ;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_0_result_int[0]~5  ; 0                 ; 0       ;
 ;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_1_result_int[0]~5    ; 0                 ; 0       ;
-;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[0]~5    ; 1                 ; 0       ;
-;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_1_result_int[0]~9  ; 1                 ; 0       ;
-;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[0]~13 ; 1                 ; 0       ;
-;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~5                       ; 1                 ; 0       ;
-;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~18                    ; 1                 ; 0       ;
-;      - Mux0~4                                                                                                                                  ; 1                 ; 0       ;
-;      - Mux1~7                                                                                                                                  ; 1                 ; 0       ;
-;      - Mux2~11                                                                                                                                 ; 1                 ; 0       ;
-;      - Mux3~3                                                                                                                                  ; 1                 ; 0       ;
-;      - LessThan1~0                                                                                                                             ; 1                 ; 0       ;
-;      - division:div|Equal0~1                                                                                                                   ; 0                 ; 0       ;
-;      - Mux3~0                                                                                                                                  ; 1                 ; 0       ;
-;      - shiftRight:shr|ShiftRight0~0                                                                                                            ; 1                 ; 0       ;
-;      - Add0~0                                                                                                                                  ; 1                 ; 0       ;
-;      - suma:generate_sumas[0].add|Add0~0                                                                                                       ; 1                 ; 0       ;
-;      - Add1~0                                                                                                                                  ; 1                 ; 0       ;
-;      - suma:generate_sumas[0].add|Add0~1                                                                                                       ; 1                 ; 0       ;
-;      - suma:generate_restas[0].sub|Add0~0                                                                                                      ; 1                 ; 0       ;
-;      - Add1~1                                                                                                                                  ; 1                 ; 0       ;
+;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[0]~5    ; 0                 ; 0       ;
+;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_1_result_int[0]~9  ; 0                 ; 0       ;
+;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[0]~13 ; 0                 ; 0       ;
+;      - modulo:mod|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~5                       ; 0                 ; 0       ;
+;      - division:div|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~18                    ; 0                 ; 0       ;
+;      - Mux0~5                                                                                                                                  ; 0                 ; 0       ;
+;      - Mux1~7                                                                                                                                  ; 0                 ; 0       ;
+;      - Mux2~12                                                                                                                                 ; 0                 ; 0       ;
+;      - Mux3~3                                                                                                                                  ; 0                 ; 0       ;
+;      - LessThan1~0                                                                                                                             ; 0                 ; 0       ;
+;      - Mux3~0                                                                                                                                  ; 0                 ; 0       ;
+;      - shiftRight:shr|ShiftRight0~0                                                                                                            ; 0                 ; 0       ;
+;      - Add0~0                                                                                                                                  ; 0                 ; 0       ;
+;      - Mux2~3                                                                                                                                  ; 0                 ; 0       ;
+;      - suma:generate_sumas[0].add|Add0~0                                                                                                       ; 0                 ; 0       ;
+;      - Add1~0                                                                                                                                  ; 0                 ; 0       ;
+;      - division:div|result[1]~0                                                                                                                ; 0                 ; 0       ;
+;      - suma:generate_sumas[0].add|Add0~1                                                                                                       ; 0                 ; 0       ;
+;      - suma:generate_restas[0].sub|Add0~0                                                                                                      ; 0                 ; 0       ;
+;      - Add1~1                                                                                                                                  ; 0                 ; 0       ;
+;      - division:div|result[2]~1                                                                                                                ; 0                 ; 0       ;
+;      - division:div|result[3]~2                                                                                                                ; 0                 ; 0       ;
 ; opcode[0]                                                                                                                                      ;                   ;         ;
-;      - Mux0~4                                                                                                                                  ; 0                 ; 0       ;
-;      - Mux0~8                                                                                                                                  ; 0                 ; 0       ;
-;      - Mux2~11                                                                                                                                 ; 0                 ; 0       ;
+;      - Mux0~5                                                                                                                                  ; 0                 ; 0       ;
+;      - Mux2~12                                                                                                                                 ; 0                 ; 0       ;
 ;      - Mux3~3                                                                                                                                  ; 0                 ; 0       ;
 ;      - N~0                                                                                                                                     ; 0                 ; 0       ;
 ;      - Mux3~0                                                                                                                                  ; 0                 ; 0       ;
 ;      - Mux3~1                                                                                                                                  ; 0                 ; 0       ;
 ;      - Mux2~1                                                                                                                                  ; 0                 ; 0       ;
-;      - Mux2~4                                                                                                                                  ; 0                 ; 0       ;
+;      - Mux2~6                                                                                                                                  ; 0                 ; 0       ;
 ;      - Mux1~3                                                                                                                                  ; 0                 ; 0       ;
 ;      - Mux1~4                                                                                                                                  ; 0                 ; 0       ;
+;      - Mux0~2                                                                                                                                  ; 0                 ; 0       ;
 ;      - C~0                                                                                                                                     ; 0                 ; 0       ;
 ;      - Mux1~7                                                                                                                                  ; 0                 ; 0       ;
 ; opcode[1]                                                                                                                                      ;                   ;         ;
-;      - Mux2~7                                                                                                                                  ; 0                 ; 0       ;
-;      - Mux0~8                                                                                                                                  ; 0                 ; 0       ;
 ;      - Mux3~3                                                                                                                                  ; 0                 ; 0       ;
 ;      - N~0                                                                                                                                     ; 0                 ; 0       ;
 ;      - Mux3~0                                                                                                                                  ; 0                 ; 0       ;
@@ -1684,34 +1667,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Mux2~1                                                                                                                                  ; 0                 ; 0       ;
 ;      - Mux2~2                                                                                                                                  ; 0                 ; 0       ;
 ;      - Mux2~3                                                                                                                                  ; 0                 ; 0       ;
-;      - Mux2~4                                                                                                                                  ; 0                 ; 0       ;
-;      - Mux1~1                                                                                                                                  ; 0                 ; 0       ;
+;      - Mux2~6                                                                                                                                  ; 0                 ; 0       ;
 ;      - Mux1~2                                                                                                                                  ; 0                 ; 0       ;
 ;      - Mux1~3                                                                                                                                  ; 0                 ; 0       ;
 ;      - Mux0~0                                                                                                                                  ; 0                 ; 0       ;
+;      - Mux0~2                                                                                                                                  ; 0                 ; 0       ;
 ;      - C~0                                                                                                                                     ; 0                 ; 0       ;
-;      - Mux2~6                                                                                                                                  ; 0                 ; 0       ;
 ; opcode[2]                                                                                                                                      ;                   ;         ;
-;      - N~0                                                                                                                                     ; 1                 ; 0       ;
-;      - Mux3~1                                                                                                                                  ; 1                 ; 0       ;
-;      - Mux2~1                                                                                                                                  ; 1                 ; 0       ;
-;      - Mux2~5                                                                                                                                  ; 1                 ; 0       ;
-;      - Mux1~5                                                                                                                                  ; 1                 ; 0       ;
-;      - Mux0~2                                                                                                                                  ; 1                 ; 0       ;
-;      - Equal0~1                                                                                                                                ; 1                 ; 0       ;
-;      - C~0                                                                                                                                     ; 1                 ; 0       ;
-;      - LessThan0~1                                                                                                                             ; 1                 ; 0       ;
-;      - Mux3~2                                                                                                                                  ; 1                 ; 0       ;
+;      - N~0                                                                                                                                     ; 0                 ; 0       ;
+;      - Mux3~1                                                                                                                                  ; 0                 ; 0       ;
+;      - Mux2~1                                                                                                                                  ; 0                 ; 0       ;
+;      - Mux2~7                                                                                                                                  ; 0                 ; 0       ;
+;      - Mux1~5                                                                                                                                  ; 0                 ; 0       ;
+;      - Mux0~3                                                                                                                                  ; 0                 ; 0       ;
+;      - Equal0~1                                                                                                                                ; 0                 ; 0       ;
+;      - C~0                                                                                                                                     ; 0                 ; 0       ;
+;      - Mux3~2                                                                                                                                  ; 0                 ; 0       ;
 ; opcode[3]                                                                                                                                      ;                   ;         ;
 ;      - N~0                                                                                                                                     ; 0                 ; 0       ;
 ;      - Mux2~0                                                                                                                                  ; 0                 ; 0       ;
 ;      - Mux2~1                                                                                                                                  ; 0                 ; 0       ;
-;      - Mux2~5                                                                                                                                  ; 0                 ; 0       ;
+;      - Mux2~7                                                                                                                                  ; 0                 ; 0       ;
 ;      - Mux1~5                                                                                                                                  ; 0                 ; 0       ;
-;      - Mux0~2                                                                                                                                  ; 0                 ; 0       ;
+;      - Mux0~3                                                                                                                                  ; 0                 ; 0       ;
 ;      - Equal0~1                                                                                                                                ; 0                 ; 0       ;
 ;      - C~0                                                                                                                                     ; 0                 ; 0       ;
-;      - LessThan0~1                                                                                                                             ; 0                 ; 0       ;
 ;      - Mux3~2                                                                                                                                  ; 0                 ; 0       ;
 +------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+
 
@@ -1742,14 +1722,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 219 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 10 / 13,420 ( < 1 % )   ;
-; C2 interconnects                            ; 49 / 119,108 ( < 1 % )  ;
-; C4 interconnects                            ; 26 / 56,300 ( < 1 % )   ;
+; Block interconnects                         ; 148 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 0 / 13,420 ( 0 % )      ;
+; C2 interconnects                            ; 24 / 119,108 ( < 1 % )  ;
+; C4 interconnects                            ; 29 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )          ;
-; Direct links                                ; 35 / 289,320 ( < 1 % )  ;
+; Direct links                                ; 22 / 289,320 ( < 1 % )  ;
 ; Global clocks                               ; 0 / 16 ( 0 % )          ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -1805,12 +1785,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )          ;
-; Local interconnects                         ; 54 / 84,580 ( < 1 % )   ;
+; Local interconnects                         ; 45 / 84,580 ( < 1 % )   ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )          ;
-; R14 interconnects                           ; 94 / 12,676 ( < 1 % )   ;
-; R14/C12 interconnect drivers                ; 99 / 20,720 ( < 1 % )   ;
-; R3 interconnects                            ; 81 / 130,992 ( < 1 % )  ;
-; R6 interconnects                            ; 99 / 266,960 ( < 1 % )  ;
+; R14 interconnects                           ; 26 / 12,676 ( < 1 % )   ;
+; R14/C12 interconnect drivers                ; 26 / 20,720 ( < 1 % )   ;
+; R3 interconnects                            ; 50 / 130,992 ( < 1 % )  ;
+; R6 interconnects                            ; 79 / 266,960 ( < 1 % )  ;
 ; Spine clocks                                ; 0 / 360 ( 0 % )         ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
 +---------------------------------------------+-------------------------+
@@ -1871,12 +1851,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
 ; Pin/Rules          ; IO_000001    ; IO_000002    ; IO_000003    ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007    ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000034    ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
-; Total Pass         ; 23           ; 0            ; 23           ; 0            ; 0            ; 29        ; 23           ; 0            ; 29        ; 29        ; 0            ; 15           ; 0            ; 0            ; 0            ; 0            ; 15           ; 0            ; 0            ; 0            ; 0            ; 15           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; Total Pass         ; 23           ; 0            ; 23           ; 0            ; 0            ; 27        ; 23           ; 0            ; 27        ; 27        ; 0            ; 15           ; 0            ; 0            ; 0            ; 0            ; 15           ; 0            ; 0            ; 0            ; 0            ; 15           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
 ; Total Unchecked    ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
-; Total Inapplicable ; 6            ; 29           ; 6            ; 29           ; 29           ; 0         ; 6            ; 29           ; 0         ; 0         ; 29           ; 14           ; 29           ; 29           ; 29           ; 29           ; 14           ; 29           ; 29           ; 29           ; 29           ; 14           ; 29           ; 29           ; 29           ; 29           ; 29           ; 29           ;
+; Total Inapplicable ; 4            ; 27           ; 4            ; 27           ; 27           ; 0         ; 4            ; 27           ; 0         ; 0         ; 27           ; 12           ; 27           ; 27           ; 27           ; 27           ; 12           ; 27           ; 27           ; 27           ; 27           ; 12           ; 27           ; 27           ; 27           ; 27           ; 27           ; 27           ;
 ; Total Fail         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
-; clk                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; reset              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; N                  ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; Z                  ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; C                  ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
@@ -1954,58 +1932,57 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (119006): Selected device 5CSEMA5F31C6 for design "Problema_1"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
-Critical Warning (169085): No exact pin location assignment(s) for 6 pins of 29 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
+Critical Warning (169085): No exact pin location assignment(s) for 4 pins of 27 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Info (184020): Starting Fitter periphery placement operations
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:10
-Info (332104): Reading SDC File: 'Problema_1.out.sdc'
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:28
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Problema_1.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332144): No user constrained base clocks found in the design
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info (332129): Detected timing requirements -- optimizing circuit to achieve only the specified requirements
-Info (332111): Found 1 clocks
-    Info (332111):   Period   Clock Name
-    Info (332111): ======== ============
-    Info (332111):   20.000        testN
+Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:07
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:08
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X11_Y0 to location X21_Y10
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X11_Y0 to location X21_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.40 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
+Info (11888): Total time spent on timing analysis during the Fitter is 0.28 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
-Info (144001): Generated suppressed messages file C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/output_files/Problema_1.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 6935 megabytes
-    Info: Processing ended: Wed Sep 13 10:00:19 2023
-    Info: Elapsed time: 00:01:04
-    Info: Total CPU time (on all processors): 00:03:16
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:08
+Info (144001): Generated suppressed messages file C:/Users/Bojtronic/Desktop/ALU_FPGA/output_files/Problema_1.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 6131 megabytes
+    Info: Processing ended: Wed Sep 13 13:10:30 2023
+    Info: Elapsed time: 00:01:53
+    Info: Total CPU time (on all processors): 00:02:19
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 3/Problema_1/output_files/Problema_1.fit.smsg.
+The suppressed messages can be found in C:/Users/Bojtronic/Desktop/ALU_FPGA/output_files/Problema_1.fit.smsg.
 
 

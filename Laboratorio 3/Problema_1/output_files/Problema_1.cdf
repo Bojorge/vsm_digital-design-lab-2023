@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("C:/Users/Bojtronic/Desktop/Problema_1/output_files/") File("Problema_1.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("C:/Users/Bojtronic/Desktop/ALU_FPGA/output_files/") File("Problema_1.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

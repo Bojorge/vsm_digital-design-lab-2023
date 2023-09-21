@@ -1,9 +1,9 @@
 module or_gate #(parameter N_bits = 4)(
 		input logic [N_bits-1:0] a,
 		input logic [N_bits-1:0] b,
-		output logic [N_bits-1:0]result
+		output logic result
 );
  
-    assign result = a || b;
+    assign result = a | b;
              
 endmodule

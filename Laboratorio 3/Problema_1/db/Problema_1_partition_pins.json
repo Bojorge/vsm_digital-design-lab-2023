@@ -16,10 +16,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "V",
-					"strict" : false
-				},
-				{
 					"name" : "result[0]",
 					"strict" : false
 				},
