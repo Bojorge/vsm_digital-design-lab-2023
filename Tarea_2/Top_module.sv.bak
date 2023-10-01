@@ -1,0 +1,30 @@
+module Top_module(
+  input clk, rst, M,
+  output reg [7:0] system_state,
+  output reg t0
+);
+
+  // Señales internas
+  wire rst_timer, mux_cont, enable_mant, data_reg_state_out, data_reg_mant_out, output_mux;
+  wire [7:0] timer_out;
+
+  
+  FSM fsm_inst (.clk(clk), .rst(rst), .M(M), .rst_timer(rst_timer), .mux_cont(mux_cont), .enable_mant(enable_mant));
+  
+  Timer timer_inst (.clk(clk), .rst(rst), .rst_timer(rst_timer), .timer_out(timer_out));
+  
+  Comparator comparator_inst (.timer_out(timer_out), .t0(t0));
+  
+  Register_state reg_state_inst (.clk(clk), .rst(rst), .data_in(output_mux), .data_out(data_reg_state_out));
+  
+  Register_maintenance reg_maint_inst (.clk(clk), .rst(rst), .enable(enable_mant), .data_out(data_reg_mant_out));
+  
+  Mux mux_inst (.input1(data_reg_mant_out), .input2(8'hFF), .mux_cont(mux_cont), .output_mux(output_mux));
+  
+  
+    
+  
+  
+  
+
+endmodule

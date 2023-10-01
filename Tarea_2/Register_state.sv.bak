@@ -1,0 +1,15 @@
+module Register_state(input clk, 
+                input rst,    // Entrada de reinicio general
+                input enable, // Entrada de habilitación
+                input [7:0] data_in, // Entrada de datos de 8 bits
+                output reg [7:0] data_out); // Salida de datos de 8 bits
+
+  // Proceso que maneja el registro
+  always @(posedge clk or posedge rst) begin
+    if (rst)         // Reinicio general
+      data_out <= 8'b0;
+    else if (enable) // Si la habilitación está activa
+      data_out <= data_in; // Copia el dato de entrada al registro
+  end
+
+endmodule

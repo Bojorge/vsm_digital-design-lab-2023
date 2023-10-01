@@ -1,0 +1,56 @@
+module Top_module_tb;
+
+  // Parámetros de simulación
+  reg clk;
+  reg rst;
+  reg M;
+  reg rst_manual;
+  wire [1:0] system_state;
+  wire [7:0] reg_data;
+
+  // Instancia del módulo Top_module
+  Top_module uut (
+    .clk(clk),
+    .rst(rst),
+    .M(M),
+    .rst_manual(rst_manual),
+    .system_state(system_state),
+    .reg_data(reg_data)
+  );
+
+  // Generador de clock
+  always begin
+    #5 clk = ~clk;
+  end
+
+  // Inicialización de señales
+  initial begin
+    clk = 0;
+    rst = 1;
+    M = 0;
+    rst_manual = 0;
+
+    // Prueba 1: Presionar el botón (M) antes de 200 ciclos
+    #100 M = 1;
+
+    // Prueba 2: Esperar 200 ciclos sin presionar el botón (M)
+    #200;
+
+    // Prueba 3: Realizar un reset manual
+    #10 rst_manual = 1;
+    #10 rst_manual = 0;
+
+    // Prueba 4: Presionar el botón (M) después del reset manual
+    #100 M = 1;
+    #10 M = 0;
+
+    // Finalizar simulación
+    $finish;
+  end
+
+  // Monitoreo de estado y registro
+  always @(posedge clk) begin
+    $display("Tiempo: %t, Estado del sistema: %h, Registro de estado: %h", $time, system_state, reg_data);
+  end
+
+endmodule

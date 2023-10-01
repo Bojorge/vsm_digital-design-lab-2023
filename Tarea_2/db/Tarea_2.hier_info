@@ -1,0 +1,171 @@
+|Top_module
+clk => clk.IN4
+rst => rst.IN4
+M => M.IN1
+rst_manual => rst_manual.IN1
+system_state[0] << FSM:fsm_inst.current_state
+system_state[1] << FSM:fsm_inst.current_state
+reg_data[0] << Register_state:reg_state_inst.data_out
+reg_data[1] << Register_state:reg_state_inst.data_out
+reg_data[2] << Register_state:reg_state_inst.data_out
+reg_data[3] << Register_state:reg_state_inst.data_out
+reg_data[4] << Register_state:reg_state_inst.data_out
+reg_data[5] << Register_state:reg_state_inst.data_out
+reg_data[6] << Register_state:reg_state_inst.data_out
+reg_data[7] << Register_state:reg_state_inst.data_out
+
+
+|Top_module|Register_state:reg_state_inst
+clk => data_out[0]~reg0.CLK
+clk => data_out[1]~reg0.CLK
+clk => data_out[2]~reg0.CLK
+clk => data_out[3]~reg0.CLK
+clk => data_out[4]~reg0.CLK
+clk => data_out[5]~reg0.CLK
+clk => data_out[6]~reg0.CLK
+clk => data_out[7]~reg0.CLK
+rst => data_out[0]~reg0.ACLR
+rst => data_out[1]~reg0.ACLR
+rst => data_out[2]~reg0.ACLR
+rst => data_out[3]~reg0.ACLR
+rst => data_out[4]~reg0.ACLR
+rst => data_out[5]~reg0.ACLR
+rst => data_out[6]~reg0.ACLR
+rst => data_out[7]~reg0.ACLR
+data_in[0] => data_out[0]~reg0.DATAIN
+data_in[1] => data_out[1]~reg0.DATAIN
+data_in[2] => data_out[2]~reg0.DATAIN
+data_in[3] => data_out[3]~reg0.DATAIN
+data_in[4] => data_out[4]~reg0.DATAIN
+data_in[5] => data_out[5]~reg0.DATAIN
+data_in[6] => data_out[6]~reg0.DATAIN
+data_in[7] => data_out[7]~reg0.DATAIN
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= data_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= data_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top_module|Timer:timer_inst
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => count[4].CLK
+clk => count[5].CLK
+clk => count[6].CLK
+clk => count[7].CLK
+rst => always0.IN0
+rst_timer => always0.IN1
+timer_out[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+timer_out[1] <= count[1].DB_MAX_OUTPUT_PORT_TYPE
+timer_out[2] <= count[2].DB_MAX_OUTPUT_PORT_TYPE
+timer_out[3] <= count[3].DB_MAX_OUTPUT_PORT_TYPE
+timer_out[4] <= count[4].DB_MAX_OUTPUT_PORT_TYPE
+timer_out[5] <= count[5].DB_MAX_OUTPUT_PORT_TYPE
+timer_out[6] <= count[6].DB_MAX_OUTPUT_PORT_TYPE
+timer_out[7] <= count[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top_module|Comparator:comparator_inst
+timer_out[0] => LessThan0.IN16
+timer_out[1] => LessThan0.IN15
+timer_out[2] => LessThan0.IN14
+timer_out[3] => LessThan0.IN13
+timer_out[4] => LessThan0.IN12
+timer_out[5] => LessThan0.IN11
+timer_out[6] => LessThan0.IN10
+timer_out[7] => LessThan0.IN9
+t0 <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top_module|FSM:fsm_inst
+clk => state~1.DATAIN
+rst => state~3.DATAIN
+M => next_state.01.DATAB
+M => next_state.10.DATAB
+t0 => Selector1.IN3
+t0 => Selector0.IN2
+rst_manual => Selector0.IN3
+rst_manual => Selector1.IN1
+rst_timer <= rst_timer.DB_MAX_OUTPUT_PORT_TYPE
+enable_mant <= enable_mant.DB_MAX_OUTPUT_PORT_TYPE
+mux_cont <= mux_cont.DB_MAX_OUTPUT_PORT_TYPE
+current_state[0] <= current_state.DB_MAX_OUTPUT_PORT_TYPE
+current_state[1] <= current_state.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top_module|Register_maintenance:reg_maint_inst
+clk => data_out[0]~reg0.CLK
+clk => data_out[1]~reg0.CLK
+clk => data_out[2]~reg0.CLK
+clk => data_out[3]~reg0.CLK
+clk => data_out[4]~reg0.CLK
+clk => data_out[5]~reg0.CLK
+clk => data_out[6]~reg0.CLK
+clk => data_out[7]~reg0.CLK
+rst => data_out[0]~reg0.ACLR
+rst => data_out[1]~reg0.ACLR
+rst => data_out[2]~reg0.ACLR
+rst => data_out[3]~reg0.ACLR
+rst => data_out[4]~reg0.ACLR
+rst => data_out[5]~reg0.ACLR
+rst => data_out[6]~reg0.ACLR
+rst => data_out[7]~reg0.ACLR
+enable => data_out[0]~reg0.ENA
+enable => data_out[7]~reg0.ENA
+enable => data_out[6]~reg0.ENA
+enable => data_out[5]~reg0.ENA
+enable => data_out[4]~reg0.ENA
+enable => data_out[3]~reg0.ENA
+enable => data_out[2]~reg0.ENA
+enable => data_out[1]~reg0.ENA
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= data_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= data_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top_module|Mux:mux_inst
+input1[0] => output_mux.DATAB
+input1[1] => output_mux.DATAB
+input1[2] => output_mux.DATAB
+input1[3] => output_mux.DATAB
+input1[4] => output_mux.DATAB
+input1[5] => output_mux.DATAB
+input1[6] => output_mux.DATAB
+input1[7] => output_mux.DATAB
+input2[0] => output_mux.DATAA
+input2[1] => output_mux.DATAA
+input2[2] => output_mux.DATAA
+input2[3] => output_mux.DATAA
+input2[4] => output_mux.DATAA
+input2[5] => output_mux.DATAA
+input2[6] => output_mux.DATAA
+input2[7] => output_mux.DATAA
+mux_cont => output_mux.OUTPUTSELECT
+mux_cont => output_mux.OUTPUTSELECT
+mux_cont => output_mux.OUTPUTSELECT
+mux_cont => output_mux.OUTPUTSELECT
+mux_cont => output_mux.OUTPUTSELECT
+mux_cont => output_mux.OUTPUTSELECT
+mux_cont => output_mux.OUTPUTSELECT
+mux_cont => output_mux.OUTPUTSELECT
+output_mux[0] <= output_mux.DB_MAX_OUTPUT_PORT_TYPE
+output_mux[1] <= output_mux.DB_MAX_OUTPUT_PORT_TYPE
+output_mux[2] <= output_mux.DB_MAX_OUTPUT_PORT_TYPE
+output_mux[3] <= output_mux.DB_MAX_OUTPUT_PORT_TYPE
+output_mux[4] <= output_mux.DB_MAX_OUTPUT_PORT_TYPE
+output_mux[5] <= output_mux.DB_MAX_OUTPUT_PORT_TYPE
+output_mux[6] <= output_mux.DB_MAX_OUTPUT_PORT_TYPE
+output_mux[7] <= output_mux.DB_MAX_OUTPUT_PORT_TYPE
+
+

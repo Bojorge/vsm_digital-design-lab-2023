@@ -1,0 +1,13 @@
+module Mux(input [7:0] input1, 
+           input [7:0] input2,
+           input mux_cont, 
+           output reg [7:0] output);
+
+  always @(mux_cont or input1 or input2) begin
+    if (mux_cont) // Si mux_cont es alto, selecciona input2
+      output <= input2;
+    else        // Si mux_cont es bajo, selecciona input1
+      output <= input1;
+  end
+
+endmodule

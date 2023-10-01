@@ -1,0 +1,23 @@
+module Timer(input clk,       // Entrada de reloj
+             input rst,       // Entrada de reinicio general
+             input rst_timer, // Entrada de reinicio del temporizador
+             output reg timer_out); // Salida del temporizador
+
+  reg [31:0] count; // Contador de temporizador de 32 bits
+
+  // Proceso que maneja el contador de temporizador
+  always @(posedge clk or posedge rst) begin
+    if (rst)         // Reinicio general
+      count <= 0;
+    else if (rst_timer) // Reinicio del temporizador
+      count <= 0;
+    else if (count == 32'hFFFFFFFF) // Verifica el desbordamiento
+      count <= 0;
+    else
+      count <= count + 1'b1;
+  end
+
+  // Salida del temporizador
+  assign timer_out = (count == 32'hFFFFFFFF);
+
+endmodule
