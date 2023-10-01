@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Tarea_2
-Sat Sep 30 18:11:44 2023
+Sat Sep 30 18:46:44 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -39,7 +39,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sat Sep 30 18:11:44 2023          ;
+; Analysis & Elaboration Status ; Successful - Sat Sep 30 18:46:44 2023          ;
 ; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                 ; Tarea_2                                        ;
 ; Top-level Entity Name         ; Top_module                                     ;
@@ -182,43 +182,39 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sat Sep 30 18:11:02 2023
+    Info: Processing started: Sat Sep 30 18:46:17 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Tarea_2 -c Tarea_2 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file fsm.sv
-    Info (12023): Found entity 1: FSM File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/FSM.sv Line: 1
+    Info (12023): Found entity 1: FSM File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/FSM.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file timer.sv
-    Info (12023): Found entity 1: Timer File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Timer.sv Line: 1
+    Info (12023): Found entity 1: Timer File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Timer.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file comparator.sv
-    Info (12023): Found entity 1: Comparator File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Comparator.sv Line: 1
+    Info (12023): Found entity 1: Comparator File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Comparator.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file register_state.sv
-    Info (12023): Found entity 1: Register_state File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Register_state.sv Line: 1
+    Info (12023): Found entity 1: Register_state File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Register_state.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file register_maintenance.sv
-    Info (12023): Found entity 1: Register_maintenance File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Register_maintenance.sv Line: 1
-Warning (12090): Entity "Mux" obtained from "Mux.sv" instead of from Quartus Prime megafunction library File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Mux.sv Line: 1
+    Info (12023): Found entity 1: Register_maintenance File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Register_maintenance.sv Line: 1
+Warning (12090): Entity "Mux" obtained from "Mux.sv" instead of from Quartus Prime megafunction library File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Mux.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux.sv
-    Info (12023): Found entity 1: Mux File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Mux.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file fsm_2.sv
-    Info (12023): Found entity 1: FSM_2 File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/FSM_2.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file fsm_2_tb.sv
-    Info (12023): Found entity 1: FSM_2_tb File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/FSM_2_tb.sv Line: 1
+    Info (12023): Found entity 1: Mux File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Mux.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file top_module.sv
-    Info (12023): Found entity 1: Top_module File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module.sv Line: 1
+    Info (12023): Found entity 1: Top_module File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file top_module_tb.sv
-    Info (12023): Found entity 1: Top_module_tb File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module_tb.sv Line: 1
+    Info (12023): Found entity 1: Top_module_tb File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module_tb.sv Line: 1
 Info (12127): Elaborating entity "Top_module" for the top level hierarchy
-Info (12128): Elaborating entity "Register_state" for hierarchy "Register_state:reg_state_inst" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module.sv Line: 22
-Info (12128): Elaborating entity "Timer" for hierarchy "Timer:timer_inst" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module.sv Line: 24
-Info (12128): Elaborating entity "Comparator" for hierarchy "Comparator:comparator_inst" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module.sv Line: 26
-Info (12128): Elaborating entity "FSM" for hierarchy "FSM:fsm_inst" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module.sv Line: 28
-Info (12128): Elaborating entity "Register_maintenance" for hierarchy "Register_maintenance:reg_maint_inst" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module.sv Line: 30
-Info (12128): Elaborating entity "Mux" for hierarchy "Mux:mux_inst" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module.sv Line: 32
+Info (12128): Elaborating entity "Register_state" for hierarchy "Register_state:reg_state_inst" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module.sv Line: 22
+Info (12128): Elaborating entity "Timer" for hierarchy "Timer:timer_inst" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module.sv Line: 24
+Info (12128): Elaborating entity "Comparator" for hierarchy "Comparator:comparator_inst" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module.sv Line: 26
+Info (12128): Elaborating entity "FSM" for hierarchy "FSM:fsm_inst" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module.sv Line: 28
+Info (12128): Elaborating entity "Register_maintenance" for hierarchy "Register_maintenance:reg_maint_inst" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module.sv Line: 30
+Info (12128): Elaborating entity "Mux" for hierarchy "Mux:mux_inst" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module.sv Line: 32
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4791 megabytes
-    Info: Processing ended: Sat Sep 30 18:11:44 2023
-    Info: Elapsed time: 00:00:42
+    Info: Peak virtual memory: 4785 megabytes
+    Info: Processing ended: Sat Sep 30 18:46:44 2023
+    Info: Elapsed time: 00:00:27
     Info: Total CPU time (on all processors): 00:00:42
 
 

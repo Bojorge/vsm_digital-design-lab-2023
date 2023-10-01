@@ -8,56 +8,56 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/simulation/modelsim
+Z0 dC:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/simulation/modelsim
 vComparator
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1696119295
+Z2 !s110 1696121073
 !i10b 1
 !s100 lN_a1oF<[dCi6:WhQSzh[0
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I_DX>6nODjhz9fiX2DhWlT3
+I]30KkedSmgKTL8zi2o@503
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
 w1696046779
-8C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Comparator.sv
-FC:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Comparator.sv
+8C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Comparator.sv
+FC:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Comparator.sv
 !i122 2
 L0 1 13
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1696119295.000000
-!s107 C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Comparator.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2|C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Comparator.sv|
+Z6 !s108 1696121073.000000
+!s107 C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Comparator.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2|C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Comparator.sv|
 !i113 1
 Z7 o-sv -work work
-Z8 !s92 -sv -work work {+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2}
+Z8 !s92 -sv -work work {+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2}
 Z9 tCvgOpt 0
 n@comparator
 vFSM
 R1
-Z10 !s110 1696119294
+R2
 !i10b 1
 !s100 b5?gG5oA1c4RjLM?hBz>L2
 R3
-I^TkAI3@98FNF17EU7PKTT0
+I3_P9FXb`n_lbIH910=<6:0
 R4
 S1
 R0
 w1696045922
-8C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/FSM.sv
-FC:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/FSM.sv
+8C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/FSM.sv
+FC:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/FSM.sv
 !i122 0
 L0 1 45
 R5
 r1
 !s85 0
 31
-Z11 !s108 1696119294.000000
-!s107 C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/FSM.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2|C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/FSM.sv|
+!s108 1696121072.000000
+!s107 C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/FSM.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2|C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/FSM.sv|
 !i113 1
 R7
 R8
@@ -65,26 +65,26 @@ R9
 n@f@s@m
 vMux
 R1
-Z12 !s110 1696119296
+Z10 !s110 1696121074
 !i10b 1
 !s100 @Am<LcaR;QL<QYH8:WWRO0
 R3
-INBSLW4zPHKR;=X>bBDTd[2
+IYU29aJNB1LhAeaW9`2YLi0
 R4
 S1
 R0
 w1696047366
-8C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Mux.sv
-FC:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Mux.sv
+8C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Mux.sv
+FC:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Mux.sv
 !i122 5
 L0 1 10
 R5
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Mux.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2|C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Mux.sv|
+Z11 !s108 1696121074.000000
+!s107 C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Mux.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2|C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Mux.sv|
 !i113 1
 R7
 R8
@@ -92,26 +92,26 @@ R9
 n@mux
 vRegister_maintenance
 R1
-R2
+R10
 !i10b 1
 !s100 EZdiOLlEcEU=gB5V25?7A3
 R3
-Iz^0cJVMPd_WME>XM_GnSa0
+IzEf^jn91fTO:<GbOmV8581
 R4
 S1
 R0
 w1696047138
-8C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Register_maintenance.sv
-FC:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Register_maintenance.sv
+8C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Register_maintenance.sv
+FC:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Register_maintenance.sv
 !i122 4
 L0 1 16
 R5
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Register_maintenance.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2|C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Register_maintenance.sv|
+R11
+!s107 C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Register_maintenance.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2|C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Register_maintenance.sv|
 !i113 1
 R7
 R8
@@ -123,13 +123,13 @@ R2
 !i10b 1
 !s100 I^NB3VC9PX<P1a4P_4RaS0
 R3
-I0iKWgc=c:ik]f7=?`imEB1
+IdAmhh76:cWG<:W6cl;=8[2
 R4
 S1
 R0
 w1696047157
-8C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Register_state.sv
-FC:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Register_state.sv
+8C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Register_state.sv
+FC:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Register_state.sv
 !i122 3
 L0 1 14
 R5
@@ -137,8 +137,8 @@ r1
 !s85 0
 31
 R6
-!s107 C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Register_state.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2|C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Register_state.sv|
+!s107 C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Register_state.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2|C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Register_state.sv|
 !i113 1
 R7
 R8
@@ -146,26 +146,26 @@ R9
 n@register_state
 vTimer
 R1
-R10
+R2
 !i10b 1
 !s100 d?f0QR6W=gMO7dQFn?Mjc1
 R3
-IoNfWPPknVf?5kk=NFaC]D2
+IK]oZoiB[6I>bDVRZY`dc:1
 R4
 S1
 R0
 w1696046453
-8C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Timer.sv
-FC:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Timer.sv
+8C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Timer.sv
+FC:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Timer.sv
 !i122 1
 L0 1 22
 R5
 r1
 !s85 0
 31
-R11
-!s107 C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Timer.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2|C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Timer.sv|
+R6
+!s107 C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Timer.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2|C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Timer.sv|
 !i113 1
 R7
 R8
@@ -173,26 +173,26 @@ R9
 n@timer
 vTop_module
 R1
-R12
+R10
 !i10b 1
 !s100 J>XK4K`k3k@6=oB=0Q9Z<2
 R3
-IC;_4T9c1X`Z:R850XL:_W3
+I<]S[6eLGbaa>G7gi7XeL]0
 R4
 S1
 R0
 w1696045952
-8C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module.sv
-FC:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module.sv
+8C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module.sv
+FC:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module.sv
 !i122 6
 L0 1 37
 R5
 r1
 !s85 0
 31
-Z13 !s108 1696119296.000000
-!s107 C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2|C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module.sv|
+R11
+!s107 C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2|C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module.sv|
 !i113 1
 R7
 R8
@@ -200,26 +200,26 @@ R9
 n@top_module
 vTop_module_tb
 R1
-R12
+!s110 1696121075
 !i10b 1
-!s100 9nA5iWQc4eLZ?gdEO>iLC0
+!s100 RV07XE8B[[FLjG1Q928[X1
 R3
-IdB[GVk4ENe1GWO6eG[Eo@1
+IWn?jPiBKY532AkMfOXL5l1
 R4
 S1
 R0
-w1696119058
-8C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module_tb.sv
-FC:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module_tb.sv
+w1696120905
+8C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module_tb.sv
+FC:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module_tb.sv
 !i122 7
-L0 1 53
+L0 1 60
 R5
 r1
 !s85 0
 31
-R13
-!s107 C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2|C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module_tb.sv|
+R11
+!s107 C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2|C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module_tb.sv|
 !i113 1
 R7
 R8

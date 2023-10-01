@@ -13,7 +13,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:14:01 on Sep 30,2023
+# Start time: 18:43:44 on Sep 30,2023
 # vlog -reportprogress 300 -vlog01compat -work altera_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v 
 # -- Compiling module global
 # -- Compiling module carry
@@ -95,7 +95,7 @@
 # 	alt_iobuf_diff
 # 	alt_bidir_diff
 # 	alt_bidir_buf
-# End time: 18:14:04 on Sep 30,2023, Elapsed time: 0:00:03
+# End time: 18:43:47 on Sep 30,2023, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/lpm_ver
@@ -106,7 +106,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work lpm_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:14:05 on Sep 30,2023
+# Start time: 18:43:48 on Sep 30,2023
 # vlog -reportprogress 300 -vlog01compat -work lpm_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v 
 # -- Compiling module LPM_MEMORY_INITIALIZATION
 # -- Compiling module LPM_HINT_EVALUATION
@@ -170,7 +170,7 @@
 # 	lpm_inpad
 # 	lpm_outpad
 # 	lpm_bipad
-# End time: 18:14:06 on Sep 30,2023, Elapsed time: 0:00:01
+# End time: 18:43:49 on Sep 30,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/sgate_ver
@@ -181,7 +181,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work sgate_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:14:06 on Sep 30,2023
+# Start time: 18:43:50 on Sep 30,2023
 # vlog -reportprogress 300 -vlog01compat -work sgate_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v 
 # -- Compiling module oper_add
 # -- Compiling module oper_addsub
@@ -223,7 +223,7 @@
 # 	oper_decoder
 # 	oper_bus_mux
 # 	oper_latch
-# End time: 18:14:07 on Sep 30,2023, Elapsed time: 0:00:01
+# End time: 18:43:50 on Sep 30,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_mf_ver
@@ -234,7 +234,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_mf_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:14:07 on Sep 30,2023
+# Start time: 18:43:51 on Sep 30,2023
 # vlog -reportprogress 300 -vlog01compat -work altera_mf_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v 
 # -- Compiling module lcell
 # -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
@@ -364,7 +364,7 @@
 # 	alt_fault_injection
 # 	sld_virtual_jtag_basic
 # 	altsource_probe
-# End time: 18:14:11 on Sep 30,2023, Elapsed time: 0:00:04
+# End time: 18:43:55 on Sep 30,2023, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_lnsim_ver
@@ -375,7 +375,7 @@
 # Modifying modelsim.ini
 # vlog -sv -work altera_lnsim_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:14:12 on Sep 30,2023
+# Start time: 18:43:56 on Sep 30,2023
 # vlog -reportprogress 300 -sv -work altera_lnsim_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv 
 # -- Compiling package altera_lnsim_functions
 # -- Compiling package altera_generic_pll_functions
@@ -458,7 +458,7 @@
 # 	altera_iopll
 # 	fourteennm_altera_iopll
 # 	fourteennm_simple_iopll
-# End time: 18:14:15 on Sep 30,2023, Elapsed time: 0:00:03
+# End time: 18:43:58 on Sep 30,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_ver
@@ -469,7 +469,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:14:15 on Sep 30,2023
+# Start time: 18:43:58 on Sep 30,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -483,19 +483,19 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 18:14:24 on Sep 30,2023, Elapsed time: 0:00:09
+# End time: 18:44:07 on Sep 30,2023, Elapsed time: 0:00:09
 # Errors: 0, Warnings: 10
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:14:24 on Sep 30,2023
+# Start time: 18:44:07 on Sep 30,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 18:14:29 on Sep 30,2023, Elapsed time: 0:00:05
+# End time: 18:44:11 on Sep 30,2023, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:14:29 on Sep 30,2023
+# Start time: 18:44:11 on Sep 30,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.v 
 # -- Compiling UDP CYCLONEV_PRIM_DFFE
 # -- Compiling UDP CYCLONEV_PRIM_DFFEAS
@@ -635,7 +635,7 @@
 # 	cyclonev_mem_phy
 # 	cyclonev_oscillator
 # 	cyclonev_hps_interface_fpga2sdram
-# End time: 18:14:31 on Sep 30,2023, Elapsed time: 0:00:02
+# End time: 18:44:14 on Sep 30,2023, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_hssi_ver
@@ -646,15 +646,15 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:14:33 on Sep 30,2023
+# Start time: 18:44:15 on Sep 30,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 18:14:40 on Sep 30,2023, Elapsed time: 0:00:07
+# End time: 18:44:21 on Sep 30,2023, Elapsed time: 0:00:06
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:14:41 on Sep 30,2023
+# Start time: 18:44:21 on Sep 30,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.v 
 # -- Compiling module cyclonev_hssi_8g_pcs_aggregate
 # -- Compiling module cyclonev_hssi_8g_rx_pcs
@@ -754,7 +754,7 @@
 # 	arriav_hssi_avmm_interface
 # 	arriav_hssi_pma_hi_pmaif
 # 	arriav_hssi_pma_hi_xcvrif
-# End time: 18:14:42 on Sep 30,2023, Elapsed time: 0:00:01
+# End time: 18:44:22 on Sep 30,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_pcie_hip_ver
@@ -765,7 +765,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:14:43 on Sep 30,2023
+# Start time: 18:44:23 on Sep 30,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -775,18 +775,18 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 18:14:52 on Sep 30,2023, Elapsed time: 0:00:09
+# End time: 18:44:31 on Sep 30,2023, Elapsed time: 0:00:08
 # Errors: 0, Warnings: 6
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:14:52 on Sep 30,2023
+# Start time: 18:44:31 on Sep 30,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v 
 # -- Compiling module cyclonev_hd_altpe2_hip_top
 # -- Compiling module arriav_hd_altpe2_hip_top
 # 
 # Top level modules:
 # 	cyclonev_hd_altpe2_hip_top
-# End time: 18:14:53 on Sep 30,2023, Elapsed time: 0:00:01
+# End time: 18:44:32 on Sep 30,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # if {[file exists rtl_work]} {
@@ -798,91 +798,91 @@
 # vmap work rtl_work 
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Tareas/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/FSM.sv}
+# vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/FSM.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:14:54 on Sep 30,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2" C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/FSM.sv 
+# Start time: 18:44:32 on Sep 30,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2" C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/FSM.sv 
 # -- Compiling module FSM
 # 
 # Top level modules:
 # 	FSM
-# End time: 18:14:54 on Sep 30,2023, Elapsed time: 0:00:00
+# End time: 18:44:33 on Sep 30,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Tareas/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Timer.sv}
+# vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Timer.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:14:54 on Sep 30,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2" C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Timer.sv 
+# Start time: 18:44:33 on Sep 30,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2" C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Timer.sv 
 # -- Compiling module Timer
 # 
 # Top level modules:
 # 	Timer
-# End time: 18:14:54 on Sep 30,2023, Elapsed time: 0:00:00
+# End time: 18:44:33 on Sep 30,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Tareas/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Comparator.sv}
+# vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Comparator.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:14:55 on Sep 30,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2" C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Comparator.sv 
+# Start time: 18:44:33 on Sep 30,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2" C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Comparator.sv 
 # -- Compiling module Comparator
 # 
 # Top level modules:
 # 	Comparator
-# End time: 18:14:55 on Sep 30,2023, Elapsed time: 0:00:00
+# End time: 18:44:33 on Sep 30,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Tareas/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Register_state.sv}
+# vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Register_state.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:14:55 on Sep 30,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2" C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Register_state.sv 
+# Start time: 18:44:33 on Sep 30,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2" C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Register_state.sv 
 # -- Compiling module Register_state
 # 
 # Top level modules:
 # 	Register_state
-# End time: 18:14:55 on Sep 30,2023, Elapsed time: 0:00:00
+# End time: 18:44:33 on Sep 30,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Tareas/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Register_maintenance.sv}
+# vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Register_maintenance.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:14:55 on Sep 30,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2" C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Register_maintenance.sv 
+# Start time: 18:44:34 on Sep 30,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2" C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Register_maintenance.sv 
 # -- Compiling module Register_maintenance
 # 
 # Top level modules:
 # 	Register_maintenance
-# End time: 18:14:55 on Sep 30,2023, Elapsed time: 0:00:00
+# End time: 18:44:34 on Sep 30,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Tareas/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Mux.sv}
+# vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Mux.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:14:55 on Sep 30,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2" C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Mux.sv 
+# Start time: 18:44:34 on Sep 30,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2" C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Mux.sv 
 # -- Compiling module Mux
 # 
 # Top level modules:
 # 	Mux
-# End time: 18:14:56 on Sep 30,2023, Elapsed time: 0:00:01
+# End time: 18:44:34 on Sep 30,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Tareas/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module.sv}
+# vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:14:56 on Sep 30,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2" C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module.sv 
+# Start time: 18:44:34 on Sep 30,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2" C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module.sv 
 # -- Compiling module Top_module
 # 
 # Top level modules:
 # 	Top_module
-# End time: 18:14:56 on Sep 30,2023, Elapsed time: 0:00:00
+# End time: 18:44:34 on Sep 30,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Tareas/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module_tb.sv}
+# vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:14:56 on Sep 30,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2" C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module_tb.sv 
+# Start time: 18:44:34 on Sep 30,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2" C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module_tb.sv 
 # -- Compiling module Top_module_tb
 # 
 # Top level modules:
 # 	Top_module_tb
-# End time: 18:14:56 on Sep 30,2023, Elapsed time: 0:00:00
+# End time: 18:44:35 on Sep 30,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Top_module_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" Top_module_tb 
-# Start time: 18:14:56 on Sep 30,2023
+# Start time: 18:44:35 on Sep 30,2023
 # Loading sv_std.std
 # Loading work.Top_module_tb
 # Loading work.Top_module
@@ -892,10 +892,10 @@
 # Loading work.FSM
 # Loading work.Register_maintenance
 # Loading work.Mux
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (1) for port 'data_in'. The port definition is at: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Register_state.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /Top_module_tb/uut/reg_state_inst File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module.sv Line: 22
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (1) for port 'output_mux'. The port definition is at: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Mux.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /Top_module_tb/uut/mux_inst File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module.sv Line: 32
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (1) for port 'data_in'. The port definition is at: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Register_state.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Top_module_tb/uut/reg_state_inst File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (1) for port 'output_mux'. The port definition is at: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Mux.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /Top_module_tb/uut/mux_inst File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module.sv Line: 32
 # 
 # add wave *
 # view structure
@@ -911,7 +911,7 @@
 # Tiempo:                  110, Estado del sistema: 0, Registro de estado: zzzzzzzx
 # Tiempo:                  130, Estado del sistema: 2, Registro de estado: zzzzzzzx
 # Tiempo:                  150, Estado del sistema: 0, Registro de estado: zzzzzzzx
-# Tiempo:                  170, Estado del sistema: 2, Registro de estado: zzzzzzzx
+# Tiempo:                  170, Estado del sistema: 1, Registro de estado: zzzzzzzx
 # Tiempo:                  190, Estado del sistema: 0, Registro de estado: zzzzzzzx
 # Tiempo:                  210, Estado del sistema: 1, Registro de estado: zzzzzzzx
 # Tiempo:                  230, Estado del sistema: 0, Registro de estado: zzzzzzzx
@@ -921,9 +921,23 @@
 # Tiempo:                  310, Estado del sistema: 0, Registro de estado: zzzzzzzx
 # Tiempo:                  330, Estado del sistema: 1, Registro de estado: zzzzzzzx
 # Tiempo:                  350, Estado del sistema: 0, Registro de estado: zzzzzzzx
-# ** Note: $finish    : C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module_tb.sv(45)
-#    Time: 360 ps  Iteration: 0  Instance: /Top_module_tb
+# Tiempo:                  370, Estado del sistema: 2, Registro de estado: zzzzzzzx
+# Tiempo:                  390, Estado del sistema: 0, Registro de estado: zzzzzzzx
+# Tiempo:                  410, Estado del sistema: 2, Registro de estado: zzzzzzzx
+# Tiempo:                  430, Estado del sistema: 0, Registro de estado: zzzzzzzx
+# Tiempo:                  450, Estado del sistema: 2, Registro de estado: zzzzzzzx
+# Tiempo:                  470, Estado del sistema: 0, Registro de estado: zzzzzzzx
+# Tiempo:                  490, Estado del sistema: 2, Registro de estado: zzzzzzzx
+# Tiempo:                  510, Estado del sistema: 0, Registro de estado: zzzzzzzx
+# Tiempo:                  530, Estado del sistema: 2, Registro de estado: zzzzzzzx
+# Tiempo:                  550, Estado del sistema: 0, Registro de estado: zzzzzzzx
+# Tiempo:                  570, Estado del sistema: 2, Registro de estado: zzzzzzzx
+# Tiempo:                  590, Estado del sistema: 0, Registro de estado: zzzzzzzx
+# Tiempo:                  610, Estado del sistema: 2, Registro de estado: zzzzzzzx
+# Tiempo:                  630, Estado del sistema: 0, Registro de estado: zzzzzzzx
+# ** Note: $finish    : C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module_tb.sv(52)
+#    Time: 650 ps  Iteration: 0  Instance: /Top_module_tb
 # 1
-# Break in Module Top_module_tb at C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module_tb.sv line 45
-# End time: 18:24:36 on Sep 30,2023, Elapsed time: 0:09:40
+# Break in Module Top_module_tb at C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module_tb.sv line 52
+# End time: 18:45:14 on Sep 30,2023, Elapsed time: 0:00:39
 # Errors: 0, Warnings: 2

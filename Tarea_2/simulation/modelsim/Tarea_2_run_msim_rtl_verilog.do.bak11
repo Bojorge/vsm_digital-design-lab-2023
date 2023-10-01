@@ -45,15 +45,15 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Tareas/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/FSM.sv}
-vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Tareas/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Timer.sv}
-vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Tareas/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Comparator.sv}
-vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Tareas/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Register_state.sv}
-vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Tareas/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Register_maintenance.sv}
-vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Tareas/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Mux.sv}
-vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Tareas/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module.sv}
+vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/FSM.sv}
+vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Timer.sv}
+vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Comparator.sv}
+vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Register_state.sv}
+vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Register_maintenance.sv}
+vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Mux.sv}
+vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module.sv}
 
-vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Tareas/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Tareas/Tarea_2/Top_module_tb.sv}
+vlog -sv -work work +incdir+C:/Users/Bojtronic/Documents/TEC/Taller\ de\ digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2 {C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Tarea_2/Top_module_tb.sv}
 
 vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Top_module_tb
 

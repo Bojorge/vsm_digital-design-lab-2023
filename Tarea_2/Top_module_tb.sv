@@ -30,14 +30,21 @@ module Top_module_tb;
 	 rst = 0;
 	 rst_manual = 0;
 	 
-    
-    #150 
+    // Se preciona el boton de mantenimiento "M" a tiempo
+    #130 
 	 M = 1;
 
+	 // Pasan mas de 200 unidades de tiempo y no se preciona el boton de mantenimiento
 	 #210 
+	 M = 0;
+	 
+	 // Despues de un tiempo (100) en el estado 3, se hace reset manual
+	 #100
+	 rst_manual = 1;
    
-    
- 
+    // Despues del reset manual se pasa al estado 0 y nuevamente se preciona el boton de mantenimiento a tiempo
+	 #100 
+	 M = 1;
 
     
 
