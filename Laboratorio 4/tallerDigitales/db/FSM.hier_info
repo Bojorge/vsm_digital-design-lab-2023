@@ -1,0 +1,53 @@
+|Top
+hsync << VGA_Controller:vga_controller.hsync
+vsync << VGA_Controller:vga_controller.vsync
+red[0] << White_Screen:white_screen.red
+red[1] << White_Screen:white_screen.red
+red[2] << White_Screen:white_screen.red
+red[3] << White_Screen:white_screen.red
+green[0] << White_Screen:white_screen.green
+green[1] << White_Screen:white_screen.green
+green[2] << White_Screen:white_screen.green
+green[3] << White_Screen:white_screen.green
+blue[0] << White_Screen:white_screen.blue
+blue[1] << White_Screen:white_screen.blue
+blue[2] << White_Screen:white_screen.blue
+blue[3] << White_Screen:white_screen.blue
+
+
+|Top|VGA_Controller:vga_controller
+hsync <= hsync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+vsync <= vsync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk <= clock.DB_MAX_OUTPUT_PORT_TYPE
+blank <= blank.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top|White_Screen:white_screen
+red[0] <= red_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+red[1] <= red_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+red[2] <= red_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+red[3] <= red_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+green[0] <= green_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+green[1] <= green_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+green[2] <= green_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+green[3] <= green_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+blue[0] <= blue_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+blue[1] <= blue_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+blue[2] <= blue_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+blue[3] <= blue_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+clk => blue_reg[0].CLK
+clk => blue_reg[1].CLK
+clk => blue_reg[2].CLK
+clk => blue_reg[3].CLK
+clk => green_reg[0].CLK
+clk => green_reg[1].CLK
+clk => green_reg[2].CLK
+clk => green_reg[3].CLK
+clk => red_reg[0].CLK
+clk => red_reg[1].CLK
+clk => red_reg[2].CLK
+clk => red_reg[3].CLK
+hsync => ~NO_FANOUT~
+vsync => ~NO_FANOUT~
+
+
