@@ -2,100 +2,148 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1100mV 85C Model Setup 'horizontal_counter:vga_horizontal|h_Count_Value[10]'
+Slack : -8.003
+TNS   : -8.003
+
 Type  : Slow 1100mV 85C Model Setup 'clock'
-Slack : -5.127
-TNS   : -103.599
+Slack : -4.925
+TNS   : -127.721
 
 Type  : Slow 1100mV 85C Model Setup 'clock_divider:vga_clock_gen|divided_clk'
-Slack : -2.238
-TNS   : -104.157
-
-Type  : Slow 1100mV 85C Model Hold 'clock_divider:vga_clock_gen|divided_clk'
-Slack : 0.278
-TNS   : 0.000
+Slack : -3.865
+TNS   : -97.468
 
 Type  : Slow 1100mV 85C Model Hold 'clock'
-Slack : 0.383
-TNS   : 0.000
+Slack : -3.237
+TNS   : -3.237
+
+Type  : Slow 1100mV 85C Model Hold 'horizontal_counter:vga_horizontal|h_Count_Value[10]'
+Slack : -2.098
+TNS   : -2.098
+
+Type  : Slow 1100mV 85C Model Hold 'clock_divider:vga_clock_gen|divided_clk'
+Slack : -0.935
+TNS   : -4.024
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'horizontal_counter:vga_horizontal|h_Count_Value[10]'
+Slack : -1.718
+TNS   : -23.773
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock'
-Slack : -0.841
-TNS   : -22.763
+Slack : -0.879
+TNS   : -27.018
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock_divider:vga_clock_gen|divided_clk'
 Slack : -0.394
-TNS   : -25.932
+TNS   : -17.225
+
+Type  : Slow 1100mV 0C Model Setup 'horizontal_counter:vga_horizontal|h_Count_Value[10]'
+Slack : -7.731
+TNS   : -7.731
 
 Type  : Slow 1100mV 0C Model Setup 'clock'
-Slack : -5.295
-TNS   : -100.431
+Slack : -5.130
+TNS   : -126.147
 
 Type  : Slow 1100mV 0C Model Setup 'clock_divider:vga_clock_gen|divided_clk'
-Slack : -2.235
-TNS   : -104.121
-
-Type  : Slow 1100mV 0C Model Hold 'clock_divider:vga_clock_gen|divided_clk'
-Slack : 0.281
-TNS   : 0.000
+Slack : -3.744
+TNS   : -95.243
 
 Type  : Slow 1100mV 0C Model Hold 'clock'
-Slack : 0.382
-TNS   : 0.000
+Slack : -3.039
+TNS   : -3.039
+
+Type  : Slow 1100mV 0C Model Hold 'horizontal_counter:vga_horizontal|h_Count_Value[10]'
+Slack : -2.141
+TNS   : -2.141
+
+Type  : Slow 1100mV 0C Model Hold 'clock_divider:vga_clock_gen|divided_clk'
+Slack : -0.791
+TNS   : -3.061
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'horizontal_counter:vga_horizontal|h_Count_Value[10]'
+Slack : -1.761
+TNS   : -23.966
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock'
-Slack : -0.856
-TNS   : -25.376
+Slack : -0.887
+TNS   : -29.367
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock_divider:vga_clock_gen|divided_clk'
 Slack : -0.394
-TNS   : -25.695
+TNS   : -17.051
+
+Type  : Fast 1100mV 85C Model Setup 'horizontal_counter:vga_horizontal|h_Count_Value[10]'
+Slack : -4.635
+TNS   : -4.635
 
 Type  : Fast 1100mV 85C Model Setup 'clock'
-Slack : -4.226
-TNS   : -44.524
+Slack : -2.906
+TNS   : -54.614
 
 Type  : Fast 1100mV 85C Model Setup 'clock_divider:vga_clock_gen|divided_clk'
-Slack : -1.045
-TNS   : -45.260
-
-Type  : Fast 1100mV 85C Model Hold 'clock_divider:vga_clock_gen|divided_clk'
-Slack : 0.094
-TNS   : 0.000
+Slack : -1.990
+TNS   : -46.646
 
 Type  : Fast 1100mV 85C Model Hold 'clock'
-Slack : 0.204
-TNS   : 0.000
+Slack : -1.822
+TNS   : -1.822
+
+Type  : Fast 1100mV 85C Model Hold 'horizontal_counter:vga_horizontal|h_Count_Value[10]'
+Slack : -1.120
+TNS   : -1.120
+
+Type  : Fast 1100mV 85C Model Hold 'clock_divider:vga_clock_gen|divided_clk'
+Slack : -0.698
+TNS   : -3.200
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'horizontal_counter:vga_horizontal|h_Count_Value[10]'
+Slack : -0.794
+TNS   : -8.775
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock'
-Slack : -0.766
-TNS   : -4.481
+Slack : -0.769
+TNS   : -5.236
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock_divider:vga_clock_gen|divided_clk'
-Slack : 0.125
+Slack : 0.104
 TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'horizontal_counter:vga_horizontal|h_Count_Value[10]'
+Slack : -4.107
+TNS   : -4.107
 
 Type  : Fast 1100mV 0C Model Setup 'clock'
-Slack : -3.638
-TNS   : -38.127
+Slack : -2.727
+TNS   : -47.289
 
 Type  : Fast 1100mV 0C Model Setup 'clock_divider:vga_clock_gen|divided_clk'
-Slack : -0.883
-TNS   : -38.907
-
-Type  : Fast 1100mV 0C Model Hold 'clock_divider:vga_clock_gen|divided_clk'
-Slack : 0.081
-TNS   : 0.000
+Slack : -1.739
+TNS   : -40.736
 
 Type  : Fast 1100mV 0C Model Hold 'clock'
-Slack : 0.190
-TNS   : 0.000
+Slack : -1.675
+TNS   : -1.675
+
+Type  : Fast 1100mV 0C Model Hold 'horizontal_counter:vga_horizontal|h_Count_Value[10]'
+Slack : -1.041
+TNS   : -1.041
+
+Type  : Fast 1100mV 0C Model Hold 'clock_divider:vga_clock_gen|divided_clk'
+Slack : -0.627
+TNS   : -2.782
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock'
-Slack : -0.739
-TNS   : -4.482
+Slack : -0.743
+TNS   : -5.266
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'horizontal_counter:vga_horizontal|h_Count_Value[10]'
+Slack : -0.648
+TNS   : -6.351
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock_divider:vga_clock_gen|divided_clk'
-Slack : 0.140
+Slack : 0.117
 TNS   : 0.000
 
 ------------------------------------------------------------
