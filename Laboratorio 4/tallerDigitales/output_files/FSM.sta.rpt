@@ -1,5 +1,5 @@
 Timing Analyzer report for FSM
-Wed Oct 11 04:21:25 2023
+Wed Oct 11 13:45:26 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -98,18 +98,18 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.36        ;
+; Average used               ; 1.34        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   5.5%      ;
-;     Processor 3            ;   5.3%      ;
-;     Processor 4            ;   5.2%      ;
-;     Processor 5            ;   5.0%      ;
-;     Processor 6            ;   4.9%      ;
-;     Processor 7            ;   4.9%      ;
-;     Processor 8            ;   4.9%      ;
+;     Processor 2            ;   5.3%      ;
+;     Processor 3            ;   5.1%      ;
+;     Processor 4            ;   5.0%      ;
+;     Processor 5            ;   4.8%      ;
+;     Processor 6            ;   4.8%      ;
+;     Processor 7            ;   4.7%      ;
+;     Processor 8            ;   4.7%      ;
 +----------------------------+-------------+
 
 
@@ -129,9 +129,9 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+-----------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                          ; Note ;
 +------------+-----------------+-----------------------------------------------------+------+
-; 59.46 MHz  ; 59.46 MHz       ; horizontal_counter:vga_horizontal|h_Count_Value[10] ;      ;
-; 174.43 MHz ; 174.43 MHz      ; clock                                               ;      ;
-; 277.39 MHz ; 277.39 MHz      ; clock_divider:vga_clock_gen|divided_clk             ;      ;
+; 79.76 MHz  ; 79.76 MHz       ; horizontal_counter:vga_horizontal|h_Count_Value[10] ;      ;
+; 175.78 MHz ; 175.78 MHz      ; clock                                               ;      ;
+; 290.02 MHz ; 290.02 MHz      ; clock_divider:vga_clock_gen|divided_clk             ;      ;
 +------------+-----------------+-----------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -142,15 +142,15 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 HTML report is unavailable in plain text report export.
 
 
-+-------------------------------------------------------------------------------+
-; Slow 1100mV 85C Model Setup Summary                                           ;
-+-----------------------------------------------------+---------+---------------+
-; Clock                                               ; Slack   ; End Point TNS ;
-+-----------------------------------------------------+---------+---------------+
-; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -10.525 ; -45.155       ;
-; clock                                               ; -4.733  ; -114.613      ;
-; clock_divider:vga_clock_gen|divided_clk             ; -2.605  ; -80.869       ;
-+-----------------------------------------------------+---------+---------------+
++------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Setup Summary                                          ;
++-----------------------------------------------------+--------+---------------+
+; Clock                                               ; Slack  ; End Point TNS ;
++-----------------------------------------------------+--------+---------------+
+; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -7.473 ; -28.926       ;
+; clock                                               ; -4.962 ; -119.150      ;
+; clock_divider:vga_clock_gen|divided_clk             ; -2.448 ; -75.209       ;
++-----------------------------------------------------+--------+---------------+
 
 
 +------------------------------------------------------------------------------+
@@ -158,9 +158,9 @@ HTML report is unavailable in plain text report export.
 +-----------------------------------------------------+--------+---------------+
 ; Clock                                               ; Slack  ; End Point TNS ;
 +-----------------------------------------------------+--------+---------------+
-; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -3.402 ; -13.977       ;
-; clock                                               ; -2.665 ; -2.665        ;
-; clock_divider:vga_clock_gen|divided_clk             ; -1.240 ; -11.265       ;
+; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -3.917 ; -14.926       ;
+; clock_divider:vga_clock_gen|divided_clk             ; -0.920 ; -5.845        ;
+; clock                                               ; 0.521  ; 0.000         ;
 +-----------------------------------------------------+--------+---------------+
 
 
@@ -181,9 +181,9 @@ No paths to report.
 +-----------------------------------------------------+--------+---------------+
 ; Clock                                               ; Slack  ; End Point TNS ;
 +-----------------------------------------------------+--------+---------------+
-; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -2.633 ; -87.986       ;
-; clock                                               ; -0.920 ; -25.513       ;
-; clock_divider:vga_clock_gen|divided_clk             ; -0.394 ; -18.099       ;
+; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -2.891 ; -72.317       ;
+; clock                                               ; -0.894 ; -26.022       ;
+; clock_divider:vga_clock_gen|divided_clk             ; -0.394 ; -17.121       ;
 +-----------------------------------------------------+--------+---------------+
 
 
@@ -198,22 +198,22 @@ No synchronizer chains to report.
 +------------+-----------------+-----------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                          ; Note ;
 +------------+-----------------+-----------------------------------------------------+------+
-; 59.79 MHz  ; 59.79 MHz       ; horizontal_counter:vga_horizontal|h_Count_Value[10] ;      ;
-; 167.31 MHz ; 167.31 MHz      ; clock                                               ;      ;
-; 284.41 MHz ; 284.41 MHz      ; clock_divider:vga_clock_gen|divided_clk             ;      ;
+; 80.66 MHz  ; 80.66 MHz       ; horizontal_counter:vga_horizontal|h_Count_Value[10] ;      ;
+; 167.34 MHz ; 167.34 MHz      ; clock                                               ;      ;
+; 291.97 MHz ; 291.97 MHz      ; clock_divider:vga_clock_gen|divided_clk             ;      ;
 +------------+-----------------+-----------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+-------------------------------------------------------------------------------+
-; Slow 1100mV 0C Model Setup Summary                                            ;
-+-----------------------------------------------------+---------+---------------+
-; Clock                                               ; Slack   ; End Point TNS ;
-+-----------------------------------------------------+---------+---------------+
-; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -10.226 ; -44.064       ;
-; clock                                               ; -4.977  ; -112.743      ;
-; clock_divider:vga_clock_gen|divided_clk             ; -2.516  ; -78.727       ;
-+-----------------------------------------------------+---------+---------------+
++------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Setup Summary                                           ;
++-----------------------------------------------------+--------+---------------+
+; Clock                                               ; Slack  ; End Point TNS ;
++-----------------------------------------------------+--------+---------------+
+; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -7.234 ; -28.139       ;
+; clock                                               ; -4.976 ; -118.536      ;
+; clock_divider:vga_clock_gen|divided_clk             ; -2.425 ; -74.532       ;
++-----------------------------------------------------+--------+---------------+
 
 
 +------------------------------------------------------------------------------+
@@ -221,9 +221,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------------------+--------+---------------+
 ; Clock                                               ; Slack  ; End Point TNS ;
 +-----------------------------------------------------+--------+---------------+
-; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -3.286 ; -13.953       ;
-; clock                                               ; -2.437 ; -2.437        ;
-; clock_divider:vga_clock_gen|divided_clk             ; -1.158 ; -10.098       ;
+; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -3.976 ; -15.074       ;
+; clock_divider:vga_clock_gen|divided_clk             ; -0.836 ; -4.686        ;
+; clock                                               ; 0.534  ; 0.000         ;
 +-----------------------------------------------------+--------+---------------+
 
 
@@ -244,9 +244,9 @@ No paths to report.
 +-----------------------------------------------------+--------+---------------+
 ; Clock                                               ; Slack  ; End Point TNS ;
 +-----------------------------------------------------+--------+---------------+
-; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -2.624 ; -89.220       ;
-; clock                                               ; -0.931 ; -28.087       ;
-; clock_divider:vga_clock_gen|divided_clk             ; -0.394 ; -18.013       ;
+; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -2.891 ; -72.788       ;
+; clock                                               ; -0.902 ; -29.022       ;
+; clock_divider:vga_clock_gen|divided_clk             ; -0.394 ; -16.945       ;
 +-----------------------------------------------------+--------+---------------+
 
 
@@ -261,9 +261,9 @@ No synchronizer chains to report.
 +-----------------------------------------------------+--------+---------------+
 ; Clock                                               ; Slack  ; End Point TNS ;
 +-----------------------------------------------------+--------+---------------+
-; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -5.916 ; -25.694       ;
-; clock                                               ; -2.861 ; -47.974       ;
-; clock_divider:vga_clock_gen|divided_clk             ; -1.304 ; -36.942       ;
+; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -4.318 ; -16.343       ;
+; clock                                               ; -4.133 ; -48.205       ;
+; clock_divider:vga_clock_gen|divided_clk             ; -1.159 ; -34.397       ;
 +-----------------------------------------------------+--------+---------------+
 
 
@@ -272,9 +272,9 @@ No synchronizer chains to report.
 +-----------------------------------------------------+--------+---------------+
 ; Clock                                               ; Slack  ; End Point TNS ;
 +-----------------------------------------------------+--------+---------------+
-; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -2.149 ; -9.095        ;
-; clock                                               ; -1.459 ; -1.459        ;
-; clock_divider:vga_clock_gen|divided_clk             ; -0.817 ; -8.608        ;
+; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -2.533 ; -9.309        ;
+; clock_divider:vga_clock_gen|divided_clk             ; -0.638 ; -5.581        ;
+; clock                                               ; 0.265  ; 0.000         ;
 +-----------------------------------------------------+--------+---------------+
 
 
@@ -295,9 +295,9 @@ No paths to report.
 +-----------------------------------------------------+--------+---------------+
 ; Clock                                               ; Slack  ; End Point TNS ;
 +-----------------------------------------------------+--------+---------------+
-; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -1.415 ; -33.185       ;
-; clock                                               ; -0.805 ; -5.014        ;
-; clock_divider:vga_clock_gen|divided_clk             ; 0.044  ; 0.000         ;
+; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -1.580 ; -26.707       ;
+; clock                                               ; -0.771 ; -4.900        ;
+; clock_divider:vga_clock_gen|divided_clk             ; 0.105  ; 0.000         ;
 +-----------------------------------------------------+--------+---------------+
 
 
@@ -312,9 +312,9 @@ No synchronizer chains to report.
 +-----------------------------------------------------+--------+---------------+
 ; Clock                                               ; Slack  ; End Point TNS ;
 +-----------------------------------------------------+--------+---------------+
-; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -5.228 ; -22.640       ;
-; clock                                               ; -2.699 ; -41.319       ;
-; clock_divider:vga_clock_gen|divided_clk             ; -1.134 ; -32.528       ;
+; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -3.775 ; -14.352       ;
+; clock                                               ; -3.596 ; -41.816       ;
+; clock_divider:vga_clock_gen|divided_clk             ; -1.005 ; -29.399       ;
 +-----------------------------------------------------+--------+---------------+
 
 
@@ -323,9 +323,9 @@ No synchronizer chains to report.
 +-----------------------------------------------------+--------+---------------+
 ; Clock                                               ; Slack  ; End Point TNS ;
 +-----------------------------------------------------+--------+---------------+
-; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -1.944 ; -8.253        ;
-; clock                                               ; -1.327 ; -1.327        ;
-; clock_divider:vga_clock_gen|divided_clk             ; -0.755 ; -7.906        ;
+; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -2.325 ; -8.575        ;
+; clock_divider:vga_clock_gen|divided_clk             ; -0.593 ; -5.156        ;
+; clock                                               ; 0.252  ; 0.000         ;
 +-----------------------------------------------------+--------+---------------+
 
 
@@ -346,9 +346,9 @@ No paths to report.
 +-----------------------------------------------------+--------+---------------+
 ; Clock                                               ; Slack  ; End Point TNS ;
 +-----------------------------------------------------+--------+---------------+
-; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -1.201 ; -26.837       ;
-; clock                                               ; -0.777 ; -5.109        ;
-; clock_divider:vga_clock_gen|divided_clk             ; 0.067  ; 0.000         ;
+; horizontal_counter:vga_horizontal|h_Count_Value[10] ; -1.355 ; -21.954       ;
+; clock                                               ; -0.744 ; -5.029        ;
+; clock_divider:vga_clock_gen|divided_clk             ; 0.112  ; 0.000         ;
 +-----------------------------------------------------+--------+---------------+
 
 
@@ -363,14 +363,14 @@ No synchronizer chains to report.
 +------------------------------------------------------+----------+---------+----------+---------+---------------------+
 ; Clock                                                ; Setup    ; Hold    ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------------------------------------------+----------+---------+----------+---------+---------------------+
-; Worst-case Slack                                     ; -10.525  ; -3.402  ; N/A      ; N/A     ; -2.633              ;
-;  clock                                               ; -4.977   ; -2.665  ; N/A      ; N/A     ; -0.931              ;
-;  clock_divider:vga_clock_gen|divided_clk             ; -2.605   ; -1.240  ; N/A      ; N/A     ; -0.394              ;
-;  horizontal_counter:vga_horizontal|h_Count_Value[10] ; -10.525  ; -3.402  ; N/A      ; N/A     ; -2.633              ;
-; Design-wide TNS                                      ; -240.637 ; -27.907 ; 0.0      ; 0.0     ; -135.32             ;
-;  clock                                               ; -114.613 ; -2.665  ; N/A      ; N/A     ; -28.087             ;
-;  clock_divider:vga_clock_gen|divided_clk             ; -80.869  ; -11.265 ; N/A      ; N/A     ; -18.099             ;
-;  horizontal_counter:vga_horizontal|h_Count_Value[10] ; -45.155  ; -13.977 ; N/A      ; N/A     ; -89.220             ;
+; Worst-case Slack                                     ; -7.473   ; -3.976  ; N/A      ; N/A     ; -2.891              ;
+;  clock                                               ; -4.976   ; 0.252   ; N/A      ; N/A     ; -0.902              ;
+;  clock_divider:vga_clock_gen|divided_clk             ; -2.448   ; -0.920  ; N/A      ; N/A     ; -0.394              ;
+;  horizontal_counter:vga_horizontal|h_Count_Value[10] ; -7.473   ; -3.976  ; N/A      ; N/A     ; -2.891              ;
+; Design-wide TNS                                      ; -223.285 ; -20.771 ; 0.0      ; 0.0     ; -118.755            ;
+;  clock                                               ; -119.150 ; 0.000   ; N/A      ; N/A     ; -29.022             ;
+;  clock_divider:vga_clock_gen|divided_clk             ; -75.209  ; -5.845  ; N/A      ; N/A     ; -17.121             ;
+;  horizontal_counter:vga_horizontal|h_Count_Value[10] ; -28.926  ; -15.074 ; N/A      ; N/A     ; -72.788             ;
 +------------------------------------------------------+----------+---------+----------+---------+---------------------+
 
 
@@ -573,12 +573,12 @@ No synchronizer chains to report.
 +-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                          ; To Clock                                            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
-; clock                                               ; clock                                               ; 2247     ; 0        ; 0        ; 0        ;
+; clock                                               ; clock                                               ; 2299     ; 0        ; 0        ; 0        ;
 ; clock_divider:vga_clock_gen|divided_clk             ; clock                                               ; 1        ; 1        ; 0        ; 0        ;
 ; clock_divider:vga_clock_gen|divided_clk             ; clock_divider:vga_clock_gen|divided_clk             ; 761      ; 0        ; 0        ; 0        ;
 ; horizontal_counter:vga_horizontal|h_Count_Value[10] ; clock_divider:vga_clock_gen|divided_clk             ; 23       ; 23       ; 0        ; 0        ;
-; clock_divider:vga_clock_gen|divided_clk             ; horizontal_counter:vga_horizontal|h_Count_Value[10] ; 12090    ; 0        ; 0        ; 0        ;
-; horizontal_counter:vga_horizontal|h_Count_Value[10] ; horizontal_counter:vga_horizontal|h_Count_Value[10] ; 374      ; 374      ; 0        ; 0        ;
+; clock_divider:vga_clock_gen|divided_clk             ; horizontal_counter:vga_horizontal|h_Count_Value[10] ; 8930     ; 0        ; 0        ; 0        ;
+; horizontal_counter:vga_horizontal|h_Count_Value[10] ; horizontal_counter:vga_horizontal|h_Count_Value[10] ; 301      ; 301      ; 0        ; 0        ;
 +-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -588,12 +588,12 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                          ; To Clock                                            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
-; clock                                               ; clock                                               ; 2247     ; 0        ; 0        ; 0        ;
+; clock                                               ; clock                                               ; 2299     ; 0        ; 0        ; 0        ;
 ; clock_divider:vga_clock_gen|divided_clk             ; clock                                               ; 1        ; 1        ; 0        ; 0        ;
 ; clock_divider:vga_clock_gen|divided_clk             ; clock_divider:vga_clock_gen|divided_clk             ; 761      ; 0        ; 0        ; 0        ;
 ; horizontal_counter:vga_horizontal|h_Count_Value[10] ; clock_divider:vga_clock_gen|divided_clk             ; 23       ; 23       ; 0        ; 0        ;
-; clock_divider:vga_clock_gen|divided_clk             ; horizontal_counter:vga_horizontal|h_Count_Value[10] ; 12090    ; 0        ; 0        ; 0        ;
-; horizontal_counter:vga_horizontal|h_Count_Value[10] ; horizontal_counter:vga_horizontal|h_Count_Value[10] ; 374      ; 374      ; 0        ; 0        ;
+; clock_divider:vga_clock_gen|divided_clk             ; horizontal_counter:vga_horizontal|h_Count_Value[10] ; 8930     ; 0        ; 0        ; 0        ;
+; horizontal_counter:vga_horizontal|h_Count_Value[10] ; horizontal_counter:vga_horizontal|h_Count_Value[10] ; 301      ; 301      ; 0        ; 0        ;
 +-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -713,14 +713,14 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Wed Oct 11 04:21:20 2023
+    Info: Processing started: Wed Oct 11 13:45:21 2023
 Info: Command: quartus_sta FSM -c FSM
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
 Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
-Warning (335093): The Timing Analyzer is analyzing 5 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Warning (335093): The Timing Analyzer is analyzing 4 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'FSM.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
@@ -733,107 +733,107 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -10.525
+Info (332146): Worst-case setup slack is -7.473
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -10.525             -45.155 horizontal_counter:vga_horizontal|h_Count_Value[10] 
-    Info (332119):    -4.733            -114.613 clock 
-    Info (332119):    -2.605             -80.869 clock_divider:vga_clock_gen|divided_clk 
-Info (332146): Worst-case hold slack is -3.402
+    Info (332119):    -7.473             -28.926 horizontal_counter:vga_horizontal|h_Count_Value[10] 
+    Info (332119):    -4.962            -119.150 clock 
+    Info (332119):    -2.448             -75.209 clock_divider:vga_clock_gen|divided_clk 
+Info (332146): Worst-case hold slack is -3.917
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.402             -13.977 horizontal_counter:vga_horizontal|h_Count_Value[10] 
-    Info (332119):    -2.665              -2.665 clock 
-    Info (332119):    -1.240             -11.265 clock_divider:vga_clock_gen|divided_clk 
+    Info (332119):    -3.917             -14.926 horizontal_counter:vga_horizontal|h_Count_Value[10] 
+    Info (332119):    -0.920              -5.845 clock_divider:vga_clock_gen|divided_clk 
+    Info (332119):     0.521               0.000 clock 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -2.633
+Info (332146): Worst-case minimum pulse width slack is -2.891
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.633             -87.986 horizontal_counter:vga_horizontal|h_Count_Value[10] 
-    Info (332119):    -0.920             -25.513 clock 
-    Info (332119):    -0.394             -18.099 clock_divider:vga_clock_gen|divided_clk 
+    Info (332119):    -2.891             -72.317 horizontal_counter:vga_horizontal|h_Count_Value[10] 
+    Info (332119):    -0.894             -26.022 clock 
+    Info (332119):    -0.394             -17.121 clock_divider:vga_clock_gen|divided_clk 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -10.226
+Info (332146): Worst-case setup slack is -7.234
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -10.226             -44.064 horizontal_counter:vga_horizontal|h_Count_Value[10] 
-    Info (332119):    -4.977            -112.743 clock 
-    Info (332119):    -2.516             -78.727 clock_divider:vga_clock_gen|divided_clk 
-Info (332146): Worst-case hold slack is -3.286
+    Info (332119):    -7.234             -28.139 horizontal_counter:vga_horizontal|h_Count_Value[10] 
+    Info (332119):    -4.976            -118.536 clock 
+    Info (332119):    -2.425             -74.532 clock_divider:vga_clock_gen|divided_clk 
+Info (332146): Worst-case hold slack is -3.976
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.286             -13.953 horizontal_counter:vga_horizontal|h_Count_Value[10] 
-    Info (332119):    -2.437              -2.437 clock 
-    Info (332119):    -1.158             -10.098 clock_divider:vga_clock_gen|divided_clk 
+    Info (332119):    -3.976             -15.074 horizontal_counter:vga_horizontal|h_Count_Value[10] 
+    Info (332119):    -0.836              -4.686 clock_divider:vga_clock_gen|divided_clk 
+    Info (332119):     0.534               0.000 clock 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -2.624
+Info (332146): Worst-case minimum pulse width slack is -2.891
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.624             -89.220 horizontal_counter:vga_horizontal|h_Count_Value[10] 
-    Info (332119):    -0.931             -28.087 clock 
-    Info (332119):    -0.394             -18.013 clock_divider:vga_clock_gen|divided_clk 
+    Info (332119):    -2.891             -72.788 horizontal_counter:vga_horizontal|h_Count_Value[10] 
+    Info (332119):    -0.902             -29.022 clock 
+    Info (332119):    -0.394             -16.945 clock_divider:vga_clock_gen|divided_clk 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.916
+Info (332146): Worst-case setup slack is -4.318
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.916             -25.694 horizontal_counter:vga_horizontal|h_Count_Value[10] 
-    Info (332119):    -2.861             -47.974 clock 
-    Info (332119):    -1.304             -36.942 clock_divider:vga_clock_gen|divided_clk 
-Info (332146): Worst-case hold slack is -2.149
+    Info (332119):    -4.318             -16.343 horizontal_counter:vga_horizontal|h_Count_Value[10] 
+    Info (332119):    -4.133             -48.205 clock 
+    Info (332119):    -1.159             -34.397 clock_divider:vga_clock_gen|divided_clk 
+Info (332146): Worst-case hold slack is -2.533
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.149              -9.095 horizontal_counter:vga_horizontal|h_Count_Value[10] 
-    Info (332119):    -1.459              -1.459 clock 
-    Info (332119):    -0.817              -8.608 clock_divider:vga_clock_gen|divided_clk 
+    Info (332119):    -2.533              -9.309 horizontal_counter:vga_horizontal|h_Count_Value[10] 
+    Info (332119):    -0.638              -5.581 clock_divider:vga_clock_gen|divided_clk 
+    Info (332119):     0.265               0.000 clock 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -1.415
+Info (332146): Worst-case minimum pulse width slack is -1.580
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.415             -33.185 horizontal_counter:vga_horizontal|h_Count_Value[10] 
-    Info (332119):    -0.805              -5.014 clock 
-    Info (332119):     0.044               0.000 clock_divider:vga_clock_gen|divided_clk 
+    Info (332119):    -1.580             -26.707 horizontal_counter:vga_horizontal|h_Count_Value[10] 
+    Info (332119):    -0.771              -4.900 clock 
+    Info (332119):     0.105               0.000 clock_divider:vga_clock_gen|divided_clk 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.228
+Info (332146): Worst-case setup slack is -3.775
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.228             -22.640 horizontal_counter:vga_horizontal|h_Count_Value[10] 
-    Info (332119):    -2.699             -41.319 clock 
-    Info (332119):    -1.134             -32.528 clock_divider:vga_clock_gen|divided_clk 
-Info (332146): Worst-case hold slack is -1.944
+    Info (332119):    -3.775             -14.352 horizontal_counter:vga_horizontal|h_Count_Value[10] 
+    Info (332119):    -3.596             -41.816 clock 
+    Info (332119):    -1.005             -29.399 clock_divider:vga_clock_gen|divided_clk 
+Info (332146): Worst-case hold slack is -2.325
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.944              -8.253 horizontal_counter:vga_horizontal|h_Count_Value[10] 
-    Info (332119):    -1.327              -1.327 clock 
-    Info (332119):    -0.755              -7.906 clock_divider:vga_clock_gen|divided_clk 
+    Info (332119):    -2.325              -8.575 horizontal_counter:vga_horizontal|h_Count_Value[10] 
+    Info (332119):    -0.593              -5.156 clock_divider:vga_clock_gen|divided_clk 
+    Info (332119):     0.252               0.000 clock 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -1.201
+Info (332146): Worst-case minimum pulse width slack is -1.355
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.201             -26.837 horizontal_counter:vga_horizontal|h_Count_Value[10] 
-    Info (332119):    -0.777              -5.109 clock 
-    Info (332119):     0.067               0.000 clock_divider:vga_clock_gen|divided_clk 
+    Info (332119):    -1.355             -21.954 horizontal_counter:vga_horizontal|h_Count_Value[10] 
+    Info (332119):    -0.744              -5.029 clock 
+    Info (332119):     0.112               0.000 clock_divider:vga_clock_gen|divided_clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 5192 megabytes
-    Info: Processing ended: Wed Oct 11 04:21:25 2023
+    Info: Peak virtual memory: 5203 megabytes
+    Info: Processing ended: Wed Oct 11 13:45:26 2023
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:06
 

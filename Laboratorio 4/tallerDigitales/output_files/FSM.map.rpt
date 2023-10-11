@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FSM
-Wed Oct 11 04:19:29 2023
+Wed Oct 11 13:43:53 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -47,7 +47,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct 11 04:19:29 2023          ;
+; Analysis & Synthesis Status     ; Successful - Wed Oct 11 13:43:53 2023          ;
 ; Quartus Prime Version           ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                   ; FSM                                            ;
 ; Top-level Entity Name           ; video_controller                               ;
@@ -189,14 +189,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------------------------------+
 ; Resource                                    ; Usage                                   ;
 +---------------------------------------------+-----------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 164                                     ;
+; Estimate of Logic utilization (ALMs needed) ; 148                                     ;
 ;                                             ;                                         ;
-; Combinational ALUT usage for logic          ; 261                                     ;
-;     -- 7 input functions                    ; 0                                       ;
-;     -- 6 input functions                    ; 67                                      ;
-;     -- 5 input functions                    ; 41                                      ;
-;     -- 4 input functions                    ; 41                                      ;
-;     -- <=3 input functions                  ; 112                                     ;
+; Combinational ALUT usage for logic          ; 234                                     ;
+;     -- 7 input functions                    ; 1                                       ;
+;     -- 6 input functions                    ; 61                                      ;
+;     -- 5 input functions                    ; 37                                      ;
+;     -- 4 input functions                    ; 32                                      ;
+;     -- <=3 input functions                  ; 103                                     ;
 ;                                             ;                                         ;
 ; Dedicated logic registers                   ; 66                                      ;
 ;                                             ;                                         ;
@@ -206,8 +206,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                         ;
 ; Maximum fan-out node                        ; clock_divider:vga_clock_gen|divided_clk ;
 ; Maximum fan-out                             ; 35                                      ;
-; Total fan-out                               ; 1296                                    ;
-; Average fan-out                             ; 3.35                                    ;
+; Total fan-out                               ; 1183                                    ;
+; Average fan-out                             ; 3.29                                    ;
 +---------------------------------------------+-----------------------------------------+
 
 
@@ -216,7 +216,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                 ; Entity Name        ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------+--------------------+--------------+
-; |video_controller                      ; 261 (189)           ; 66 (0)                    ; 0                 ; 0          ; 30   ; 0            ; |video_controller                                   ; video_controller   ; work         ;
+; |video_controller                      ; 234 (162)           ; 66 (0)                    ; 0                 ; 0          ; 30   ; 0            ; |video_controller                                   ; video_controller   ; work         ;
 ;    |clock_divider:vga_clock_gen|       ; 40 (40)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |video_controller|clock_divider:vga_clock_gen       ; clock_divider      ; work         ;
 ;    |horizontal_counter:vga_horizontal| ; 16 (16)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |video_controller|horizontal_counter:vga_horizontal ; horizontal_counter ; work         ;
 ;    |vertical_counter:vga_vertical|     ; 16 (16)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |video_controller|vertical_counter:vga_vertical     ; vertical_counter   ; work         ;
@@ -278,8 +278,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 43:1               ; 2 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |video_controller|green[7] ;
-; 49:1               ; 3 bits    ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |video_controller|red[6]   ;
+; 49:1               ; 4 bits    ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |video_controller|red[6]   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -315,21 +314,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 16                          ;
 ;     SCLR              ; 48                          ;
 ;     plain             ; 2                           ;
-; arriav_lcell_comb     ; 263                         ;
+; arriav_lcell_comb     ; 236                         ;
 ;     arith             ; 64                          ;
 ;         1 data inputs ; 64                          ;
-;     normal            ; 199                         ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 171                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 14                          ;
-;         3 data inputs ; 34                          ;
-;         4 data inputs ; 41                          ;
-;         5 data inputs ; 41                          ;
-;         6 data inputs ; 67                          ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 24                          ;
+;         4 data inputs ; 32                          ;
+;         5 data inputs ; 37                          ;
+;         6 data inputs ; 61                          ;
 ; boundary_port         ; 30                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 4.86                        ;
+; Average LUT depth     ; 4.73                        ;
 +-----------------------+-----------------------------+
 
 
@@ -348,7 +349,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Wed Oct 11 04:19:19 2023
+    Info: Processing started: Wed Oct 11 13:43:44 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FSM -c FSM
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -362,83 +363,86 @@ Info (12021): Found 1 design units, including 1 entities, in source file clock_d
     Info (12023): Found entity 1: clock_divider File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/clock_divider.sv Line: 2
 Info (12021): Found 0 design units, including 0 entities, in source file updategame.sv
 Info (12127): Elaborating entity "video_controller" for the top level hierarchy
-Warning (10240): Verilog HDL Always Construct warning at video_controller.sv(64): inferring latch(es) for variable "red", which holds its previous value in one or more paths through the always construct File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Warning (10240): Verilog HDL Always Construct warning at video_controller.sv(64): inferring latch(es) for variable "green", which holds its previous value in one or more paths through the always construct File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Warning (10240): Verilog HDL Always Construct warning at video_controller.sv(64): inferring latch(es) for variable "blue", which holds its previous value in one or more paths through the always construct File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
+Warning (10036): Verilog HDL or VHDL warning at video_controller.sv(73): object "gridGameWin" assigned a value but never read File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 73
+Warning (10036): Verilog HDL or VHDL warning at video_controller.sv(84): object "gridGameOver" assigned a value but never read File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 84
+Warning (10240): Verilog HDL Always Construct warning at video_controller.sv(91): inferring latch(es) for variable "red", which holds its previous value in one or more paths through the always construct File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Warning (10240): Verilog HDL Always Construct warning at video_controller.sv(91): inferring latch(es) for variable "green", which holds its previous value in one or more paths through the always construct File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Warning (10240): Verilog HDL Always Construct warning at video_controller.sv(91): inferring latch(es) for variable "blue", which holds its previous value in one or more paths through the always construct File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
 Warning (10034): Output port "sync_n" at video_controller.sv(16) has no driver File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 16
-Info (10041): Inferred latch for "blue[0]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "blue[1]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "blue[2]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "blue[3]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "blue[4]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "blue[5]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "blue[6]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "blue[7]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "green[0]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "green[1]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "green[2]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "green[3]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "green[4]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "green[5]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "green[6]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "green[7]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "red[0]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "red[1]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "red[2]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "red[3]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "red[4]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "red[5]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "red[6]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Info (10041): Inferred latch for "red[7]" at video_controller.sv(64) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
+Info (10041): Inferred latch for "blue[0]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "blue[1]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "blue[2]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "blue[3]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "blue[4]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "blue[5]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "blue[6]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "blue[7]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "green[0]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "green[1]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "green[2]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "green[3]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "green[4]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "green[5]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "green[6]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "green[7]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "red[0]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "red[1]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "red[2]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "red[3]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "red[4]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "red[5]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "red[6]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Info (10041): Inferred latch for "red[7]" at video_controller.sv(91) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "grid" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gridGameWin" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gridGameOver" into its bus
 Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:vga_clock_gen" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 33
 Info (12128): Elaborating entity "horizontal_counter" for hierarchy "horizontal_counter:vga_horizontal" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 36
 Warning (10230): Verilog HDL assignment warning at horizontal_counter.sv(12): truncated value with size 32 to match size of target (16) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/horizontal_counter.sv Line: 12
 Info (12128): Elaborating entity "vertical_counter" for hierarchy "vertical_counter:vga_vertical" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 37
 Warning (10230): Verilog HDL assignment warning at vertical_counter.sv(13): truncated value with size 32 to match size of target (16) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/vertical_counter.sv Line: 13
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "red[6]$latch" merged with LATCH primitive "red[0]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-    Info (13026): Duplicate LATCH primitive "red[4]$latch" merged with LATCH primitive "red[0]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-    Info (13026): Duplicate LATCH primitive "red[2]$latch" merged with LATCH primitive "red[0]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-    Info (13026): Duplicate LATCH primitive "red[5]$latch" merged with LATCH primitive "red[1]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-    Info (13026): Duplicate LATCH primitive "red[3]$latch" merged with LATCH primitive "red[1]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-    Info (13026): Duplicate LATCH primitive "red[7]$latch" merged with LATCH primitive "red[1]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-    Info (13026): Duplicate LATCH primitive "green[6]$latch" merged with LATCH primitive "green[0]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-    Info (13026): Duplicate LATCH primitive "green[4]$latch" merged with LATCH primitive "green[0]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-    Info (13026): Duplicate LATCH primitive "green[2]$latch" merged with LATCH primitive "green[0]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-    Info (13026): Duplicate LATCH primitive "blue[6]$latch" merged with LATCH primitive "green[0]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-    Info (13026): Duplicate LATCH primitive "blue[4]$latch" merged with LATCH primitive "green[0]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-    Info (13026): Duplicate LATCH primitive "blue[2]$latch" merged with LATCH primitive "green[0]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-    Info (13026): Duplicate LATCH primitive "blue[0]$latch" merged with LATCH primitive "green[0]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-    Info (13026): Duplicate LATCH primitive "green[7]$latch" merged with LATCH primitive "green[1]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-    Info (13026): Duplicate LATCH primitive "green[5]$latch" merged with LATCH primitive "green[1]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-    Info (13026): Duplicate LATCH primitive "green[3]$latch" merged with LATCH primitive "green[1]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-    Info (13026): Duplicate LATCH primitive "blue[7]$latch" merged with LATCH primitive "blue[1]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-    Info (13026): Duplicate LATCH primitive "blue[5]$latch" merged with LATCH primitive "blue[1]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-    Info (13026): Duplicate LATCH primitive "blue[3]$latch" merged with LATCH primitive "blue[1]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-Warning (13012): Latch red[0]$latch has unsafe behavior File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
+    Info (13026): Duplicate LATCH primitive "red[6]$latch" merged with LATCH primitive "red[0]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+    Info (13026): Duplicate LATCH primitive "red[4]$latch" merged with LATCH primitive "red[0]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+    Info (13026): Duplicate LATCH primitive "red[2]$latch" merged with LATCH primitive "red[0]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+    Info (13026): Duplicate LATCH primitive "red[5]$latch" merged with LATCH primitive "red[1]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+    Info (13026): Duplicate LATCH primitive "red[3]$latch" merged with LATCH primitive "red[1]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+    Info (13026): Duplicate LATCH primitive "red[7]$latch" merged with LATCH primitive "red[1]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+    Info (13026): Duplicate LATCH primitive "green[6]$latch" merged with LATCH primitive "green[0]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+    Info (13026): Duplicate LATCH primitive "green[4]$latch" merged with LATCH primitive "green[0]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+    Info (13026): Duplicate LATCH primitive "green[2]$latch" merged with LATCH primitive "green[0]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+    Info (13026): Duplicate LATCH primitive "blue[6]$latch" merged with LATCH primitive "green[0]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+    Info (13026): Duplicate LATCH primitive "blue[4]$latch" merged with LATCH primitive "green[0]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+    Info (13026): Duplicate LATCH primitive "blue[2]$latch" merged with LATCH primitive "green[0]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+    Info (13026): Duplicate LATCH primitive "blue[0]$latch" merged with LATCH primitive "green[0]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+    Info (13026): Duplicate LATCH primitive "green[7]$latch" merged with LATCH primitive "green[1]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+    Info (13026): Duplicate LATCH primitive "green[5]$latch" merged with LATCH primitive "green[1]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+    Info (13026): Duplicate LATCH primitive "green[3]$latch" merged with LATCH primitive "green[1]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+    Info (13026): Duplicate LATCH primitive "blue[7]$latch" merged with LATCH primitive "green[1]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+    Info (13026): Duplicate LATCH primitive "blue[5]$latch" merged with LATCH primitive "green[1]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+    Info (13026): Duplicate LATCH primitive "blue[3]$latch" merged with LATCH primitive "green[1]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+    Info (13026): Duplicate LATCH primitive "blue[1]$latch" merged with LATCH primitive "green[1]$latch" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
+Warning (13012): Latch red[0]$latch has unsafe behavior File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
     Warning (13013): Ports D and ENA on the latch are fed by the same signal horizontal_counter:vga_horizontal|h_Count_Value[15] File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/horizontal_counter.sv Line: 8
-Warning (13012): Latch red[1]$latch has unsafe behavior File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
+Warning (13012): Latch red[1]$latch has unsafe behavior File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
     Warning (13013): Ports D and ENA on the latch are fed by the same signal horizontal_counter:vga_horizontal|h_Count_Value[15] File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/horizontal_counter.sv Line: 8
-Warning (13012): Latch green[0]$latch has unsafe behavior File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
+Warning (13012): Latch green[0]$latch has unsafe behavior File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
     Warning (13013): Ports D and ENA on the latch are fed by the same signal horizontal_counter:vga_horizontal|h_Count_Value[15] File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/horizontal_counter.sv Line: 8
-Warning (13012): Latch green[1]$latch has unsafe behavior File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal horizontal_counter:vga_horizontal|h_Count_Value[15] File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/horizontal_counter.sv Line: 8
-Warning (13012): Latch blue[1]$latch has unsafe behavior File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 64
+Warning (13012): Latch green[1]$latch has unsafe behavior File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 91
     Warning (13013): Ports D and ENA on the latch are fed by the same signal horizontal_counter:vga_horizontal|h_Count_Value[15] File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/horizontal_counter.sv Line: 8
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "sync_n" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 16
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 292 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 265 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 262 logic cells
+    Info (21061): Implemented 235 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
     Info: Peak virtual memory: 4877 megabytes
-    Info: Processing ended: Wed Oct 11 04:19:29 2023
-    Info: Elapsed time: 00:00:10
+    Info: Processing ended: Wed Oct 11 13:43:53 2023
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:21
 
 
