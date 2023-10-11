@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Buscaminas
-Wed Oct 11 12:34:20 2023
+Wed Oct 11 14:29:24 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -9,8 +9,10 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |video_controller
+  5. Parameter Settings for User Entity Instance: clock_divider:vga_clock_gen
+  6. Analysis & Elaboration Settings
+  7. Analysis & Elaboration Messages
 
 
 
@@ -37,10 +39,10 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Failed - Wed Oct 11 12:34:20 2023              ;
+; Analysis & Elaboration Status ; Successful - Wed Oct 11 14:29:24 2023          ;
 ; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                 ; Buscaminas                                     ;
-; Top-level Entity Name         ; TopModule                                      ;
+; Top-level Entity Name         ; video_controller                               ;
 ; Family                        ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
 ; Total registers               ; N/A until Partition Merge                      ;
@@ -68,13 +70,36 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |video_controller ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; WIDTH          ; 640   ; Signed Integer                                          ;
+; HEIGHT         ; 480   ; Signed Integer                                          ;
+; ROWS           ; 8     ; Signed Integer                                          ;
+; COLS           ; 8     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clock_divider:vga_clock_gen ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; div_value      ; 0     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; TopModule          ; Buscaminas         ;
+; Top-level entity name                                                           ; video_controller   ; Buscaminas         ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -161,7 +186,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Wed Oct 11 12:33:54 2023
+    Info: Processing started: Wed Oct 11 14:29:00 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Buscaminas -c Buscaminas --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -182,15 +207,50 @@ Info (12021): Found 1 design units, including 1 entities, in source file vga_sig
     Info (12023): Found entity 1: VGA_Signal_Generator File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/VGA_Signal_Generator.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file topmodule.sv
     Info (12023): Found entity 1: TopModule File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 1
-Info (12127): Elaborating entity "TopModule" for the top level hierarchy
-Info (12128): Elaborating entity "FiniteStateMachine" for hierarchy "FiniteStateMachine:fsm" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 40
-Warning (10240): Verilog HDL Always Construct warning at FiniteStateMachine.sv(20): inferring latch(es) for variable "next_state", which holds its previous value in one or more paths through the always construct File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/FiniteStateMachine.sv Line: 20
-Error (10166): SystemVerilog RTL Coding error at FiniteStateMachine.sv(20): always_comb construct does not infer purely combinational logic. File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/FiniteStateMachine.sv Line: 20
-Error (12152): Can't elaborate user hierarchy "FiniteStateMachine:fsm" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 40
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 2 errors, 2 warnings
-    Error: Peak virtual memory: 4771 megabytes
-    Error: Processing ended: Wed Oct 11 12:34:20 2023
-    Error: Elapsed time: 00:00:26
-    Error: Total CPU time (on all processors): 00:00:39
+Info (12021): Found 1 design units, including 1 entities, in source file comparator.sv
+    Info (12023): Found entity 1: Comparator File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/Comparator.sv Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file register.sv
+    Info (12023): Found entity 1: registroMinas File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/Register.sv Line: 1
+    Info (12023): Found entity 2: generarGrid File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/Register.sv Line: 25
+Info (12127): Elaborating entity "video_controller" for the top level hierarchy
+Warning (10240): Verilog HDL Always Construct warning at video_controller.sv(63): inferring latch(es) for variable "red", which holds its previous value in one or more paths through the always construct File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Warning (10240): Verilog HDL Always Construct warning at video_controller.sv(63): inferring latch(es) for variable "green", which holds its previous value in one or more paths through the always construct File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Warning (10240): Verilog HDL Always Construct warning at video_controller.sv(63): inferring latch(es) for variable "blue", which holds its previous value in one or more paths through the always construct File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Warning (10034): Output port "sync_n" at video_controller.sv(15) has no driver File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 15
+Info (10041): Inferred latch for "blue[0]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "blue[1]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "blue[2]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "blue[3]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "blue[4]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "blue[5]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "blue[6]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "blue[7]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "green[0]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "green[1]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "green[2]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "green[3]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "green[4]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "green[5]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "green[6]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "green[7]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "red[0]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "red[1]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "red[2]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "red[3]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "red[4]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "red[5]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "red[6]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10041): Inferred latch for "red[7]" at video_controller.sv(63) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 63
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "grid" into its bus
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:vga_clock_gen" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 32
+Info (12128): Elaborating entity "horizontal_counter" for hierarchy "horizontal_counter:vga_horizontal" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 35
+Warning (10230): Verilog HDL assignment warning at horizontal_counter.sv(11): truncated value with size 32 to match size of target (16) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/horizontal_counter.sv Line: 11
+Info (12128): Elaborating entity "vertical_counter" for hierarchy "vertical_counter:vga_vertical" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 36
+Warning (10230): Verilog HDL assignment warning at vertical_counter.sv(12): truncated value with size 32 to match size of target (16) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/vertical_counter.sv Line: 12
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4780 megabytes
+    Info: Processing ended: Wed Oct 11 14:29:24 2023
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:39
 
 

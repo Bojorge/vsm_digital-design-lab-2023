@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Failed - Wed Oct 11 12:34:20 2023
+Analysis & Elaboration Status : Successful - Wed Oct 11 14:29:24 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : Buscaminas
-Top-level Entity Name : TopModule
+Top-level Entity Name : video_controller
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge

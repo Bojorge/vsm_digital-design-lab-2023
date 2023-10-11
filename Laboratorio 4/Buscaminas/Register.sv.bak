@@ -1,0 +1,11 @@
+module Register(
+  input clk,
+  input logic rst,
+  input logic enable,
+  input bombs,
+  output logic [1:0] grid [0:7][0:7];
+);
+
+ 
+
+endmodule
