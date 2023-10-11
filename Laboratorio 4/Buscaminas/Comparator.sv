@@ -1,13 +1,20 @@
 module Comparator(
-						input [7:0] timer_out, // Salida del temporizador de 8 bits
-                  output logic t0); // Salida del comparador
+    input [0:7] x,
+    input [0:7] y,
+    input logic [7:0][7:0] gridMinasIn,
+    output logic bomb
+);
 
-  // Comparador para verificar si el temporizador es mayor o igual a 200
-  always @(timer_out) begin
-    if (timer_out > 8'hC8) // 200 en hexadecimal es 8'hC8 en 8 bits
-      t0 = 1'b1;    // Si es mayor o igual a 200, se establece en 1 -> va al estado 3
-    else
-      t0 = 1'b0;    // Si es menor a 200, se establece en 0 -> va al estado 0
-  end
+always @(x or y or gridMinasIn) begin
+    if (x >= 0 && x < 8 && y >= 0 && y < 8) begin
+        if (gridMinasIn[x][y] == 1'b1)
+            bomb = 1'b1;
+        else
+            bomb = 1'b0;
+    end else begin
+        // Handle out-of-range indices, set bomb to 0 or any other appropriate action
+        bomb = 1'b0; // Default behavior is no bomb for out-of-range indices
+    end
+end
 
 endmodule

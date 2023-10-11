@@ -96,4 +96,6 @@ set_location_assignment PIN_A13 -to red[0]
 set_location_assignment PIN_C10 -to sync_n
 set_location_assignment PIN_D11 -to v_synq
 set_global_assignment -name SYSTEMVERILOG_FILE Register.sv
+set_global_assignment -name SYSTEMVERILOG_FILE registroCasillasMarcadas.sv
+set_global_assignment -name SYSTEMVERILOG_FILE generateGrid.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
