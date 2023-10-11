@@ -1,22 +1,22 @@
 |video_controller
 clock => clock.IN1
-h_synq << LessThan0.DB_MAX_OUTPUT_PORT_TYPE
-v_synq << LessThan1.DB_MAX_OUTPUT_PORT_TYPE
-red[0] << <GND>
-red[1] << <GND>
-red[2] << <GND>
-red[3] << <GND>
-green[0] << <GND>
-green[1] << <GND>
-green[2] << <GND>
-green[3] << <GND>
-blue[0] << <GND>
-blue[1] << <GND>
-blue[2] << <GND>
-blue[3] << <GND>
-clk_25mhz << clk_25mhz.DB_MAX_OUTPUT_PORT_TYPE
-sync_n << <GND>
-blank_n << blank_n.DB_MAX_OUTPUT_PORT_TYPE
+h_synq <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+v_synq <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+red[0] <= red.DB_MAX_OUTPUT_PORT_TYPE
+red[1] <= red.DB_MAX_OUTPUT_PORT_TYPE
+red[2] <= red.DB_MAX_OUTPUT_PORT_TYPE
+red[3] <= red.DB_MAX_OUTPUT_PORT_TYPE
+green[0] <= red.DB_MAX_OUTPUT_PORT_TYPE
+green[1] <= red.DB_MAX_OUTPUT_PORT_TYPE
+green[2] <= red.DB_MAX_OUTPUT_PORT_TYPE
+green[3] <= red.DB_MAX_OUTPUT_PORT_TYPE
+blue[0] <= red.DB_MAX_OUTPUT_PORT_TYPE
+blue[1] <= red.DB_MAX_OUTPUT_PORT_TYPE
+blue[2] <= red.DB_MAX_OUTPUT_PORT_TYPE
+blue[3] <= red.DB_MAX_OUTPUT_PORT_TYPE
+clk_25MHz <= clk_25MHz.DB_MAX_OUTPUT_PORT_TYPE
+sync_n <= <GND>
+blank_n <= blank_n.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |video_controller|clock_divider:vga_clock_gen
@@ -93,7 +93,7 @@ h_Count_Value[14] <= h_Count_Value[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 h_Count_Value[15] <= h_Count_Value[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|video_controller|vertical_counter:vga_Vertical
+|video_controller|vertical_counter:vga_vertical
 clk_25MHz => v_Count_Value[0]~reg0.CLK
 clk_25MHz => v_Count_Value[1]~reg0.CLK
 clk_25MHz => v_Count_Value[2]~reg0.CLK

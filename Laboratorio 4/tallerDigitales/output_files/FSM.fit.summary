@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue Oct 10 22:55:15 2023
+Fitter Status : Successful - Wed Oct 11 00:54:41 2023
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : FSM
 Top-level Entity Name : video_controller
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 48 / 32,070 ( < 1 % )
-Total registers : 102
+Logic utilization (in ALMs) : 53 / 32,070 ( < 1 % )
+Total registers : 96
 Total pins : 18 / 457 ( 4 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )

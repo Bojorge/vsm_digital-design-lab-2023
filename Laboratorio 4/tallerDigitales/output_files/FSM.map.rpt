@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FSM
-Tue Oct 10 22:54:39 2023
+Wed Oct 11 00:54:03 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -45,7 +45,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 10 22:54:39 2023          ;
+; Analysis & Synthesis Status     ; Successful - Wed Oct 11 00:54:03 2023          ;
 ; Quartus Prime Version           ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                   ; FSM                                            ;
 ; Top-level Entity Name           ; video_controller                               ;
@@ -186,14 +186,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------------------------------+
 ; Resource                                    ; Usage                                   ;
 +---------------------------------------------+-----------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 47                                      ;
+; Estimate of Logic utilization (ALMs needed) ; 52                                      ;
 ;                                             ;                                         ;
-; Combinational ALUT usage for logic          ; 81                                      ;
+; Combinational ALUT usage for logic          ; 89                                      ;
 ;     -- 7 input functions                    ; 0                                       ;
-;     -- 6 input functions                    ; 12                                      ;
-;     -- 5 input functions                    ; 2                                       ;
-;     -- 4 input functions                    ; 0                                       ;
-;     -- <=3 input functions                  ; 67                                      ;
+;     -- 6 input functions                    ; 14                                      ;
+;     -- 5 input functions                    ; 4                                       ;
+;     -- 4 input functions                    ; 3                                       ;
+;     -- <=3 input functions                  ; 68                                      ;
 ;                                             ;                                         ;
 ; Dedicated logic registers                   ; 66                                      ;
 ;                                             ;                                         ;
@@ -203,8 +203,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                         ;
 ; Maximum fan-out node                        ; clock_divider:vga_clock_gen|divided_clk ;
 ; Maximum fan-out                             ; 35                                      ;
-; Total fan-out                               ; 447                                     ;
-; Average fan-out                             ; 2.44                                    ;
+; Total fan-out                               ; 497                                     ;
+; Average fan-out                             ; 2.60                                    ;
 +---------------------------------------------+-----------------------------------------+
 
 
@@ -213,10 +213,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                 ; Entity Name        ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------+--------------------+--------------+
-; |video_controller                      ; 81 (3)              ; 66 (0)                    ; 0                 ; 0          ; 18   ; 0            ; |video_controller                                   ; video_controller   ; work         ;
+; |video_controller                      ; 89 (12)             ; 66 (0)                    ; 0                 ; 0          ; 18   ; 0            ; |video_controller                                   ; video_controller   ; work         ;
 ;    |clock_divider:vga_clock_gen|       ; 40 (40)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |video_controller|clock_divider:vga_clock_gen       ; clock_divider      ; work         ;
 ;    |horizontal_counter:vga_horizontal| ; 19 (19)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |video_controller|horizontal_counter:vga_horizontal ; horizontal_counter ; work         ;
-;    |vertical_counter:vga_Vertical|     ; 19 (19)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |video_controller|vertical_counter:vga_Vertical     ; vertical_counter   ; work         ;
+;    |vertical_counter:vga_vertical|     ; 18 (18)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |video_controller|vertical_counter:vga_vertical     ; vertical_counter   ; work         ;
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -243,8 +243,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+-------+---------------------------------------------------------+
 ; WIDTH          ; 640   ; Signed Integer                                          ;
 ; HEIGHT         ; 480   ; Signed Integer                                          ;
-; ROWS           ; 8     ; Signed Integer                                          ;
-; COLS           ; 8     ; Signed Integer                                          ;
 +----------------+-------+---------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -268,19 +266,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 16                          ;
 ;     SCLR              ; 48                          ;
 ;     plain             ; 2                           ;
-; arriav_lcell_comb     ; 83                          ;
+; arriav_lcell_comb     ; 91                          ;
 ;     arith             ; 64                          ;
 ;         1 data inputs ; 64                          ;
-;     normal            ; 19                          ;
+;     normal            ; 27                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 3                           ;
-;         5 data inputs ; 2                           ;
-;         6 data inputs ; 12                          ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 3                           ;
+;         5 data inputs ; 4                           ;
+;         6 data inputs ; 14                          ;
 ; boundary_port         ; 18                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.69                        ;
+; Average LUT depth     ; 2.77                        ;
 +-----------------------+-----------------------------+
 
 
@@ -299,7 +299,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Tue Oct 10 22:54:31 2023
+    Info: Processing started: Wed Oct 11 00:53:55 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FSM -c FSM
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -307,59 +307,30 @@ Info (12021): Found 1 design units, including 1 entities, in source file horizon
     Info (12023): Found entity 1: horizontal_counter File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/horizontal_counter.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file vertical_counter.sv
     Info (12023): Found entity 1: vertical_counter File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/vertical_counter.sv Line: 2
-Warning (10229): Verilog HDL Expression warning at video_controller.sv(57): truncated literal to match 1 bits File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 57
 Info (12021): Found 1 design units, including 1 entities, in source file video_controller.sv
     Info (12023): Found entity 1: video_controller File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file clock_divider.sv
     Info (12023): Found entity 1: clock_divider File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/clock_divider.sv Line: 2
 Info (12127): Elaborating entity "video_controller" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at video_controller.sv(61): object "grid" assigned a value but never read File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 61
-Warning (10230): Verilog HDL assignment warning at video_controller.sv(67): truncated value with size 16 to match size of target (1) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 67
-Warning (10240): Verilog HDL Always Construct warning at video_controller.sv(79): inferring latch(es) for variable "red", which holds its previous value in one or more paths through the always construct File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-Warning (10240): Verilog HDL Always Construct warning at video_controller.sv(79): inferring latch(es) for variable "green", which holds its previous value in one or more paths through the always construct File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-Warning (10240): Verilog HDL Always Construct warning at video_controller.sv(79): inferring latch(es) for variable "blue", which holds its previous value in one or more paths through the always construct File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-Info (10041): Inferred latch for "blue[0]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-Info (10041): Inferred latch for "blue[1]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-Info (10041): Inferred latch for "blue[2]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-Info (10041): Inferred latch for "blue[3]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-Info (10041): Inferred latch for "green[0]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-Info (10041): Inferred latch for "green[1]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-Info (10041): Inferred latch for "green[2]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-Info (10041): Inferred latch for "green[3]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-Info (10041): Inferred latch for "red[0]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-Info (10041): Inferred latch for "red[1]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-Info (10041): Inferred latch for "red[2]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-Info (10041): Inferred latch for "red[3]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:vga_clock_gen" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 42
-Info (12128): Elaborating entity "horizontal_counter" for hierarchy "horizontal_counter:vga_horizontal" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 45
+Warning (10034): Output port "sync_n" at video_controller.sv(13) has no driver File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 13
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:vga_clock_gen" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 30
+Info (12128): Elaborating entity "horizontal_counter" for hierarchy "horizontal_counter:vga_horizontal" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 33
 Warning (10230): Verilog HDL assignment warning at horizontal_counter.sv(12): truncated value with size 32 to match size of target (16) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/horizontal_counter.sv Line: 12
-Info (12128): Elaborating entity "vertical_counter" for hierarchy "vertical_counter:vga_Vertical" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 46
+Info (12128): Elaborating entity "vertical_counter" for hierarchy "vertical_counter:vga_vertical" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 34
 Warning (10230): Verilog HDL assignment warning at vertical_counter.sv(13): truncated value with size 32 to match size of target (16) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/vertical_counter.sv Line: 13
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "red[0]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-    Warning (13410): Pin "red[1]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-    Warning (13410): Pin "red[2]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-    Warning (13410): Pin "red[3]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-    Warning (13410): Pin "green[0]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-    Warning (13410): Pin "green[1]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-    Warning (13410): Pin "green[2]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-    Warning (13410): Pin "green[3]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-    Warning (13410): Pin "blue[0]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-    Warning (13410): Pin "blue[1]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-    Warning (13410): Pin "blue[2]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-    Warning (13410): Pin "blue[3]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
-    Warning (13410): Pin "sync_n" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 18
+    Warning (13410): Pin "sync_n" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 13
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 100 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 108 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 82 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 4865 megabytes
-    Info: Processing ended: Tue Oct 10 22:54:39 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:18
+    Info (21061): Implemented 90 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4862 megabytes
+    Info: Processing ended: Wed Oct 11 00:54:04 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:19
 
 
