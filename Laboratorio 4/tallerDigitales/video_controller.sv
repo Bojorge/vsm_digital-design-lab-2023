@@ -41,7 +41,9 @@ module video_controller #(
 
 
 // Zona activa de la pantalla (pantalla en blanco)
-assign blank_n = (h_count_value >= 96) && (h_count_value < 736) && (v_count_value >= 2) && (v_count_value < 482);
+//assign blank_n = (h_count_value >= 96) && (h_count_value < 736) && (v_count_value >= 2) && (v_count_value < 482);
+assign sync_n = 1'b0;
+assign blank_n = (h_count_value < 639) && (v_count_value < 479);
 
 	
 assign red = (h_count_value < 784 && h_count_value > 143 && v_count_value < 515 && v_count_value > 34) ? 4'hF: 4'h0;
