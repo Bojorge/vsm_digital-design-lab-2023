@@ -16,15 +16,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "red[1]",
-					"strict" : false
-				},
-				{
 					"name" : "red[2]",
-					"strict" : false
-				},
-				{
-					"name" : "red[3]",
 					"strict" : false
 				},
 				{
@@ -32,15 +24,39 @@
 					"strict" : false
 				},
 				{
-					"name" : "red[5]",
-					"strict" : false
-				},
-				{
 					"name" : "red[6]",
 					"strict" : false
 				},
 				{
-					"name" : "red[7]",
+					"name" : "green[0]",
+					"strict" : false
+				},
+				{
+					"name" : "green[2]",
+					"strict" : false
+				},
+				{
+					"name" : "green[4]",
+					"strict" : false
+				},
+				{
+					"name" : "green[6]",
+					"strict" : false
+				},
+				{
+					"name" : "blue[0]",
+					"strict" : false
+				},
+				{
+					"name" : "blue[2]",
+					"strict" : false
+				},
+				{
+					"name" : "blue[4]",
+					"strict" : false
+				},
+				{
+					"name" : "blue[6]",
 					"strict" : false
 				},
 				{
