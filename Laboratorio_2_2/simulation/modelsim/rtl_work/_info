@@ -1,0 +1,257 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/simulation/modelsim
+Eadder_4bits_tb
+Z1 w1693204970
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 4
+R0
+Z4 8C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/adder_4bits_tb.vhd
+Z5 FC:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/adder_4bits_tb.vhd
+l0
+L4 1
+VRnn8^PG6nT5>mlh9cTYU91
+!s100 :^^3YO9zbF80Z<``AKMoO0
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1693206420
+!i10b 1
+Z8 !s108 1693206420.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/adder_4bits_tb.vhd|
+Z10 !s107 C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/adder_4bits_tb.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Atestbench
+R2
+R3
+DEx4 work 14 adder_4bits_tb 0 22 Rnn8^PG6nT5>mlh9cTYU91
+!i122 4
+l25
+L8 55
+V97J6?;J`zkZzWeRbgjLJ03
+!s100 Z0627<zhfBE29MJheN>Cg0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ebcd_deco
+Z13 w1692940877
+R2
+R3
+!i122 3
+R0
+Z14 8C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/bcd_deco.vhd
+Z15 FC:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/bcd_deco.vhd
+l0
+L4 1
+VablXhVY]@zmfZn:oR6>nl2
+!s100 ?IK6GLMj?XSfZ>Gd_Of>J0
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/bcd_deco.vhd|
+Z17 !s107 C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/bcd_deco.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 8 bcd_deco 0 22 ablXhVY]@zmfZn:oR6>nl2
+!i122 3
+l12
+L11 41
+V[iN8NBUU2ee2GkG4W4B<F3
+!s100 d`CMSN[EVcGPnJFX8CK7d3
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Efull_adder
+Z18 w1692822609
+R2
+R3
+!i122 1
+R0
+Z19 8C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/full_adder.vhd
+Z20 FC:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/full_adder.vhd
+l0
+L4 1
+V;]PeJlJ9JeQ0QfFd`U8363
+!s100 ]3?[Yag9C6zknED19:YB73
+R6
+31
+R7
+!i10b 1
+R8
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/full_adder.vhd|
+Z22 !s107 C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/full_adder.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 10 full_adder 0 22 ;]PeJlJ9JeQ0QfFd`U8363
+!i122 1
+l13
+L12 5
+VQmR0c4;AF:>`H_CYLD;BN2
+!s100 S=:=nc_ZVXL8GV6<?4QBg1
+R6
+31
+R7
+!i10b 1
+R8
+R21
+R22
+!i113 1
+R11
+R12
+Eproblema_2
+Z23 w1692822583
+R2
+R3
+!i122 5
+R0
+Z24 8C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/problema_2.vhd
+Z25 FC:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/problema_2.vhd
+l0
+L4 1
+V[[lePTf]lV=7CV^7NbGeZ1
+!s100 ^nZUZMl3B_UHkhNB`zf3K1
+R6
+31
+R7
+!i10b 1
+R8
+Z26 !s90 -reportprogress|300|-93|-work|work|C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/problema_2.vhd|
+Z27 !s107 C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/problema_2.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 10 problema_2 0 22 [[lePTf]lV=7CV^7NbGeZ1
+!i122 5
+l22
+L12 47
+VEQ>f58mFZCBjM`m8FB2`K3
+!s100 Z110FNI60b]:djk9Nzf[<1
+R6
+31
+R7
+!i10b 1
+R8
+R26
+R27
+!i113 1
+R11
+R12
+Eproblema_2_7seg
+Z28 w1692993476
+R2
+R3
+!i122 6
+R0
+Z29 8C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/problema_2_7seg.vhd
+Z30 FC:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/problema_2_7seg.vhd
+l0
+L4 1
+V98hzo<gkXYQ903X`;gCCA3
+!s100 iCX<o`PPo;R001C8OgMa03
+R6
+31
+Z31 !s110 1693206421
+!i10b 1
+R8
+Z32 !s90 -reportprogress|300|-93|-work|work|C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/problema_2_7seg.vhd|
+!s107 C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/problema_2_7seg.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 15 problema_2_7seg 0 22 98hzo<gkXYQ903X`;gCCA3
+!i122 6
+l36
+L13 41
+VBm9mSQf<adXTZUEW@;0Ud0
+!s100 fmL_60SQ[dC<bc9iEXS7Q1
+R6
+31
+R31
+!i10b 1
+R8
+R32
+Z33 !s107 C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/problema_2_7seg.vhd|
+!i113 1
+R11
+R12
+Etestbench_problema_2_7seg
+Z34 w1693206115
+R2
+R3
+!i122 2
+R0
+Z35 8C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/testbench_problema_2_7seg.vhd
+Z36 FC:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/testbench_problema_2_7seg.vhd
+l0
+L4 1
+V670YEeJMMP@;a:6>SNbac0
+!s100 [LCYMBZRWzz5QQiBFk=X52
+R6
+31
+R7
+!i10b 1
+R8
+Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/testbench_problema_2_7seg.vhd|
+Z38 !s107 C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio_2_2/testbench_problema_2_7seg.vhd|
+!i113 1
+R11
+R12
+Atestbench
+R2
+R3
+DEx4 work 25 testbench_problema_2_7seg 0 22 670YEeJMMP@;a:6>SNbac0
+!i122 2
+l22
+L7 43
+V?ZLb2D_>E<cHE@>?UZ_PO3
+!s100 o?Q7h8LO;3cC7AS2CA]4`0
+R6
+31
+R7
+!i10b 1
+R8
+R37
+R38
+!i113 1
+R11
+R12

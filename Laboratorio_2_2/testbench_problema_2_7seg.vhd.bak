@@ -1,0 +1,49 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity testbench_problema_2_7seg is
+end entity testbench_problema_2_7seg;
+
+architecture testbench of testbench_problema_2_7seg is
+    signal A_tb : std_logic_vector(3 downto 0) := "0000";
+    signal B_tb : std_logic_vector(3 downto 0) := "0000";
+    signal Cin_tb : std_logic := '0';
+    signal HEXA_tb : std_logic_vector(6 downto 0);
+
+    component problema_2_7seg is
+        port (
+            A : in std_logic_vector(3 downto 0);
+            B : in std_logic_vector(3 downto 0);
+            Cin : in std_logic;
+            HEXA : out std_logic_vector(6 downto 0)
+        );
+    end component;
+
+begin
+    uut : problema_2_7seg
+        port map (
+            A_tb,
+            B_tb,
+            Cin_tb,
+            HEXA_tb
+        );
+
+    -- Simulación de entrada
+    process
+    begin
+        A_tb <= "0010";
+        B_tb <= "0101";
+        Cin_tb <= '0';
+        wait for 10 ns;
+
+        A_tb <= "1011";
+        B_tb <= "1100";
+        Cin_tb <= '1';
+        wait for 10 ns;
+
+        -- Agrega más casos de prueba si es necesario
+
+        wait;
+    end process;
+
+end architecture testbench;

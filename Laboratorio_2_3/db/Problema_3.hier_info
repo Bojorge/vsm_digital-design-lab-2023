@@ -1,0 +1,30 @@
+|Problema_3
+clk => clk.IN1
+reset => reset.IN1
+counter_output[0] << CountdownCounter:my_counter.count
+counter_output[1] << CountdownCounter:my_counter.count
+counter_output[2] << CountdownCounter:my_counter.count
+counter_output[3] << CountdownCounter:my_counter.count
+
+
+|Problema_3|CountdownCounter:my_counter
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+rst => counter[0].ACLR
+rst => counter[1].ACLR
+rst => counter[2].ACLR
+rst => counter[3].ACLR
+rst => counter[4].ACLR
+rst => counter[5].ACLR
+count[0] <= counter[0].DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= counter[1].DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= counter[2].DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= counter[3].DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= counter[4].DB_MAX_OUTPUT_PORT_TYPE
+count[5] <= counter[5].DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FSM
-Wed Oct  4 13:49:40 2023
+Tue Oct 10 22:54:39 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -13,14 +13,12 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: VGA_Controller:vga_controller
- 11. Port Connectivity Checks: "White_Screen:white_screen"
- 12. Port Connectivity Checks: "VGA_Controller:vga_controller"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |video_controller
+ 10. Parameter Settings for User Entity Instance: clock_divider:vga_clock_gen
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -47,14 +45,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct  4 13:49:40 2023          ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 10 22:54:39 2023          ;
 ; Quartus Prime Version           ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                   ; FSM                                            ;
-; Top-level Entity Name           ; Top                                            ;
+; Top-level Entity Name           ; video_controller                               ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 49                                             ;
-; Total pins                      ; 14                                             ;
+; Total registers                 ; 66                                             ;
+; Total pins                      ; 18                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
 ; Total DSP Blocks                ; 0                                              ;
@@ -73,7 +71,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; Top                ; FSM                ;
+; Top-level entity name                                                           ; video_controller   ; FSM                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -171,65 +169,56 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                             ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                         ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
-; VGA_Controller.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/steph/OneDrive/Documentos/tallerDigitales/VGA_Controller.sv ;         ;
-; White_Screen.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/steph/OneDrive/Documentos/tallerDigitales/White_Screen.sv   ;         ;
-; Top.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/steph/OneDrive/Documentos/tallerDigitales/Top.sv            ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                              ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------+---------+
+; horizontal_counter.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/horizontal_counter.sv ;         ;
+; vertical_counter.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/vertical_counter.sv   ;         ;
+; video_controller.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv   ;         ;
+; clock_divider.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/clock_divider.sv      ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                            ;
-+---------------------------------------------+------------------------------------------+
-; Resource                                    ; Usage                                    ;
-+---------------------------------------------+------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 35                                       ;
-;                                             ;                                          ;
-; Combinational ALUT usage for logic          ; 60                                       ;
-;     -- 7 input functions                    ; 0                                        ;
-;     -- 6 input functions                    ; 9                                        ;
-;     -- 5 input functions                    ; 3                                        ;
-;     -- 4 input functions                    ; 1                                        ;
-;     -- <=3 input functions                  ; 47                                       ;
-;                                             ;                                          ;
-; Dedicated logic registers                   ; 49                                       ;
-;                                             ;                                          ;
-; I/O pins                                    ; 14                                       ;
-;                                             ;                                          ;
-; Total DSP Blocks                            ; 0                                        ;
-;                                             ;                                          ;
-; Maximum fan-out node                        ; VGA_Controller:vga_controller|counter[0] ;
-; Maximum fan-out                             ; 28                                       ;
-; Total fan-out                               ; 335                                      ;
-; Average fan-out                             ; 2.45                                     ;
-+---------------------------------------------+------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                           ;
++---------------------------------------------+-----------------------------------------+
+; Resource                                    ; Usage                                   ;
++---------------------------------------------+-----------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 47                                      ;
+;                                             ;                                         ;
+; Combinational ALUT usage for logic          ; 81                                      ;
+;     -- 7 input functions                    ; 0                                       ;
+;     -- 6 input functions                    ; 12                                      ;
+;     -- 5 input functions                    ; 2                                       ;
+;     -- 4 input functions                    ; 0                                       ;
+;     -- <=3 input functions                  ; 67                                      ;
+;                                             ;                                         ;
+; Dedicated logic registers                   ; 66                                      ;
+;                                             ;                                         ;
+; I/O pins                                    ; 18                                      ;
+;                                             ;                                         ;
+; Total DSP Blocks                            ; 0                                       ;
+;                                             ;                                         ;
+; Maximum fan-out node                        ; clock_divider:vga_clock_gen|divided_clk ;
+; Maximum fan-out                             ; 35                                      ;
+; Total fan-out                               ; 447                                     ;
+; Average fan-out                             ; 2.44                                    ;
++---------------------------------------------+-----------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                              ;
-+------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+----------------+--------------+
-; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name    ; Library Name ;
-+------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+----------------+--------------+
-; |Top                               ; 60 (0)              ; 49 (0)                    ; 0                 ; 0          ; 14   ; 0            ; |Top                               ; Top            ; work         ;
-;    |VGA_Controller:vga_controller| ; 60 (60)             ; 49 (49)                   ; 0                 ; 0          ; 0    ; 0            ; |Top|VGA_Controller:vga_controller ; VGA_Controller ; work         ;
-+------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+----------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                       ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                 ; Entity Name        ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------+--------------------+--------------+
+; |video_controller                      ; 81 (3)              ; 66 (0)                    ; 0                 ; 0          ; 18   ; 0            ; |video_controller                                   ; video_controller   ; work         ;
+;    |clock_divider:vga_clock_gen|       ; 40 (40)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |video_controller|clock_divider:vga_clock_gen       ; clock_divider      ; work         ;
+;    |horizontal_counter:vga_horizontal| ; 19 (19)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |video_controller|horizontal_counter:vga_horizontal ; horizontal_counter ; work         ;
+;    |vertical_counter:vga_Vertical|     ; 19 (19)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |video_controller|vertical_counter:vga_Vertical     ; vertical_counter   ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                               ;
-+-------------------------------------------+--------------------------------------+
-; Register name                             ; Reason for Removal                   ;
-+-------------------------------------------+--------------------------------------+
-; White_Screen:white_screen|red_reg[0..3]   ; Stuck at GND due to stuck port clock ;
-; White_Screen:white_screen|green_reg[0..3] ; Stuck at GND due to stuck port clock ;
-; White_Screen:white_screen|blue_reg[0..3]  ; Stuck at GND due to stuck port clock ;
-; Total Number of Removed Registers = 12    ;                                      ;
-+-------------------------------------------+--------------------------------------+
 
 
 +------------------------------------------------------+
@@ -237,52 +226,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 49    ;
-; Number of registers using Synchronous Clear  ; 46    ;
+; Total registers                              ; 66    ;
+; Number of registers using Synchronous Clear  ; 64    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: VGA_Controller:vga_controller ;
-+----------------+------------+----------------------------------------------+
-; Parameter Name ; Value      ; Type                                         ;
-+----------------+------------+----------------------------------------------+
-; H_ACTIVE       ; 1010000000 ; Unsigned Binary                              ;
-; H_FRONT        ; 0000001010 ; Unsigned Binary                              ;
-; H_PULSE        ; 0001011111 ; Unsigned Binary                              ;
-; H_BACK         ; 0000101111 ; Unsigned Binary                              ;
-; V_ACTIVE       ; 0111100000 ; Unsigned Binary                              ;
-; V_FRONT        ; 0000001010 ; Unsigned Binary                              ;
-; V_PULSE        ; 0000000001 ; Unsigned Binary                              ;
-; V_BACK         ; 0000100000 ; Unsigned Binary                              ;
-+----------------+------------+----------------------------------------------+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |video_controller ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; WIDTH          ; 640   ; Signed Integer                                          ;
+; HEIGHT         ; 480   ; Signed Integer                                          ;
+; ROWS           ; 8     ; Signed Integer                                          ;
+; COLS           ; 8     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "White_Screen:white_screen"                                                                                                                   ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; clk   ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; hsync ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; vsync ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "VGA_Controller:vga_controller"                                                       ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; clk   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; blank ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clock_divider:vga_clock_gen ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; div_value      ; 0     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -290,23 +264,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 49                          ;
-;     ENA SCLR          ; 10                          ;
-;     SCLR              ; 36                          ;
-;     plain             ; 3                           ;
-; arriav_lcell_comb     ; 61                          ;
-;     arith             ; 46                          ;
-;         1 data inputs ; 46                          ;
-;     normal            ; 15                          ;
+; arriav_ff             ; 66                          ;
+;     ENA SCLR          ; 16                          ;
+;     SCLR              ; 48                          ;
+;     plain             ; 2                           ;
+; arriav_lcell_comb     ; 83                          ;
+;     arith             ; 64                          ;
+;         1 data inputs ; 64                          ;
+;     normal            ; 19                          ;
 ;         0 data inputs ; 1                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 1                           ;
-;         5 data inputs ; 3                           ;
-;         6 data inputs ; 9                           ;
-; boundary_port         ; 14                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 3                           ;
+;         5 data inputs ; 2                           ;
+;         6 data inputs ; 12                          ;
+; boundary_port         ; 18                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.50                        ;
-; Average LUT depth     ; 2.22                        ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 2.69                        ;
 +-----------------------+-----------------------------+
 
 
@@ -325,54 +299,67 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Wed Oct  4 13:49:23 2023
+    Info: Processing started: Tue Oct 10 22:54:31 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FSM -c FSM
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file grid.sv
-    Info (12023): Found entity 1: grid File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/grid.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file vga_controller.sv
-    Info (12023): Found entity 1: VGA_Controller File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/VGA_Controller.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file white_screen.sv
-    Info (12023): Found entity 1: White_Screen File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/White_Screen.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file top.sv
-    Info (12023): Found entity 1: Top File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/Top.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file vga_pll.sv
-    Info (12023): Found entity 1: VGA_PLL File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/VGA_PLL.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at VGA_PLL.sv(12): created implicit net for "pll_locked" File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/VGA_PLL.sv Line: 12
-Info (12127): Elaborating entity "Top" for the top level hierarchy
-Info (12128): Elaborating entity "VGA_Controller" for hierarchy "VGA_Controller:vga_controller" File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/Top.sv Line: 18
-Warning (10646): Verilog HDL Event Control warning at VGA_Controller.sv(24): posedge or negedge of vector "counter" depends solely on its least-significant bit File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/VGA_Controller.sv Line: 24
-Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(30): truncated value with size 32 to match size of target (26) File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/VGA_Controller.sv Line: 30
-Info (12128): Elaborating entity "White_Screen" for hierarchy "White_Screen:white_screen" File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/Top.sv Line: 25
-Warning (10230): Verilog HDL assignment warning at White_Screen.sv(29): truncated value with size 8 to match size of target (4) File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/White_Screen.sv Line: 29
-Warning (10230): Verilog HDL assignment warning at White_Screen.sv(30): truncated value with size 8 to match size of target (4) File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/White_Screen.sv Line: 30
-Warning (10230): Verilog HDL assignment warning at White_Screen.sv(31): truncated value with size 8 to match size of target (4) File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/White_Screen.sv Line: 31
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12021): Found 1 design units, including 1 entities, in source file horizontal_counter.sv
+    Info (12023): Found entity 1: horizontal_counter File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/horizontal_counter.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file vertical_counter.sv
+    Info (12023): Found entity 1: vertical_counter File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/vertical_counter.sv Line: 2
+Warning (10229): Verilog HDL Expression warning at video_controller.sv(57): truncated literal to match 1 bits File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 57
+Info (12021): Found 1 design units, including 1 entities, in source file video_controller.sv
+    Info (12023): Found entity 1: video_controller File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file clock_divider.sv
+    Info (12023): Found entity 1: clock_divider File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/clock_divider.sv Line: 2
+Info (12127): Elaborating entity "video_controller" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at video_controller.sv(61): object "grid" assigned a value but never read File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 61
+Warning (10230): Verilog HDL assignment warning at video_controller.sv(67): truncated value with size 16 to match size of target (1) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 67
+Warning (10240): Verilog HDL Always Construct warning at video_controller.sv(79): inferring latch(es) for variable "red", which holds its previous value in one or more paths through the always construct File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+Warning (10240): Verilog HDL Always Construct warning at video_controller.sv(79): inferring latch(es) for variable "green", which holds its previous value in one or more paths through the always construct File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+Warning (10240): Verilog HDL Always Construct warning at video_controller.sv(79): inferring latch(es) for variable "blue", which holds its previous value in one or more paths through the always construct File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+Info (10041): Inferred latch for "blue[0]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+Info (10041): Inferred latch for "blue[1]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+Info (10041): Inferred latch for "blue[2]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+Info (10041): Inferred latch for "blue[3]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+Info (10041): Inferred latch for "green[0]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+Info (10041): Inferred latch for "green[1]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+Info (10041): Inferred latch for "green[2]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+Info (10041): Inferred latch for "green[3]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+Info (10041): Inferred latch for "red[0]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+Info (10041): Inferred latch for "red[1]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+Info (10041): Inferred latch for "red[2]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+Info (10041): Inferred latch for "red[3]" at video_controller.sv(79) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:vga_clock_gen" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 42
+Info (12128): Elaborating entity "horizontal_counter" for hierarchy "horizontal_counter:vga_horizontal" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 45
+Warning (10230): Verilog HDL assignment warning at horizontal_counter.sv(12): truncated value with size 32 to match size of target (16) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/horizontal_counter.sv Line: 12
+Info (12128): Elaborating entity "vertical_counter" for hierarchy "vertical_counter:vga_Vertical" File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 46
+Warning (10230): Verilog HDL assignment warning at vertical_counter.sv(13): truncated value with size 32 to match size of target (16) File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/vertical_counter.sv Line: 13
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "red[0]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/Top.sv Line: 4
-    Warning (13410): Pin "red[1]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/Top.sv Line: 4
-    Warning (13410): Pin "red[2]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/Top.sv Line: 4
-    Warning (13410): Pin "red[3]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/Top.sv Line: 4
-    Warning (13410): Pin "green[0]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/Top.sv Line: 5
-    Warning (13410): Pin "green[1]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/Top.sv Line: 5
-    Warning (13410): Pin "green[2]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/Top.sv Line: 5
-    Warning (13410): Pin "green[3]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/Top.sv Line: 5
-    Warning (13410): Pin "blue[0]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/Top.sv Line: 7
-    Warning (13410): Pin "blue[1]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/Top.sv Line: 7
-    Warning (13410): Pin "blue[2]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/Top.sv Line: 7
-    Warning (13410): Pin "blue[3]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/tallerDigitales/Top.sv Line: 7
+    Warning (13410): Pin "red[0]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+    Warning (13410): Pin "red[1]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+    Warning (13410): Pin "red[2]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+    Warning (13410): Pin "red[3]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+    Warning (13410): Pin "green[0]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+    Warning (13410): Pin "green[1]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+    Warning (13410): Pin "green[2]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+    Warning (13410): Pin "green[3]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+    Warning (13410): Pin "blue[0]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+    Warning (13410): Pin "blue[1]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+    Warning (13410): Pin "blue[2]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+    Warning (13410): Pin "blue[3]" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 79
+    Warning (13410): Pin "sync_n" is stuck at GND File: C:/Users/steph/OneDrive/Documentos/GitHub/vsm_digital-design-lab-2023/Laboratorio 4/tallerDigitales/video_controller.sv Line: 18
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 76 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 0 input pins
-    Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 62 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 4877 megabytes
-    Info: Processing ended: Wed Oct  4 13:49:40 2023
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:19
+Info (21057): Implemented 100 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 82 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 4865 megabytes
+    Info: Processing ended: Tue Oct 10 22:54:39 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
 
 

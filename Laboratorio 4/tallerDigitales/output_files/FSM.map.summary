@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Wed Oct  4 13:49:40 2023
+Analysis & Synthesis Status : Successful - Tue Oct 10 22:54:39 2023
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : FSM
-Top-level Entity Name : Top
+Top-level Entity Name : video_controller
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 49
-Total pins : 14
+Total registers : 66
+Total pins : 18
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

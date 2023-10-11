@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "counter_output[0]",
+					"strict" : false
+				},
+				{
+					"name" : "counter_output[1]",
+					"strict" : false
+				},
+				{
+					"name" : "counter_output[2]",
+					"strict" : false
+				},
+				{
+					"name" : "counter_output[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

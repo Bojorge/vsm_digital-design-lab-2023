@@ -4,11 +4,23 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "hsync",
+					"name" : "h_synq",
 					"strict" : false
 				},
 				{
-					"name" : "vsync",
+					"name" : "v_synq",
+					"strict" : false
+				},
+				{
+					"name" : "clk_25mhz",
+					"strict" : false
+				},
+				{
+					"name" : "blank_n",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
 					"strict" : false
 				}
 			]

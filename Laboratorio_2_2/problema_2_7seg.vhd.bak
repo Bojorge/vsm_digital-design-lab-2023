@@ -1,0 +1,39 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use work.all;
+
+entity problema_2_7seg is 
+    port(
+        A : in std_logic_vector(3 downto 0);
+        B : in std_logic_vector(3 downto 0);
+        Cin : in std_logic;
+        HEXA : out std_logic_vector(6 downto 0)
+    );
+end problema_2_7seg;
+
+architecture structural of problema_2_7seg is
+component problema_2 is
+    port (
+        A : in std_logic_vector(3 downto 0);
+        B : in std_logic_vector(3 downto 0);
+        Cin : in std_logic;
+        Cout : out std_logic;
+        S : out std_logic_vector(3 downto 0)
+    );
+end component;
+
+signal Cout : std_logic_vector(3 downto 0) := "0000";
+    signal S : std_logic_vector(3 downto 0);
+
+begin
+    adder : problema_2
+        port map (
+            A,
+            B,
+            Cin,
+            Cout(0),
+            S
+        );
+
+    HEX <= std_logic_vector(to_unsigned(conv_integer(S), HEX'length)); -- Conversión de binario a hexadecimal
+end structural;
