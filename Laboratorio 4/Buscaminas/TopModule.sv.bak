@@ -1,0 +1,15 @@
+module TopModule 
+(
+	 input wire clk_25MHz,
+    input wire rst,
+    output wire hsync,
+    output wire vsync,
+    output wire [2:0] red,
+    output wire [2:0] green,
+    output wire [2:0] blue
+);
+
+  
+  
+
+endmodule
