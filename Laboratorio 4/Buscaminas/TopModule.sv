@@ -1,7 +1,7 @@
 module TopModule 
 (
 	 input logic clk,
-    input logic rst,
+    input logic rst, 
     output logic h_synq,
     output logic v_synq,
     output logic [7:0] red,
@@ -21,21 +21,14 @@ module TopModule
 	logic C2;
 	logic x;
 	
+	logic [2:0] grid [0:7][0:7];
 	
-	logic [1:0] grid [0:7][0:7] = '{
-    '{2'b00,2'b00,2'b00,2'b00,2'b00,2'b00,2'b00,2'b00},
-    '{2'b00,2'b00,2'b00,2'b00,2'b00,2'b00,2'b00,2'b00},
-    '{2'b00,2'b00,2'b00,2'b00,2'b00,2'b00,2'b00,2'b00},
-    '{2'b00,2'b10,2'b00,2'b00,2'b00,2'b00,2'b00,2'b00},
-    '{2'b00,2'b00,2'b00,2'b00,2'b00,2'b00,2'b00,2'b00},
-    '{2'b00,2'b00,2'b00,2'b00,2'b00,2'b00,2'b00,2'b00},
-    '{2'b00,2'b00,2'b00,2'b00,2'b00,2'b00,2'b00,2'b00},
-    '{2'b00,2'b00,2'b00,2'b00,2'b00,2'b00,2'b00,2'b00}
-	};
+		
+	generateGrid gen_grid( 
+			.grid(grid) 
+	); 
 	
-	//int ROWS = $size(grid, 1); // Obtiene el número de filas
-	//int COLS = $size(grid, 2); // Obtiene el número de columnas
-
+	
 	 
 	clock_divider vga_clock_gen(
 			.clk(clk), 
@@ -55,8 +48,7 @@ module TopModule
 	
 
 	
-	video_controller #(640, 480, 8, 8) video_controller_inst (
-        //.clock(clk),
+	grid_controller #(640, 480, 8, 8) grid_controller_inst (
 		  .grid(grid),
 		  .clk_25MHz(clk_25MHz),
         .h_synq(h_synq),
@@ -64,7 +56,6 @@ module TopModule
         .red(red),
         .green(green),
         .blue(blue),
-        //.clk_25MHz(clk_25MHz),
         .sync_n(sync_n),
         .blank_n(blank_n)
     );

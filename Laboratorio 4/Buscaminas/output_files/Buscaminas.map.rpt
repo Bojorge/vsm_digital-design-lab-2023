@@ -1,5 +1,5 @@
-Analysis & Elaboration report for Buscaminas
-Fri Oct 13 06:22:56 2023
+Analysis & Synthesis report for Buscaminas
+Fri Oct 13 10:43:32 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -7,14 +7,23 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: clock_divider:vga_clock_gen
-  5. Parameter Settings for User Entity Instance: video_controller:video_controller_inst
-  6. Analysis & Elaboration Settings
-  7. Port Connectivity Checks: "video_controller:video_controller_inst"
-  8. Port Connectivity Checks: "FiniteStateMachine:fsm"
-  9. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |TopModule|FiniteStateMachine:fsm|state
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Parameter Settings for User Entity Instance: clock_divider:vga_clock_gen
+ 14. Parameter Settings for User Entity Instance: grid_controller:grid_controller_inst
+ 15. Port Connectivity Checks: "FiniteStateMachine:fsm"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -38,65 +47,31 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+--------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                 ;
-+-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Fri Oct 13 06:22:56 2023          ;
-; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
-; Revision Name                 ; Buscaminas                                     ;
-; Top-level Entity Name         ; TopModule                                      ;
-; Family                        ; Cyclone V                                      ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
-; Total registers               ; N/A until Partition Merge                      ;
-; Total pins                    ; N/A until Partition Merge                      ;
-; Total virtual pins            ; N/A until Partition Merge                      ;
-; Total block memory bits       ; N/A until Partition Merge                      ;
-; Total PLLs                    ; N/A until Partition Merge                      ;
-; Total DLLs                    ; N/A until Partition Merge                      ;
-+-------------------------------+------------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 2           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: clock_divider:vga_clock_gen ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; div_value      ; 0     ; Signed Integer                                  ;
-+----------------+-------+-------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: video_controller:video_controller_inst ;
-+----------------+-------+------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                       ;
-+----------------+-------+------------------------------------------------------------+
-; WIDTH          ; 640   ; Signed Integer                                             ;
-; HEIGHT         ; 480   ; Signed Integer                                             ;
-; ROWS           ; 8     ; Signed Integer                                             ;
-; COLS           ; 8     ; Signed Integer                                             ;
-+----------------+-------+------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Oct 13 10:43:32 2023          ;
+; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Revision Name                   ; Buscaminas                                     ;
+; Top-level Entity Name           ; TopModule                                      ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 66                                             ;
+; Total pins                      ; 31                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -182,18 +157,181 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+--------------------------------------------------------------------+
-; Port Connectivity Checks: "video_controller:video_controller_inst" ;
-+---------------+-------+----------+---------------------------------+
-; Port          ; Type  ; Severity ; Details                         ;
-+---------------+-------+----------+---------------------------------+
-; grid[0..2]    ; Input ; Info     ; Stuck at GND                    ;
-; grid[4..7]    ; Input ; Info     ; Stuck at GND                    ;
-; grid[3][2..7] ; Input ; Info     ; Stuck at GND                    ;
-; grid[3][0]    ; Input ; Info     ; Stuck at GND                    ;
-; grid[3][1][1] ; Input ; Info     ; Stuck at VCC                    ;
-; grid[3][1][0] ; Input ; Info     ; Stuck at GND                    ;
-+---------------+-------+----------+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; FiniteStateMachine.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/FiniteStateMachine.sv ;         ;
+; vertical_counter.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/vertical_counter.sv   ;         ;
+; horizontal_counter.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/horizontal_counter.sv ;         ;
+; clock_divider.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/clock_divider.sv      ;         ;
+; TopModule.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv          ;         ;
+; generateGrid.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generateGrid.sv       ;         ;
+; grid_controller.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv    ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                           ;
++---------------------------------------------+-----------------------------------------+
+; Resource                                    ; Usage                                   ;
++---------------------------------------------+-----------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 104                                     ;
+;                                             ;                                         ;
+; Combinational ALUT usage for logic          ; 172                                     ;
+;     -- 7 input functions                    ; 0                                       ;
+;     -- 6 input functions                    ; 35                                      ;
+;     -- 5 input functions                    ; 28                                      ;
+;     -- 4 input functions                    ; 22                                      ;
+;     -- <=3 input functions                  ; 87                                      ;
+;                                             ;                                         ;
+; Dedicated logic registers                   ; 66                                      ;
+;                                             ;                                         ;
+; I/O pins                                    ; 31                                      ;
+;                                             ;                                         ;
+; Total DSP Blocks                            ; 0                                       ;
+;                                             ;                                         ;
+; Maximum fan-out node                        ; clock_divider:vga_clock_gen|divided_clk ;
+; Maximum fan-out                             ; 35                                      ;
+; Total fan-out                               ; 883                                     ;
+; Average fan-out                             ; 2.94                                    ;
++---------------------------------------------+-----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                        ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                               ; Entity Name        ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------+--------------------+--------------+
+; |TopModule                                ; 172 (0)             ; 66 (0)                    ; 0                 ; 0          ; 31   ; 0            ; |TopModule                                                                        ; TopModule          ; work         ;
+;    |clock_divider:vga_clock_gen|          ; 40 (40)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |TopModule|clock_divider:vga_clock_gen                                            ; clock_divider      ; work         ;
+;    |grid_controller:grid_controller_inst| ; 132 (100)           ; 33 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopModule|grid_controller:grid_controller_inst                                   ; grid_controller    ; work         ;
+;       |horizontal_counter:vga_horizontal| ; 16 (16)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |TopModule|grid_controller:grid_controller_inst|horizontal_counter:vga_horizontal ; horizontal_counter ; work         ;
+;       |vertical_counter:vga_vertical|     ; 16 (16)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |TopModule|grid_controller:grid_controller_inst|vertical_counter:vga_vertical     ; vertical_counter   ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------+
+; State Machine - |TopModule|FiniteStateMachine:fsm|state                                       ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+; Name      ; state.110 ; state.101 ; state.100 ; state.011 ; state.010 ; state.001 ; state.000 ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+; state.000 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ;
+; state.001 ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 1         ;
+; state.010 ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 1         ;
+; state.011 ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 1         ;
+; state.100 ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 1         ;
+; state.101 ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; state.110 ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                        ;
++-----------------------------------------------------+---------------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                         ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------------------------------+------------------------+
+; grid_controller:grid_controller_inst|red[0]         ; grid_controller:grid_controller_inst|red[7] ; yes                    ;
+; grid_controller:grid_controller_inst|red[2]         ; grid_controller:grid_controller_inst|red[7] ; yes                    ;
+; grid_controller:grid_controller_inst|red[4]         ; grid_controller:grid_controller_inst|red[7] ; yes                    ;
+; grid_controller:grid_controller_inst|red[6]         ; grid_controller:grid_controller_inst|red[7] ; yes                    ;
+; grid_controller:grid_controller_inst|green[0]       ; grid_controller:grid_controller_inst|red[7] ; yes                    ;
+; grid_controller:grid_controller_inst|green[2]       ; grid_controller:grid_controller_inst|red[7] ; yes                    ;
+; grid_controller:grid_controller_inst|green[4]       ; grid_controller:grid_controller_inst|red[7] ; yes                    ;
+; grid_controller:grid_controller_inst|green[6]       ; grid_controller:grid_controller_inst|red[7] ; yes                    ;
+; grid_controller:grid_controller_inst|blue[0]        ; grid_controller:grid_controller_inst|red[7] ; yes                    ;
+; grid_controller:grid_controller_inst|blue[2]        ; grid_controller:grid_controller_inst|red[7] ; yes                    ;
+; grid_controller:grid_controller_inst|blue[4]        ; grid_controller:grid_controller_inst|red[7] ; yes                    ;
+; grid_controller:grid_controller_inst|blue[6]        ; grid_controller:grid_controller_inst|red[7] ; yes                    ;
+; Number of user-specified and inferred latches = 12  ;                                             ;                        ;
++-----------------------------------------------------+---------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; FiniteStateMachine:fsm|state.010       ; Lost fanout                            ;
+; FiniteStateMachine:fsm|state.100       ; Lost fanout                            ;
+; FiniteStateMachine:fsm|state~4         ; Lost fanout                            ;
+; FiniteStateMachine:fsm|state~5         ; Lost fanout                            ;
+; FiniteStateMachine:fsm|state~6         ; Lost fanout                            ;
+; FiniteStateMachine:fsm|state.011       ; Stuck at GND due to stuck port data_in ;
+; FiniteStateMachine:fsm|state.101       ; Stuck at GND due to stuck port data_in ;
+; FiniteStateMachine:fsm|state.110       ; Stuck at GND due to stuck port data_in ;
+; FiniteStateMachine:fsm|state.000       ; Lost fanout                            ;
+; FiniteStateMachine:fsm|state.001       ; Lost fanout                            ;
+; Total Number of Removed Registers = 10 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                  ;
++--------------------------------+--------------------+----------------------------------------+
+; Register name                  ; Reason for Removal ; Registers Removed due to This Register ;
++--------------------------------+--------------------+----------------------------------------+
+; FiniteStateMachine:fsm|state~4 ; Lost Fanouts       ; FiniteStateMachine:fsm|state.001       ;
++--------------------------------+--------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 66    ;
+; Number of registers using Synchronous Clear  ; 64    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clock_divider:vga_clock_gen ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; div_value      ; 0     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: grid_controller:grid_controller_inst ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; WIDTH          ; 640   ; Signed Integer                                           ;
+; HEIGHT         ; 480   ; Signed Integer                                           ;
+; ROWS           ; 8     ; Signed Integer                                           ;
+; COLS           ; 8     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -205,22 +343,54 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 66                          ;
+;     ENA SCLR          ; 16                          ;
+;     SCLR              ; 48                          ;
+;     plain             ; 2                           ;
+; arriav_lcell_comb     ; 175                         ;
+;     arith             ; 64                          ;
+;         1 data inputs ; 64                          ;
+;     normal            ; 111                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 22                          ;
+;         5 data inputs ; 28                          ;
+;         6 data inputs ; 35                          ;
+; boundary_port         ; 31                          ;
+;                       ;                             ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 4.34                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Fri Oct 13 06:22:31 2023
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Buscaminas -c Buscaminas --analysis_and_elaboration
+    Info: Processing started: Fri Oct 13 10:43:04 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Buscaminas -c Buscaminas
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file vga_controller.sv
-    Info (12023): Found entity 1: VGA_controller File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/VGA_controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file finitestatemachine.sv
     Info (12023): Found entity 1: FiniteStateMachine File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/FiniteStateMachine.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file video_controller.sv
-    Info (12023): Found entity 1: video_controller File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vertical_counter.sv
     Info (12023): Found entity 1: vertical_counter File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/vertical_counter.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file horizontal_counter.sv
@@ -238,49 +408,93 @@ Info (12021): Found 1 design units, including 1 entities, in source file registr
     Info (12023): Found entity 1: registroCasillasMarcadas File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/registroCasillasMarcadas.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file generategrid.sv
     Info (12023): Found entity 1: generateGrid File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generateGrid.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file grid_controller.sv
+    Info (12023): Found entity 1: grid_controller File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 1
 Info (12127): Elaborating entity "TopModule" for the top level hierarchy
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "grid" into its bus
-Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:vga_clock_gen" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 43
-Info (12128): Elaborating entity "FiniteStateMachine" for hierarchy "FiniteStateMachine:fsm" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 54
-Info (12128): Elaborating entity "video_controller" for hierarchy "video_controller:video_controller_inst" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 70
-Warning (10240): Verilog HDL Always Construct warning at video_controller.sv(65): inferring latch(es) for variable "red", which holds its previous value in one or more paths through the always construct File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Warning (10240): Verilog HDL Always Construct warning at video_controller.sv(65): inferring latch(es) for variable "green", which holds its previous value in one or more paths through the always construct File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Warning (10240): Verilog HDL Always Construct warning at video_controller.sv(65): inferring latch(es) for variable "blue", which holds its previous value in one or more paths through the always construct File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Warning (10034): Output port "sync_n" at video_controller.sv(17) has no driver File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 17
-Info (10041): Inferred latch for "blue[0]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "blue[1]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "blue[2]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "blue[3]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "blue[4]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "blue[5]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "blue[6]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "blue[7]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "green[0]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "green[1]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "green[2]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "green[3]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "green[4]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "green[5]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "green[6]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "green[7]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "red[0]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "red[1]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "red[2]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "red[3]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "red[4]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "red[5]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "red[6]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
-Info (10041): Inferred latch for "red[7]" at video_controller.sv(65) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 65
+Info (12128): Elaborating entity "generateGrid" for hierarchy "generateGrid:gen_grid" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 29
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "grid" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "grid" into its bus
-Info (12128): Elaborating entity "horizontal_counter" for hierarchy "video_controller:video_controller_inst|horizontal_counter:vga_horizontal" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 37
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:vga_clock_gen" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 36
+Info (12128): Elaborating entity "FiniteStateMachine" for hierarchy "FiniteStateMachine:fsm" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 47
+Info (12128): Elaborating entity "grid_controller" for hierarchy "grid_controller:grid_controller_inst" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 61
+Warning (10270): Verilog HDL Case Statement warning at grid_controller.sv(62): incomplete case statement has no default case item File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 62
+Warning (10240): Verilog HDL Always Construct warning at grid_controller.sv(46): inferring latch(es) for variable "red", which holds its previous value in one or more paths through the always construct File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Warning (10240): Verilog HDL Always Construct warning at grid_controller.sv(46): inferring latch(es) for variable "green", which holds its previous value in one or more paths through the always construct File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Warning (10240): Verilog HDL Always Construct warning at grid_controller.sv(46): inferring latch(es) for variable "blue", which holds its previous value in one or more paths through the always construct File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Warning (10034): Output port "sync_n" at grid_controller.sv(15) has no driver File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 15
+Info (10041): Inferred latch for "blue[0]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "blue[1]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "blue[2]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "blue[3]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "blue[4]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "blue[5]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "blue[6]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "blue[7]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "green[0]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "green[1]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "green[2]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "green[3]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "green[4]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "green[5]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "green[6]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "green[7]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "red[0]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "red[1]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "red[2]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "red[3]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "red[4]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "red[5]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "red[6]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10041): Inferred latch for "red[7]" at grid_controller.sv(46) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "grid" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "grid" into its bus
+Info (12128): Elaborating entity "horizontal_counter" for hierarchy "grid_controller:grid_controller_inst|horizontal_counter:vga_horizontal" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 33
 Warning (10230): Verilog HDL assignment warning at horizontal_counter.sv(11): truncated value with size 32 to match size of target (16) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/horizontal_counter.sv Line: 11
-Info (12128): Elaborating entity "vertical_counter" for hierarchy "video_controller:video_controller_inst|vertical_counter:vga_vertical" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/video_controller.sv Line: 38
+Info (12128): Elaborating entity "vertical_counter" for hierarchy "grid_controller:grid_controller_inst|vertical_counter:vga_vertical" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 34
 Warning (10230): Verilog HDL assignment warning at vertical_counter.sv(12): truncated value with size 32 to match size of target (16) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/vertical_counter.sv Line: 12
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4771 megabytes
-    Info: Processing ended: Fri Oct 13 06:22:56 2023
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:39
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "grid_controller:grid_controller_inst|red[6]" merged with LATCH primitive "grid_controller:grid_controller_inst|red[0]" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+    Info (13026): Duplicate LATCH primitive "grid_controller:grid_controller_inst|red[4]" merged with LATCH primitive "grid_controller:grid_controller_inst|red[0]" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+    Info (13026): Duplicate LATCH primitive "grid_controller:grid_controller_inst|red[2]" merged with LATCH primitive "grid_controller:grid_controller_inst|red[0]" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+    Info (13026): Duplicate LATCH primitive "grid_controller:grid_controller_inst|green[6]" merged with LATCH primitive "grid_controller:grid_controller_inst|red[0]" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+    Info (13026): Duplicate LATCH primitive "grid_controller:grid_controller_inst|green[4]" merged with LATCH primitive "grid_controller:grid_controller_inst|red[0]" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+    Info (13026): Duplicate LATCH primitive "grid_controller:grid_controller_inst|green[2]" merged with LATCH primitive "grid_controller:grid_controller_inst|red[0]" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+    Info (13026): Duplicate LATCH primitive "grid_controller:grid_controller_inst|green[0]" merged with LATCH primitive "grid_controller:grid_controller_inst|red[0]" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+    Info (13026): Duplicate LATCH primitive "grid_controller:grid_controller_inst|blue[6]" merged with LATCH primitive "grid_controller:grid_controller_inst|red[0]" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+    Info (13026): Duplicate LATCH primitive "grid_controller:grid_controller_inst|blue[4]" merged with LATCH primitive "grid_controller:grid_controller_inst|red[0]" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+    Info (13026): Duplicate LATCH primitive "grid_controller:grid_controller_inst|blue[2]" merged with LATCH primitive "grid_controller:grid_controller_inst|red[0]" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+    Info (13026): Duplicate LATCH primitive "grid_controller:grid_controller_inst|blue[0]" merged with LATCH primitive "grid_controller:grid_controller_inst|red[0]" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+Warning (13012): Latch grid_controller:grid_controller_inst|red[0] has unsafe behavior File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 46
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal grid_controller:grid_controller_inst|horizontal_counter:vga_horizontal|h_Count_Value[15] File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/horizontal_counter.sv Line: 7
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "red[1]" is stuck at VCC File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 7
+    Warning (13410): Pin "red[3]" is stuck at VCC File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 7
+    Warning (13410): Pin "red[5]" is stuck at VCC File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 7
+    Warning (13410): Pin "red[7]" is stuck at VCC File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 7
+    Warning (13410): Pin "green[1]" is stuck at VCC File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 8
+    Warning (13410): Pin "green[3]" is stuck at VCC File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 8
+    Warning (13410): Pin "green[5]" is stuck at VCC File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 8
+    Warning (13410): Pin "green[7]" is stuck at VCC File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 8
+    Warning (13410): Pin "blue[1]" is stuck at VCC File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 9
+    Warning (13410): Pin "blue[3]" is stuck at VCC File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 9
+    Warning (13410): Pin "blue[5]" is stuck at VCC File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 9
+    Warning (13410): Pin "blue[7]" is stuck at VCC File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 9
+    Warning (13410): Pin "sync_n" is stuck at GND File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 10
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 7 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "rst" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 4
+Info (21057): Implemented 204 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 29 output pins
+    Info (21061): Implemented 173 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
+    Info: Peak virtual memory: 4804 megabytes
+    Info: Processing ended: Fri Oct 13 10:43:32 2023
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:42
 
 
