@@ -5,13 +5,15 @@ module video_controller #(
     parameter COLS = 8
 )
 (
-    input logic clock,
+    //input logic clock,
+	 input logic [1:0] grid [0:7][0:7],
+	 input logic clk_25MHz,
     output logic h_synq,
     output logic v_synq,
     output logic [7:0] red,
     output logic [7:0] green,
     output logic [7:0] blue,
-    output logic clk_25MHz,
+    //output logic clk_25MHz,
     output logic sync_n,
     output logic blank_n
 );
@@ -29,7 +31,7 @@ module video_controller #(
     logic [15:0] v_count_value;
 
     // Clock divider
-    clock_divider vga_clock_gen(clock, clk_25MHz);
+    //clock_divider vga_clock_gen(clock, clk_25MHz);
 
     // Contadores
     horizontal_counter vga_horizontal (clk_25MHz, enable_v_counter, h_count_value);
@@ -47,7 +49,7 @@ module video_controller #(
     //assign blank_n = (h_count_value < 799) && (v_count_value < 524);
 
     // Asignar colores a la cuadrícula o al fondo
-
+/*
 logic [1:0] grid [0:7][0:7] = '{
     '{2'b00,2'b00,2'b00,2'b00,2'b11,2'b00,2'b00,2'b00},
     '{2'b00,2'b00,2'b11,2'b00,2'b11,2'b00,2'b00,2'b00},
@@ -58,7 +60,7 @@ logic [1:0] grid [0:7][0:7] = '{
     '{2'b00,2'b00,2'b00,2'b10,2'b10,2'b00,2'b00,2'b00},
     '{2'b11,2'b00,2'b00,2'b10,2'b10,2'b00,2'b00,2'b01}
 };
-
+*/
     always begin
         draw_game_screen();
     end

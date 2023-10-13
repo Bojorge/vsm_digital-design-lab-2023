@@ -108,15 +108,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk_25MHz",
-					"strict" : false
-				},
-				{
 					"name" : "blank_n",
 					"strict" : false
 				},
 				{
-					"name" : "clock",
+					"name" : "clk_25MHz",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
 					"strict" : false
 				}
 			]
