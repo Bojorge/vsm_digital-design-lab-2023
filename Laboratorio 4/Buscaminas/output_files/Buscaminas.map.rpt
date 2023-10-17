@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Buscaminas
-Tue Oct 17 12:21:27 2023
+Tue Oct 17 14:27:09 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -13,18 +13,20 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: vga_controller:vgaCont
- 11. Parameter Settings for Inferred Entity Instance: generate_grid:gen_grid|lpm_divide:Mod0
- 12. Parameter Settings for Inferred Entity Instance: generate_grid:gen_grid|lpm_divide:Mod1
- 13. Port Connectivity Checks: "generate_grid:gen_grid|generate_rectangle:rectMarca"
- 14. Port Connectivity Checks: "generate_grid:gen_grid|generate_rectangle:rectBGRight"
- 15. Port Connectivity Checks: "generate_grid:gen_grid|generate_rectangle:rectBGLeft"
- 16. Port Connectivity Checks: "generate_grid:gen_grid"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+  8. State Machine - |TopModule|FiniteStateMachine:fsm|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: vga_controller:vgaCont
+ 13. Parameter Settings for Inferred Entity Instance: generate_graphic:gen_grid|lpm_divide:Mod0
+ 14. Parameter Settings for Inferred Entity Instance: generate_graphic:gen_grid|lpm_divide:Mod1
+ 15. Port Connectivity Checks: "generate_graphic:gen_grid|generate_rectangle:rectMarca"
+ 16. Port Connectivity Checks: "generate_graphic:gen_grid|generate_rectangle:rectBGRight"
+ 17. Port Connectivity Checks: "generate_graphic:gen_grid|generate_rectangle:rectBGLeft"
+ 18. Port Connectivity Checks: "generate_graphic:gen_grid"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
 
 
 
@@ -51,14 +53,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 17 12:21:27 2023          ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 17 14:27:09 2023          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; Buscaminas                                     ;
 ; Top-level Entity Name           ; TopModule                                      ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 21                                             ;
-; Total pins                      ; 37                                             ;
+; Total registers                 ; 29                                             ;
+; Total pins                      ; 38                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
 ; Total DSP Blocks                ; 0                                              ;
@@ -180,11 +182,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                                      ; Library ;
 +----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; FiniteStateMachine.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/FiniteStateMachine.sv      ;         ;
 ; TopModule.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv               ;         ;
 ; pll.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/pll.sv                     ;         ;
 ; vga_controller.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/vga_controller.sv          ;         ;
 ; generate_rectangle.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_rectangle.sv      ;         ;
-; generate_grid.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_grid.sv           ;         ;
+; generate_graphic.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv        ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf                                                                          ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/abs_divider.inc                                                                         ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                                                                     ;         ;
@@ -203,49 +206,79 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------+
 ; Resource                                    ; Usage               ;
 +---------------------------------------------+---------------------+
-; Estimate of Logic utilization (ALMs needed) ; 158                 ;
+; Estimate of Logic utilization (ALMs needed) ; 184                 ;
 ;                                             ;                     ;
-; Combinational ALUT usage for logic          ; 292                 ;
+; Combinational ALUT usage for logic          ; 330                 ;
 ;     -- 7 input functions                    ; 2                   ;
-;     -- 6 input functions                    ; 22                  ;
-;     -- 5 input functions                    ; 32                  ;
-;     -- 4 input functions                    ; 54                  ;
-;     -- <=3 input functions                  ; 182                 ;
+;     -- 6 input functions                    ; 36                  ;
+;     -- 5 input functions                    ; 34                  ;
+;     -- 4 input functions                    ; 59                  ;
+;     -- <=3 input functions                  ; 199                 ;
 ;                                             ;                     ;
-; Dedicated logic registers                   ; 21                  ;
+; Dedicated logic registers                   ; 29                  ;
 ;                                             ;                     ;
-; I/O pins                                    ; 37                  ;
+; I/O pins                                    ; 38                  ;
 ;                                             ;                     ;
 ; Total DSP Blocks                            ; 0                   ;
 ;                                             ;                     ;
 ; Maximum fan-out node                        ; pll:vga_pll|divider ;
 ; Maximum fan-out                             ; 22                  ;
-; Total fan-out                               ; 1077                ;
-; Average fan-out                             ; 2.78                ;
+; Total fan-out                               ; 1256                ;
+; Average fan-out                             ; 2.89                ;
 +---------------------------------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                         ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                               ; Entity Name         ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |TopModule                                ; 292 (11)            ; 21 (0)                    ; 0                 ; 0          ; 37   ; 0            ; |TopModule                                                                                                                        ; TopModule           ; work         ;
-;    |generate_grid:gen_grid|               ; 249 (28)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_grid:gen_grid                                                                                                 ; generate_grid       ; work         ;
-;       |generate_rectangle:rectBGLeft|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_grid:gen_grid|generate_rectangle:rectBGLeft                                                                   ; generate_rectangle  ; work         ;
-;       |generate_rectangle:rectMarca|      ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_grid:gen_grid|generate_rectangle:rectMarca                                                                    ; generate_rectangle  ; work         ;
-;       |lpm_divide:Mod0|                   ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_grid:gen_grid|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_n3m:auto_generated|  ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_grid:gen_grid|lpm_divide:Mod0|lpm_divide_n3m:auto_generated                                                   ; lpm_divide_n3m      ; work         ;
-;             |sign_div_unsign_qlh:divider| ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_grid:gen_grid|lpm_divide:Mod0|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider                       ; sign_div_unsign_qlh ; work         ;
-;                |alt_u_div_qve:divider|    ; 139 (139)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_grid:gen_grid|lpm_divide:Mod0|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_qve:divider ; alt_u_div_qve       ; work         ;
-;       |lpm_divide:Mod1|                   ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_grid:gen_grid|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_j3m:auto_generated|  ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_grid:gen_grid|lpm_divide:Mod1|lpm_divide_j3m:auto_generated                                                   ; lpm_divide_j3m      ; work         ;
-;             |sign_div_unsign_mlh:divider| ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_grid:gen_grid|lpm_divide:Mod1|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh ; work         ;
-;                |alt_u_div_ive:divider|    ; 65 (65)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_grid:gen_grid|lpm_divide:Mod1|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive       ; work         ;
-;    |pll:vga_pll|                          ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|pll:vga_pll                                                                                                            ; pll                 ; work         ;
-;    |vga_controller:vgaCont|               ; 31 (31)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |TopModule|vga_controller:vgaCont                                                                                                 ; vga_controller      ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                            ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                  ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |TopModule                                ; 330 (11)            ; 29 (0)                    ; 0                 ; 0          ; 38   ; 0            ; |TopModule                                                                                                                           ; TopModule           ; work         ;
+;    |FiniteStateMachine:fsm|               ; 12 (12)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|FiniteStateMachine:fsm                                                                                                    ; FiniteStateMachine  ; work         ;
+;    |generate_graphic:gen_grid|            ; 275 (50)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid                                                                                                 ; generate_graphic    ; work         ;
+;       |generate_rectangle:rectBGLeft|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|generate_rectangle:rectBGLeft                                                                   ; generate_rectangle  ; work         ;
+;       |generate_rectangle:rectMarca|      ; 19 (19)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|generate_rectangle:rectMarca                                                                    ; generate_rectangle  ; work         ;
+;       |lpm_divide:Mod0|                   ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_n3m:auto_generated|  ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|lpm_divide:Mod0|lpm_divide_n3m:auto_generated                                                   ; lpm_divide_n3m      ; work         ;
+;             |sign_div_unsign_qlh:divider| ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|lpm_divide:Mod0|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider                       ; sign_div_unsign_qlh ; work         ;
+;                |alt_u_div_qve:divider|    ; 139 (139)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|lpm_divide:Mod0|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_qve:divider ; alt_u_div_qve       ; work         ;
+;       |lpm_divide:Mod1|                   ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_j3m:auto_generated|  ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|lpm_divide:Mod1|lpm_divide_j3m:auto_generated                                                   ; lpm_divide_j3m      ; work         ;
+;             |sign_div_unsign_mlh:divider| ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|lpm_divide:Mod1|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh ; work         ;
+;                |alt_u_div_ive:divider|    ; 65 (65)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|lpm_divide:Mod1|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive       ; work         ;
+;    |pll:vga_pll|                          ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|pll:vga_pll                                                                                                               ; pll                 ; work         ;
+;    |vga_controller:vgaCont|               ; 31 (31)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |TopModule|vga_controller:vgaCont                                                                                                    ; vga_controller      ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------+
+; State Machine - |TopModule|FiniteStateMachine:fsm|state                                                   ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+; Name      ; state.111 ; state.110 ; state.101 ; state.100 ; state.011 ; state.010 ; state.001 ; state.000 ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+; state.000 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ;
+; state.001 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 1         ;
+; state.010 ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 1         ;
+; state.011 ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 1         ;
+; state.100 ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 1         ;
+; state.101 ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; state.110 ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; state.111 ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; FiniteStateMachine:fsm|state~2        ; Lost fanout        ;
+; FiniteStateMachine:fsm|state~3        ; Lost fanout        ;
+; FiniteStateMachine:fsm|state~4        ; Lost fanout        ;
+; Total Number of Removed Registers = 3 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -253,24 +286,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 21    ;
+; Total registers                              ; 29    ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Clock Enable       ; 18    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |TopModule|generate_grid:gen_grid|red[0] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |TopModule|generate_grid:gen_grid|red[1] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |TopModule|generate_graphic:gen_grid|red[0]    ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |TopModule|generate_graphic:gen_grid|red[1]    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |TopModule|FiniteStateMachine:fsm|state        ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |TopModule|generate_graphic:gen_grid|colorR[0] ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |TopModule|generate_graphic:gen_grid|blue[7]   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
 
 
 +---------------------------------------------------------------------+
@@ -292,54 +328,54 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: generate_grid:gen_grid|lpm_divide:Mod0 ;
-+------------------------+----------------+-----------------------------------------------+
-; Parameter Name         ; Value          ; Type                                          ;
-+------------------------+----------------+-----------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                       ;
-; LPM_WIDTHD             ; 6              ; Untyped                                       ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
-; LPM_PIPELINE           ; 0              ; Untyped                                       ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
-; CBXI_PARAMETER         ; lpm_divide_n3m ; Untyped                                       ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
-+------------------------+----------------+-----------------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: generate_graphic:gen_grid|lpm_divide:Mod0 ;
++------------------------+----------------+--------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                             ;
++------------------------+----------------+--------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                          ;
+; LPM_WIDTHD             ; 6              ; Untyped                                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                          ;
+; CBXI_PARAMETER         ; lpm_divide_n3m ; Untyped                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                   ;
++------------------------+----------------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: generate_grid:gen_grid|lpm_divide:Mod1 ;
-+------------------------+----------------+-----------------------------------------------+
-; Parameter Name         ; Value          ; Type                                          ;
-+------------------------+----------------+-----------------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                       ;
-; LPM_WIDTHD             ; 6              ; Untyped                                       ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
-; LPM_PIPELINE           ; 0              ; Untyped                                       ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
-; CBXI_PARAMETER         ; lpm_divide_j3m ; Untyped                                       ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
-+------------------------+----------------+-----------------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: generate_graphic:gen_grid|lpm_divide:Mod1 ;
++------------------------+----------------+--------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                             ;
++------------------------+----------------+--------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                          ;
+; LPM_WIDTHD             ; 6              ; Untyped                                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                          ;
+; CBXI_PARAMETER         ; lpm_divide_j3m ; Untyped                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                   ;
++------------------------+----------------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "generate_grid:gen_grid|generate_rectangle:rectMarca"                                                                                                                                 ;
+; Port Connectivity Checks: "generate_graphic:gen_grid|generate_rectangle:rectMarca"                                                                                                                              ;
 +--------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port   ; Type  ; Severity ; Details                                                                                                                                                                             ;
 +--------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -348,52 +384,52 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Port Connectivity Checks: "generate_grid:gen_grid|generate_rectangle:rectBGRight" ;
-+--------------+-------+----------+-------------------------------------------------+
-; Port         ; Type  ; Severity ; Details                                         ;
-+--------------+-------+----------+-------------------------------------------------+
-; left[5..4]   ; Input ; Info     ; Stuck at VCC                                    ;
-; left[8..6]   ; Input ; Info     ; Stuck at GND                                    ;
-; left[3..0]   ; Input ; Info     ; Stuck at GND                                    ;
-; left[9]      ; Input ; Info     ; Stuck at VCC                                    ;
-; top          ; Input ; Info     ; Stuck at GND                                    ;
-; right[6..0]  ; Input ; Info     ; Stuck at GND                                    ;
-; right[9]     ; Input ; Info     ; Stuck at VCC                                    ;
-; right[8]     ; Input ; Info     ; Stuck at GND                                    ;
-; right[7]     ; Input ; Info     ; Stuck at VCC                                    ;
-; bottom[8..5] ; Input ; Info     ; Stuck at VCC                                    ;
-; bottom[4..0] ; Input ; Info     ; Stuck at GND                                    ;
-; bottom[9]    ; Input ; Info     ; Stuck at GND                                    ;
-+--------------+-------+----------+-------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "generate_graphic:gen_grid|generate_rectangle:rectBGRight" ;
++--------------+-------+----------+----------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                            ;
++--------------+-------+----------+----------------------------------------------------+
+; left[5..4]   ; Input ; Info     ; Stuck at VCC                                       ;
+; left[8..6]   ; Input ; Info     ; Stuck at GND                                       ;
+; left[3..0]   ; Input ; Info     ; Stuck at GND                                       ;
+; left[9]      ; Input ; Info     ; Stuck at VCC                                       ;
+; top          ; Input ; Info     ; Stuck at GND                                       ;
+; right[6..0]  ; Input ; Info     ; Stuck at GND                                       ;
+; right[9]     ; Input ; Info     ; Stuck at VCC                                       ;
+; right[8]     ; Input ; Info     ; Stuck at GND                                       ;
+; right[7]     ; Input ; Info     ; Stuck at VCC                                       ;
+; bottom[8..5] ; Input ; Info     ; Stuck at VCC                                       ;
+; bottom[4..0] ; Input ; Info     ; Stuck at GND                                       ;
+; bottom[9]    ; Input ; Info     ; Stuck at GND                                       ;
++--------------+-------+----------+----------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------+
-; Port Connectivity Checks: "generate_grid:gen_grid|generate_rectangle:rectBGLeft" ;
-+--------------+-------+----------+------------------------------------------------+
-; Port         ; Type  ; Severity ; Details                                        ;
-+--------------+-------+----------+------------------------------------------------+
-; left         ; Input ; Info     ; Stuck at GND                                   ;
-; top          ; Input ; Info     ; Stuck at GND                                   ;
-; right[9..7]  ; Input ; Info     ; Stuck at GND                                   ;
-; right[3..0]  ; Input ; Info     ; Stuck at GND                                   ;
-; right[6]     ; Input ; Info     ; Stuck at VCC                                   ;
-; right[5]     ; Input ; Info     ; Stuck at GND                                   ;
-; right[4]     ; Input ; Info     ; Stuck at VCC                                   ;
-; bottom[8..5] ; Input ; Info     ; Stuck at VCC                                   ;
-; bottom[4..0] ; Input ; Info     ; Stuck at GND                                   ;
-; bottom[9]    ; Input ; Info     ; Stuck at GND                                   ;
-+--------------+-------+----------+------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "generate_graphic:gen_grid|generate_rectangle:rectBGLeft" ;
++--------------+-------+----------+---------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                           ;
++--------------+-------+----------+---------------------------------------------------+
+; left         ; Input ; Info     ; Stuck at GND                                      ;
+; top          ; Input ; Info     ; Stuck at GND                                      ;
+; right[9..7]  ; Input ; Info     ; Stuck at GND                                      ;
+; right[3..0]  ; Input ; Info     ; Stuck at GND                                      ;
+; right[6]     ; Input ; Info     ; Stuck at VCC                                      ;
+; right[5]     ; Input ; Info     ; Stuck at GND                                      ;
+; right[4]     ; Input ; Info     ; Stuck at VCC                                      ;
+; bottom[8..5] ; Input ; Info     ; Stuck at VCC                                      ;
+; bottom[4..0] ; Input ; Info     ; Stuck at GND                                      ;
+; bottom[9]    ; Input ; Info     ; Stuck at GND                                      ;
++--------------+-------+----------+---------------------------------------------------+
 
 
-+----------------------------------------------------+
-; Port Connectivity Checks: "generate_grid:gen_grid" ;
-+---------+-------+----------+-----------------------+
-; Port    ; Type  ; Severity ; Details               ;
-+---------+-------+----------+-----------------------+
-; i[1..0] ; Input ; Info     ; Stuck at GND          ;
-; j[1..0] ; Input ; Info     ; Stuck at GND          ;
-+---------+-------+----------+-----------------------+
++-------------------------------------------------------+
+; Port Connectivity Checks: "generate_graphic:gen_grid" ;
++---------+-------+----------+--------------------------+
+; Port    ; Type  ; Severity ; Details                  ;
++---------+-------+----------+--------------------------+
+; i[1..0] ; Input ; Info     ; Stuck at GND             ;
+; j[1..0] ; Input ; Info     ; Stuck at GND             ;
++---------+-------+----------+--------------------------+
 
 
 +-----------------------------------------------------+
@@ -401,11 +437,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 21                          ;
+; arriav_ff             ; 29                          ;
+;     ENA               ; 8                           ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
 ;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 294                         ;
+; arriav_lcell_comb     ; 331                         ;
 ;     arith             ; 152                         ;
 ;         0 data inputs ; 19                          ;
 ;         1 data inputs ; 70                          ;
@@ -414,17 +451,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         4 data inputs ; 38                          ;
 ;     extend            ; 2                           ;
 ;         7 data inputs ; 2                           ;
-;     normal            ; 140                         ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 55                          ;
-;         3 data inputs ; 12                          ;
-;         4 data inputs ; 16                          ;
-;         5 data inputs ; 32                          ;
-;         6 data inputs ; 22                          ;
-; boundary_port         ; 37                          ;
+;     normal            ; 177                         ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 66                          ;
+;         3 data inputs ; 18                          ;
+;         4 data inputs ; 21                          ;
+;         5 data inputs ; 34                          ;
+;         6 data inputs ; 36                          ;
+; boundary_port         ; 38                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 26.90                       ;
-; Average LUT depth     ; 17.61                       ;
+; Max LUT depth         ; 26.20                       ;
+; Average LUT depth     ; 15.87                       ;
 +-----------------------+-----------------------------+
 
 
@@ -443,19 +480,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Tue Oct 17 12:20:58 2023
+    Info: Processing started: Tue Oct 17 14:26:40 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Buscaminas -c Buscaminas
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file finitestatemachine.sv
     Info (12023): Found entity 1: FiniteStateMachine File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/FiniteStateMachine.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file vertical_counter.sv
-    Info (12023): Found entity 1: vertical_counter File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/vertical_counter.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file horizontal_counter.sv
-    Info (12023): Found entity 1: horizontal_counter File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/horizontal_counter.sv Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file updategame.sv
-Info (12021): Found 1 design units, including 1 entities, in source file clock_divider.sv
-    Info (12023): Found entity 1: clock_divider File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/clock_divider.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file topmodule.sv
     Info (12023): Found entity 1: TopModule File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file comparator.sv
@@ -464,8 +494,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file registe
     Info (12023): Found entity 1: Register File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/Register.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file registrocasillasmarcadas.sv
     Info (12023): Found entity 1: registroCasillasMarcadas File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/registroCasillasMarcadas.sv Line: 2
-Info (12021): Found 1 design units, including 1 entities, in source file generategrid.sv
-    Info (12023): Found entity 1: generateGrid File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generateGrid.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file grid_controller.sv
     Info (12023): Found entity 1: grid_controller File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/grid_controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pll.sv
@@ -474,22 +502,23 @@ Info (12021): Found 1 design units, including 1 entities, in source file vga_con
     Info (12023): Found entity 1: vga_controller File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/vga_controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file generate_rectangle.sv
     Info (12023): Found entity 1: generate_rectangle File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_rectangle.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file generate_grid.sv
-    Info (12023): Found entity 1: generate_grid File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_grid.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at generate_grid.sv(30): created implicit net for "inAreaMarcada" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_grid.sv Line: 30
+Info (12021): Found 1 design units, including 1 entities, in source file generate_graphic.sv
+    Info (12023): Found entity 1: generate_graphic File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at generate_graphic.sv(54): created implicit net for "inAreaMarcada" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 54
 Info (12127): Elaborating entity "TopModule" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at TopModule.sv(15): truncated value with size 32 to match size of target (10) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 15
-Warning (10230): Verilog HDL assignment warning at TopModule.sv(16): truncated value with size 32 to match size of target (10) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 16
-Info (12128): Elaborating entity "pll" for hierarchy "pll:vga_pll" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 18
-Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:vgaCont" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 21
-Info (12128): Elaborating entity "generate_grid" for hierarchy "generate_grid:gen_grid" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 24
-Warning (10036): Verilog HDL or VHDL warning at generate_grid.sv(30): object "inAreaMarcada" assigned a value but never read File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_grid.sv Line: 30
-Info (12128): Elaborating entity "generate_rectangle" for hierarchy "generate_grid:gen_grid|generate_rectangle:rectBGLeft" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_grid.sv Line: 21
+Warning (10230): Verilog HDL assignment warning at TopModule.sv(19): truncated value with size 32 to match size of target (10) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 19
+Warning (10230): Verilog HDL assignment warning at TopModule.sv(20): truncated value with size 32 to match size of target (10) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 20
+Info (12128): Elaborating entity "pll" for hierarchy "pll:vga_pll" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 22
+Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:vgaCont" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 25
+Info (12128): Elaborating entity "FiniteStateMachine" for hierarchy "FiniteStateMachine:fsm" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 32
+Info (12128): Elaborating entity "generate_graphic" for hierarchy "generate_graphic:gen_grid" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 35
+Warning (10036): Verilog HDL or VHDL warning at generate_graphic.sv(54): object "inAreaMarcada" assigned a value but never read File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 54
+Info (12128): Elaborating entity "generate_rectangle" for hierarchy "generate_graphic:gen_grid|generate_rectangle:rectBGLeft" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 45
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "generate_grid:gen_grid|Mod0" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_grid.sv Line: 29
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "generate_grid:gen_grid|Mod1" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_grid.sv Line: 29
-Info (12130): Elaborated megafunction instantiation "generate_grid:gen_grid|lpm_divide:Mod0" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_grid.sv Line: 29
-Info (12133): Instantiated megafunction "generate_grid:gen_grid|lpm_divide:Mod0" with the following parameter: File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_grid.sv Line: 29
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "generate_graphic:gen_grid|Mod0" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 53
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "generate_graphic:gen_grid|Mod1" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 53
+Info (12130): Elaborated megafunction instantiation "generate_graphic:gen_grid|lpm_divide:Mod0" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 53
+Info (12133): Instantiated megafunction "generate_graphic:gen_grid|lpm_divide:Mod0" with the following parameter: File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 53
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -500,8 +529,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_qlh File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/db/sign_div_unsign_qlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qve.tdf
     Info (12023): Found entity 1: alt_u_div_qve File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/db/alt_u_div_qve.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "generate_grid:gen_grid|lpm_divide:Mod1" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_grid.sv Line: 29
-Info (12133): Instantiated megafunction "generate_grid:gen_grid|lpm_divide:Mod1" with the following parameter: File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_grid.sv Line: 29
+Info (12130): Elaborated megafunction instantiation "generate_graphic:gen_grid|lpm_divide:Mod1" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 53
+Info (12133): Instantiated megafunction "generate_graphic:gen_grid|lpm_divide:Mod1" with the following parameter: File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 53
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -514,16 +543,17 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alt_
     Info (12023): Found entity 1: alt_u_div_ive File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/db/alt_u_div_ive.tdf Line: 23
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 349 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 8 input pins
+Info (21057): Implemented 388 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 312 logic cells
+    Info (21061): Implemented 350 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4828 megabytes
-    Info: Processing ended: Tue Oct 17 12:21:27 2023
+    Info: Peak virtual memory: 4819 megabytes
+    Info: Processing ended: Tue Oct 17 14:27:09 2023
     Info: Elapsed time: 00:00:29
-    Info: Total CPU time (on all processors): 00:00:42
+    Info: Total CPU time (on all processors): 00:00:44
 
 

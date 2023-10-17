@@ -120,10 +120,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "select",
-					"strict" : false
-				},
-				{
 					"name" : "i[2]",
 					"strict" : false
 				},
@@ -149,6 +145,14 @@
 				},
 				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "trigger",
 					"strict" : false
 				}
 			]

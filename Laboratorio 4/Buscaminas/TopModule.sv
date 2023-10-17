@@ -1,7 +1,9 @@
-module TopModule(input logic clk,
+module TopModule(
+			  input logic clk,
+			  input logic rst,
 			  input logic [2:0] i,
 			  input logic [2:0] j,
-			  input logic select,
+			  input logic trigger,
 			  output logic vga_clk,
 			  output logic h_sync, v_sync,
 			  output logic sync_b, blank_b, // To monitor & DAC
@@ -10,6 +12,8 @@ module TopModule(input logic clk,
 	logic [9:0] x, y;
 	logic [9:0] i_aux;
 	logic [9:0] j_aux;
+	
+	logic [2:0] current_state;
 	
 	
 	assign i_aux = 80 + i*60;
@@ -20,6 +24,14 @@ module TopModule(input logic clk,
 	// Generate monitor timing signals
 	vga_controller vgaCont(vga_clk, h_sync, v_sync, sync_b, blank_b, x, y);
 	
+	FiniteStateMachine fsm (
+			.clk(clk), 
+			.rst(rst), 
+			.trigger(trigger), 
+			.current_state(current_state)
+	);
+	
 	// User-defined module to determine pixel color
-	generate_grid gen_grid(x, y, i_aux, j_aux, select, red, green, blue);
+	generate_graphic gen_grid(x, y, i_aux, j_aux, current_state, red, green, blue);
 endmodule
+

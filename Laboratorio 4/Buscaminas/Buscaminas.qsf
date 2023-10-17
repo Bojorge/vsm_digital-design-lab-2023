@@ -53,10 +53,6 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name SYSTEMVERILOG_FILE FiniteStateMachine.sv
-set_global_assignment -name SYSTEMVERILOG_FILE vertical_counter.sv
-set_global_assignment -name SYSTEMVERILOG_FILE horizontal_counter.sv
-set_global_assignment -name SYSTEMVERILOG_FILE updateGame.sv
-set_global_assignment -name SYSTEMVERILOG_FILE clock_divider.sv
 set_global_assignment -name SYSTEMVERILOG_FILE TopModule.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Comparator.sv
 set_location_assignment PIN_J14 -to blue[7]
@@ -85,7 +81,6 @@ set_location_assignment PIN_C13 -to red[1]
 set_location_assignment PIN_A13 -to red[0]
 set_global_assignment -name SYSTEMVERILOG_FILE Register.sv
 set_global_assignment -name SYSTEMVERILOG_FILE registroCasillasMarcadas.sv
-set_global_assignment -name SYSTEMVERILOG_FILE generateGrid.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -94,7 +89,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE grid_controller.sv
 set_global_assignment -name SYSTEMVERILOG_FILE pll.sv
 set_global_assignment -name SYSTEMVERILOG_FILE vga_controller.sv
 set_global_assignment -name SYSTEMVERILOG_FILE generate_rectangle.sv
-set_global_assignment -name SYSTEMVERILOG_FILE generate_grid.sv
 set_location_assignment PIN_A11 -to vga_clk
 set_location_assignment PIN_D11 -to v_sync
 set_location_assignment PIN_B11 -to h_sync
@@ -104,7 +98,9 @@ set_location_assignment PIN_AB12 -to i[0]
 set_location_assignment PIN_AE11 -to j[2]
 set_location_assignment PIN_AD12 -to j[1]
 set_location_assignment PIN_AD11 -to j[0]
-set_location_assignment PIN_AA14 -to select
 set_location_assignment PIN_C10 -to sync_b
 set_location_assignment PIN_F10 -to blank_b
+set_global_assignment -name SYSTEMVERILOG_FILE generate_graphic.sv
+set_location_assignment PIN_AA14 -to trigger
+set_location_assignment PIN_Y16 -to rst
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
