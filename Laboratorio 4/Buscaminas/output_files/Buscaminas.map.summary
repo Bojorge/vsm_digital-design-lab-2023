@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Fri Oct 13 10:43:32 2023
+Analysis & Synthesis Status : Successful - Tue Oct 17 12:21:27 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : Buscaminas
 Top-level Entity Name : TopModule
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 66
-Total pins : 31
+Total registers : 21
+Total pins : 37
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0
