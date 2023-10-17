@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Buscaminas
-Tue Oct 17 14:27:09 2023
+Tue Oct 17 16:32:57 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -13,20 +13,21 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |TopModule|FiniteStateMachine:fsm|state
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: vga_controller:vgaCont
- 13. Parameter Settings for Inferred Entity Instance: generate_graphic:gen_grid|lpm_divide:Mod0
- 14. Parameter Settings for Inferred Entity Instance: generate_graphic:gen_grid|lpm_divide:Mod1
- 15. Port Connectivity Checks: "generate_graphic:gen_grid|generate_rectangle:rectMarca"
- 16. Port Connectivity Checks: "generate_graphic:gen_grid|generate_rectangle:rectBGRight"
- 17. Port Connectivity Checks: "generate_graphic:gen_grid|generate_rectangle:rectBGLeft"
- 18. Port Connectivity Checks: "generate_graphic:gen_grid"
- 19. Post-Synthesis Netlist Statistics for Top Partition
- 20. Elapsed Time Per Partition
- 21. Analysis & Synthesis Messages
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. State Machine - |TopModule|FiniteStateMachine:fsm|state
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: vga_controller:vgaCont
+ 14. Parameter Settings for Inferred Entity Instance: generate_graphic:gen_grid|lpm_divide:Mod0
+ 15. Parameter Settings for Inferred Entity Instance: generate_graphic:gen_grid|lpm_divide:Mod1
+ 16. Port Connectivity Checks: "generate_graphic:gen_grid|generate_rectangle:rectMarca"
+ 17. Port Connectivity Checks: "generate_graphic:gen_grid|generate_rectangle:rectBGRight"
+ 18. Port Connectivity Checks: "generate_graphic:gen_grid|generate_rectangle:rectBGLeft"
+ 19. Port Connectivity Checks: "generate_graphic:gen_grid"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -53,17 +54,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 17 14:27:09 2023          ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 17 16:32:57 2023          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; Buscaminas                                     ;
 ; Top-level Entity Name           ; TopModule                                      ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
 ; Total registers                 ; 29                                             ;
-; Total pins                      ; 38                                             ;
+; Total pins                      ; 49                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
-; Total DSP Blocks                ; 0                                              ;
+; Total DSP Blocks                ; 2                                              ;
 ; Total HSSI RX PCSs              ; 0                                              ;
 ; Total HSSI PMA RX Deserializers ; 0                                              ;
 ; Total HSSI TX PCSs              ; 0                                              ;
@@ -188,6 +189,7 @@ https://fpgasoftware.intel.com/eula.
 ; vga_controller.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/vga_controller.sv          ;         ;
 ; generate_rectangle.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_rectangle.sv      ;         ;
 ; generate_graphic.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv        ;         ;
+; display.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/display.sv                 ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf                                                                          ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/abs_divider.inc                                                                         ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                                                                     ;         ;
@@ -206,25 +208,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------+
 ; Resource                                    ; Usage               ;
 +---------------------------------------------+---------------------+
-; Estimate of Logic utilization (ALMs needed) ; 184                 ;
+; Estimate of Logic utilization (ALMs needed) ; 166                 ;
 ;                                             ;                     ;
-; Combinational ALUT usage for logic          ; 330                 ;
+; Combinational ALUT usage for logic          ; 314                 ;
 ;     -- 7 input functions                    ; 2                   ;
-;     -- 6 input functions                    ; 36                  ;
-;     -- 5 input functions                    ; 34                  ;
-;     -- 4 input functions                    ; 59                  ;
-;     -- <=3 input functions                  ; 199                 ;
+;     -- 6 input functions                    ; 16                  ;
+;     -- 5 input functions                    ; 41                  ;
+;     -- 4 input functions                    ; 60                  ;
+;     -- <=3 input functions                  ; 195                 ;
 ;                                             ;                     ;
 ; Dedicated logic registers                   ; 29                  ;
 ;                                             ;                     ;
-; I/O pins                                    ; 38                  ;
+; I/O pins                                    ; 49                  ;
 ;                                             ;                     ;
-; Total DSP Blocks                            ; 0                   ;
+; Total DSP Blocks                            ; 2                   ;
 ;                                             ;                     ;
 ; Maximum fan-out node                        ; pll:vga_pll|divider ;
 ; Maximum fan-out                             ; 22                  ;
-; Total fan-out                               ; 1256                ;
-; Average fan-out                             ; 2.89                ;
+; Total fan-out                               ; 1163                ;
+; Average fan-out                             ; 2.63                ;
 +---------------------------------------------+---------------------+
 
 
@@ -233,9 +235,10 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                  ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |TopModule                                ; 330 (11)            ; 29 (0)                    ; 0                 ; 0          ; 38   ; 0            ; |TopModule                                                                                                                           ; TopModule           ; work         ;
-;    |FiniteStateMachine:fsm|               ; 12 (12)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|FiniteStateMachine:fsm                                                                                                    ; FiniteStateMachine  ; work         ;
-;    |generate_graphic:gen_grid|            ; 275 (50)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid                                                                                                 ; generate_graphic    ; work         ;
+; |TopModule                                ; 314 (6)             ; 29 (0)                    ; 0                 ; 2          ; 49   ; 0            ; |TopModule                                                                                                                           ; TopModule           ; work         ;
+;    |FiniteStateMachine:fsm|               ; 9 (9)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|FiniteStateMachine:fsm                                                                                                    ; FiniteStateMachine  ; work         ;
+;    |display:display|                      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|display:display                                                                                                           ; display             ; work         ;
+;    |generate_graphic:gen_grid|            ; 260 (35)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid                                                                                                 ; generate_graphic    ; work         ;
 ;       |generate_rectangle:rectBGLeft|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|generate_rectangle:rectBGLeft                                                                   ; generate_rectangle  ; work         ;
 ;       |generate_rectangle:rectMarca|      ; 19 (19)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|generate_rectangle:rectMarca                                                                    ; generate_rectangle  ; work         ;
 ;       |lpm_divide:Mod0|                   ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
@@ -250,6 +253,18 @@ https://fpgasoftware.intel.com/eula.
 ;    |vga_controller:vgaCont|               ; 31 (31)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |TopModule|vga_controller:vgaCont                                                                                                    ; vga_controller      ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary  ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Independent 9x9                 ; 2           ;
+; Total number of DSP blocks      ; 2           ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 2           ;
++---------------------------------+-------------+
 
 
 Encoding Type:  One-Hot
@@ -296,17 +311,13 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |TopModule|generate_graphic:gen_grid|red[0]    ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |TopModule|generate_graphic:gen_grid|red[1]    ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |TopModule|FiniteStateMachine:fsm|state        ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |TopModule|generate_graphic:gen_grid|colorR[0] ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |TopModule|generate_graphic:gen_grid|blue[7]   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |TopModule|FiniteStateMachine:fsm|state ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
 
 
 +---------------------------------------------------------------------+
@@ -424,12 +435,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +-------------------------------------------------------+
 ; Port Connectivity Checks: "generate_graphic:gen_grid" ;
-+---------+-------+----------+--------------------------+
-; Port    ; Type  ; Severity ; Details                  ;
-+---------+-------+----------+--------------------------+
-; i[1..0] ; Input ; Info     ; Stuck at GND             ;
-; j[1..0] ; Input ; Info     ; Stuck at GND             ;
-+---------+-------+----------+--------------------------+
++------+-------+----------+-----------------------------+
+; Port ; Type  ; Severity ; Details                     ;
++------+-------+----------+-----------------------------+
+; j[9] ; Input ; Info     ; Stuck at GND                ;
++------+-------+----------+-----------------------------+
 
 
 +-----------------------------------------------------+
@@ -442,26 +452,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
 ;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 331                         ;
-;     arith             ; 152                         ;
-;         0 data inputs ; 19                          ;
-;         1 data inputs ; 70                          ;
-;         2 data inputs ; 8                           ;
-;         3 data inputs ; 17                          ;
-;         4 data inputs ; 38                          ;
+; arriav_lcell_comb     ; 318                         ;
+;     arith             ; 160                         ;
+;         0 data inputs ; 21                          ;
+;         1 data inputs ; 81                          ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 14                          ;
+;         4 data inputs ; 37                          ;
 ;     extend            ; 2                           ;
 ;         7 data inputs ; 2                           ;
-;     normal            ; 177                         ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 66                          ;
-;         3 data inputs ; 18                          ;
-;         4 data inputs ; 21                          ;
-;         5 data inputs ; 34                          ;
-;         6 data inputs ; 36                          ;
-; boundary_port         ; 38                          ;
+;     normal            ; 156                         ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 64                          ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 23                          ;
+;         5 data inputs ; 41                          ;
+;         6 data inputs ; 16                          ;
+; arriav_mac            ; 2                           ;
+; boundary_port         ; 49                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 26.20                       ;
-; Average LUT depth     ; 15.87                       ;
+; Max LUT depth         ; 26.90                       ;
+; Average LUT depth     ; 15.91                       ;
 +-----------------------+-----------------------------+
 
 
@@ -470,7 +481,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -480,7 +491,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Tue Oct 17 14:26:40 2023
+    Info: Processing started: Tue Oct 17 16:32:31 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Buscaminas -c Buscaminas
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -504,21 +515,27 @@ Info (12021): Found 1 design units, including 1 entities, in source file generat
     Info (12023): Found entity 1: generate_rectangle File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_rectangle.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file generate_graphic.sv
     Info (12023): Found entity 1: generate_graphic File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at generate_graphic.sv(54): created implicit net for "inAreaMarcada" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 54
+Info (12021): Found 1 design units, including 1 entities, in source file icon.sv
+    Info (12023): Found entity 1: icon File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/icon.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file display.sv
+    Info (12023): Found entity 1: display File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/display.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at icon.sv(19): created implicit net for "x_matrix" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/icon.sv Line: 19
+Warning (10236): Verilog HDL Implicit Net warning at icon.sv(20): created implicit net for "y_matrix" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/icon.sv Line: 20
 Info (12127): Elaborating entity "TopModule" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at TopModule.sv(19): truncated value with size 32 to match size of target (10) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 19
-Warning (10230): Verilog HDL assignment warning at TopModule.sv(20): truncated value with size 32 to match size of target (10) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 20
-Info (12128): Elaborating entity "pll" for hierarchy "pll:vga_pll" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 22
-Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:vgaCont" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 25
-Info (12128): Elaborating entity "FiniteStateMachine" for hierarchy "FiniteStateMachine:fsm" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 32
-Info (12128): Elaborating entity "generate_graphic" for hierarchy "generate_graphic:gen_grid" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 35
-Warning (10036): Verilog HDL or VHDL warning at generate_graphic.sv(54): object "inAreaMarcada" assigned a value but never read File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 54
-Info (12128): Elaborating entity "generate_rectangle" for hierarchy "generate_graphic:gen_grid|generate_rectangle:rectBGLeft" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 45
+Warning (10230): Verilog HDL assignment warning at TopModule.sv(21): truncated value with size 32 to match size of target (10) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 21
+Warning (10230): Verilog HDL assignment warning at TopModule.sv(22): truncated value with size 32 to match size of target (10) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 22
+Info (12128): Elaborating entity "pll" for hierarchy "pll:vga_pll" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 24
+Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:vgaCont" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 27
+Info (12128): Elaborating entity "FiniteStateMachine" for hierarchy "FiniteStateMachine:fsm" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 34
+Info (12128): Elaborating entity "display" for hierarchy "display:display" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 39
+Info (12128): Elaborating entity "generate_graphic" for hierarchy "generate_graphic:gen_grid" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 42
+Warning (10230): Verilog HDL assignment warning at generate_graphic.sv(43): truncated value with size 32 to match size of target (1) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 43
+Info (12128): Elaborating entity "generate_rectangle" for hierarchy "generate_graphic:gen_grid|generate_rectangle:rectBGLeft" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 30
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "generate_graphic:gen_grid|Mod0" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 53
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "generate_graphic:gen_grid|Mod1" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 53
-Info (12130): Elaborated megafunction instantiation "generate_graphic:gen_grid|lpm_divide:Mod0" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 53
-Info (12133): Instantiated megafunction "generate_graphic:gen_grid|lpm_divide:Mod0" with the following parameter: File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 53
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "generate_graphic:gen_grid|Mod0" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 40
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "generate_graphic:gen_grid|Mod1" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 40
+Info (12130): Elaborated megafunction instantiation "generate_graphic:gen_grid|lpm_divide:Mod0" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 40
+Info (12133): Instantiated megafunction "generate_graphic:gen_grid|lpm_divide:Mod0" with the following parameter: File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 40
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -529,8 +546,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_qlh File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/db/sign_div_unsign_qlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qve.tdf
     Info (12023): Found entity 1: alt_u_div_qve File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/db/alt_u_div_qve.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "generate_graphic:gen_grid|lpm_divide:Mod1" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 53
-Info (12133): Instantiated megafunction "generate_graphic:gen_grid|lpm_divide:Mod1" with the following parameter: File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 53
+Info (12130): Elaborated megafunction instantiation "generate_graphic:gen_grid|lpm_divide:Mod1" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 40
+Info (12133): Instantiated megafunction "generate_graphic:gen_grid|lpm_divide:Mod1" with the following parameter: File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 40
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -546,14 +563,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 388 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 350 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4819 megabytes
-    Info: Processing ended: Tue Oct 17 14:27:09 2023
-    Info: Elapsed time: 00:00:29
-    Info: Total CPU time (on all processors): 00:00:44
+Info (21057): Implemented 385 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 36 output pins
+    Info (21061): Implemented 334 logic cells
+    Info (21062): Implemented 2 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4828 megabytes
+    Info: Processing ended: Tue Oct 17 16:32:57 2023
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:40
 
 

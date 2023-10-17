@@ -3,7 +3,9 @@ module TopModule(
 			  input logic rst,
 			  input logic [2:0] i,
 			  input logic [2:0] j,
+			  input logic [3:0] mines_quantity,
 			  input logic trigger,
+			  output reg [6:0] segments,
 			  output logic vga_clk,
 			  output logic h_sync, v_sync,
 			  output logic sync_b, blank_b, // To monitor & DAC
@@ -16,8 +18,8 @@ module TopModule(
 	logic [2:0] current_state;
 	
 	
-	assign i_aux = 80 + i*60;
-	assign j_aux = j*60;
+	assign i_aux = 80 + i*61;
+	assign j_aux = j*61;
 	
 	pll vga_pll(.clk(clk), .vga_clk(vga_clk));
 	
@@ -30,6 +32,11 @@ module TopModule(
 			.trigger(trigger), 
 			.current_state(current_state)
 	);
+	
+	 display display(
+			.mines(mines_quantity),  
+			.segments(segments)
+	 );
 	
 	// User-defined module to determine pixel color
 	generate_graphic gen_grid(x, y, i_aux, j_aux, current_state, red, green, blue);

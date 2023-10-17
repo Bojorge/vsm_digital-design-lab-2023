@@ -9,36 +9,21 @@ module generate_graphic(input logic [9:0] x, y,
 	 logic inrectMarca;
 	 
 	 logic inAreaRect; // Área para cambiar color
+	 logic screen;
+	 logic icon;
 	 
 	 logic [7:0] colorR, colorG, colorB;
 	 
 	 
-	 assign colorR = (current_state == 3'b000) ? 8'b11111111 : 
-						  (current_state == 3'b001) ? 8'b00000000 : 
-						  (current_state == 3'b010) ? 8'b00000000 : 
-						  (current_state == 3'b011) ? 8'b00111111 : 
-						  (current_state == 3'b100) ? 8'b00000000 : 
-						  (current_state == 3'b101) ? 8'b00000000 : 
-						  (current_state == 3'b110) ? 8'b10000111 : 
-						  (current_state == 3'b111) ? 8'b11111111 : 8'b00000000;
+	 
+	 assign colorR = (current_state == 3'b000) ? 8'b00000000 : 8'b11110000;
+						  
 
-	 assign colorG = (current_state == 3'b000) ? 8'b00000000 : 
-						  (current_state == 3'b001) ? 8'b11111111 : 
-						  (current_state == 3'b010) ? 8'b00000000 : 
-						  (current_state == 3'b011) ? 8'b00000111 : 
-						  (current_state == 3'b100) ? 8'b11111111 : 
-						  (current_state == 3'b101) ? 8'b00000000 : 
-						  (current_state == 3'b110) ? 8'b01111000 : 
-						  (current_state == 3'b111) ? 8'b11111111 : 8'b00000000;
+	 assign colorG = (current_state == 3'b000) ? 8'b00000000 : 8'b11110000;
+						  
 
-	 assign colorB = (current_state == 3'b000) ? 8'b00000000 : 
-						  (current_state == 3'b001) ? 8'b00000000 : 
-						  (current_state == 3'b010) ? 8'b11111111 : 
-						  (current_state == 3'b011) ? 8'b00000111 : 
-						  (current_state == 3'b100) ? 8'b00000000 : 
-						  (current_state == 3'b101) ? 8'b11111111 : 
-						  (current_state == 3'b110) ? 8'b01111000 : 
-						  (current_state == 3'b111) ? 8'b11111111 : 8'b00000000;
+	 assign colorB = (current_state == 3'b000) ? 8'b00000000 : 8'b11110000;
+						 
 
 	 
     // Rectangulo lateral izq
@@ -49,15 +34,19 @@ module generate_graphic(input logic [9:0] x, y,
 	 
 	 generate_rectangle rectMarca(x, y, i, j, i+60, j+60, inrectMarca);
 	 
+	 //icon gen_icon (.sel(4'b0000), .x(x), .y(y), .icon(icon));
+	 
 	 
 	 assign inAreaRect = (x >= 80) && (x < 560) && ((x-80) % 61 < 60) && (y % 61 < 60);
-	 assign inAreaMarcada = (i >= 80) && (i < 560) && ((i-80) % 61 < 60) && (j % 61 < 60);
+	 //assign inAreaMarcada = (i >= 80) && (i < 560) && ((i-80) % 60 < 60) && (j % 60 < 60);
+	 
+	 assign screen = (current_state == 3'b000) ? 0 : inAreaRect;
 	
 	 
 	// Definir colores para las áreas específicas
-	assign red = (inrectBGLeft | inrectBGRight) ? 8'b11111111 : (inrectMarca ? colorR : (inAreaRect ? 8'b10101010 : 8'b00000000));
-	assign green = (inrectBGLeft | inrectBGRight) ? 8'b11111111 : (inrectMarca ? colorG : (inAreaRect ? 8'b10101010 : 8'b00000000));
-	assign blue = (inrectBGLeft | inrectBGRight) ? 8'b11111111 : (inrectMarca ? colorB : (inAreaRect ? 8'b10101010 : 8'b00000000));
+	assign red = (inrectBGLeft | inrectBGRight) ? 8'b11111111 : (inrectMarca ? colorR : (screen ? 8'b10101010 : 8'b00000000));
+	assign green = (inrectBGLeft | inrectBGRight) ? 8'b11111111 : (inrectMarca ? colorG : (screen ? 8'b10101010 : 8'b00000000));
+	assign blue = (inrectBGLeft | inrectBGRight) ? 8'b11111111 : (inrectMarca ? colorB : (screen ? 8'b10101010 : 8'b00000000));
 
 	 
 	 

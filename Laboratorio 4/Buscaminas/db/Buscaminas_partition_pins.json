@@ -4,6 +4,34 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "segments[0]",
+					"strict" : false
+				},
+				{
+					"name" : "segments[1]",
+					"strict" : false
+				},
+				{
+					"name" : "segments[2]",
+					"strict" : false
+				},
+				{
+					"name" : "segments[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segments[4]",
+					"strict" : false
+				},
+				{
+					"name" : "segments[5]",
+					"strict" : false
+				},
+				{
+					"name" : "segments[6]",
+					"strict" : false
+				},
+				{
 					"name" : "vga_clk",
 					"strict" : false
 				},
@@ -120,7 +148,23 @@
 					"strict" : false
 				},
 				{
-					"name" : "i[2]",
+					"name" : "mines_quantity[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mines_quantity[1]",
+					"strict" : false
+				},
+				{
+					"name" : "mines_quantity[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mines_quantity[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
 					"strict" : false
 				},
 				{
@@ -132,7 +176,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "j[2]",
+					"name" : "i[2]",
 					"strict" : false
 				},
 				{
@@ -144,7 +188,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "j[2]",
 					"strict" : false
 				},
 				{
