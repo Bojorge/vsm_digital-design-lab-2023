@@ -5,6 +5,8 @@ module TopModule(
 			  input logic [2:0] j,
 			  input logic [3:0] mines_quantity,
 			  input logic trigger,
+			  input logic check,
+			  input logic select,
 			  output reg [6:0] segments,
 			  output logic vga_clk,
 			  output logic h_sync, v_sync,
@@ -23,13 +25,15 @@ module TopModule(
 	
 	pll vga_pll(.clk(clk), .vga_clk(vga_clk));
 	
-	// Generate monitor timing signals
+	
 	vga_controller vgaCont(vga_clk, h_sync, v_sync, sync_b, blank_b, x, y);
 	
 	FiniteStateMachine fsm (
 			.clk(clk), 
 			.rst(rst), 
 			.trigger(trigger), 
+			.win(win), 
+			.mines(mines_quantity),
 			.current_state(current_state)
 	);
 	
@@ -38,7 +42,7 @@ module TopModule(
 			.segments(segments)
 	 );
 	
-	// User-defined module to determine pixel color
-	generate_graphic gen_grid(x, y, i_aux, j_aux, current_state, red, green, blue);
+	
+	generate_graphic gen_grid(x, y, i_aux, j_aux, check, select, current_state, win, red, green, blue);
 endmodule
 
