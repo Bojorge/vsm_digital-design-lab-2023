@@ -1,0 +1,32 @@
+module display(
+					input logic [3:0] mines,  
+					output reg [6:0] segments
+);
+
+	always_comb begin						
+		case (mines)
+			  4'b0000: segments = 7'b1000000; // Dígito 0
+			  4'b0001: segments = 7'b1111001; // Dígito 1
+			  4'b0010: segments = 7'b0100100; // Dígito 2
+			  4'b0011: segments = 7'b0110000; // Dígito 3
+			  4'b0100: segments = 7'b0011001; // Dígito 4
+			  4'b0101: segments = 7'b0010010; // Dígito 5
+			  4'b0110: segments = 7'b0000010; // Dígito 6
+			  4'b0111: segments = 7'b1111000; // Dígito 7
+			  4'b1000: segments = 7'b0000000; // Dígito 8
+			  4'b1001: segments = 7'b0011000; // Dígito 9
+			  4'b1010: segments = 7'b0001000; // Dígito A (10 en hexadecimal)
+			  4'b1011: segments = 7'b0000011; // Dígito B (11 en hexadecimal)
+			  4'b1100: segments = 7'b1000110; // Dígito C (12 en hexadecimal)
+			  4'b1101: segments = 7'b0100001; // Dígito D (13 en hexadecimal)
+			  4'b1110: segments = 7'b0000110; // Dígito E (14 en hexadecimal)
+			  4'b1111: segments = 7'b0001110; // Dígito F (15 en hexadecimal)
+			  default: segments = 7'b1111111;  // Apagar todos los segmentos
+		endcase
+	end
+
+endmodule
+
+
+
+

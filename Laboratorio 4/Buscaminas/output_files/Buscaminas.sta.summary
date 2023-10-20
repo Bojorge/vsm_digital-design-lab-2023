@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -3.890
+TNS   : -4.337
+
+Type  : Slow 1100mV 85C Model Setup 'pll:vga_pll|divider'
+Slack : -3.183
+TNS   : -67.450
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 0.435
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'pll:vga_pll|divider'
+Slack : 0.654
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.891
+TNS   : -2.578
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'pll:vga_pll|divider'
+Slack : -0.394
+TNS   : -11.299
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -3.770
+TNS   : -4.212
+
+Type  : Slow 1100mV 0C Model Setup 'pll:vga_pll|divider'
+Slack : -3.234
+TNS   : -68.371
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.448
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'pll:vga_pll|divider'
+Slack : 0.646
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.876
+TNS   : -2.688
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'pll:vga_pll|divider'
+Slack : -0.394
+TNS   : -11.264
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -2.967
+TNS   : -2.967
+
+Type  : Fast 1100mV 85C Model Setup 'pll:vga_pll|divider'
+Slack : -1.465
+TNS   : -29.902
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 0.200
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'pll:vga_pll|divider'
+Slack : 0.340
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.786
+TNS   : -1.385
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'pll:vga_pll|divider'
+Slack : 0.110
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -2.552
+TNS   : -2.552
+
+Type  : Fast 1100mV 0C Model Setup 'pll:vga_pll|divider'
+Slack : -1.306
+TNS   : -27.244
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : 0.190
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'pll:vga_pll|divider'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.737
+TNS   : -1.302
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'pll:vga_pll|divider'
+Slack : 0.128
+TNS   : 0.000
+
+------------------------------------------------------------
