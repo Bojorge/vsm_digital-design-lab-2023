@@ -45,4 +45,3 @@ module TopModule(
 	
 	generate_graphic gen_grid(x, y, i_aux, j_aux, check, select, current_state, win, red, green, blue);
 endmodule
-

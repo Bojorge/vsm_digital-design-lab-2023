@@ -19,7 +19,7 @@ always_ff @(posedge clk)
 always_comb
 	case (state)
         3'b000: if (~trigger & (mines > 4'b0000)) next_state = 3'b001; else next_state = 3'b000;
-        3'b001: if (win) next_state = 3'b001; else next_state = 3'b001;
+        3'b001: if (win) next_state = 3'b010; else next_state = 3'b011;
         3'b010: next_state = 3'b010;
         3'b011: next_state = 3'b011;
         default: next_state = 3'b000;

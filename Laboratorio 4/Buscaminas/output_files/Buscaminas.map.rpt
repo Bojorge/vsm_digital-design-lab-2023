@@ -1,5 +1,5 @@
-Analysis & Synthesis report for Buscaminas
-Wed Oct 18 03:56:51 2023
+Analysis & Elaboration report for Buscaminas
+Wed Oct 18 20:20:15 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -7,28 +7,15 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis DSP Block Usage Summary
-  9. State Machine - |TopModule|FiniteStateMachine:fsm|state
- 10. Registers Removed During Synthesis
- 11. Removed Registers Triggering Further Register Optimizations
- 12. General Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: vga_controller:vgaCont
- 15. Parameter Settings for Inferred Entity Instance: generate_graphic:gen_grid|lpm_divide:Mod0
- 16. Parameter Settings for Inferred Entity Instance: generate_graphic:gen_grid|lpm_divide:Mod1
- 17. Port Connectivity Checks: "generate_graphic:gen_grid|generate_rectangle:rectPlayer"
- 18. Port Connectivity Checks: "generate_graphic:gen_grid|generate_rectangle:rectBGRight"
- 19. Port Connectivity Checks: "generate_graphic:gen_grid|generate_rectangle:rectBGLeft"
- 20. Port Connectivity Checks: "generate_graphic:gen_grid"
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: vga_controller:vgaCont
+  5. Analysis & Elaboration Settings
+  6. Port Connectivity Checks: "generate_graphic:gen_grid|generate_rectangle:rectPlayer"
+  7. Port Connectivity Checks: "generate_graphic:gen_grid|generate_rectangle:rectBGRight"
+  8. Port Connectivity Checks: "generate_graphic:gen_grid|generate_rectangle:rectBGLeft"
+  9. Port Connectivity Checks: "generate_graphic:gen_grid"
+ 10. Analysis & Elaboration Messages
 
 
 
@@ -52,31 +39,61 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct 18 03:56:51 2023          ;
-; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
-; Revision Name                   ; Buscaminas                                     ;
-; Top-level Entity Name           ; TopModule                                      ;
-; Family                          ; Cyclone V                                      ;
-; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 23                                             ;
-; Total pins                      ; 51                                             ;
-; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 0                                              ;
-; Total DSP Blocks                ; 2                                              ;
-; Total HSSI RX PCSs              ; 0                                              ;
-; Total HSSI PMA RX Deserializers ; 0                                              ;
-; Total HSSI TX PCSs              ; 0                                              ;
-; Total HSSI PMA TX Serializers   ; 0                                              ;
-; Total PLLs                      ; 0                                              ;
-; Total DLLs                      ; 0                                              ;
-+---------------------------------+------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                 ;
++-------------------------------+------------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Wed Oct 18 20:20:15 2023          ;
+; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Revision Name                 ; Buscaminas                                     ;
+; Top-level Entity Name         ; TopModule                                      ;
+; Family                        ; Cyclone V                                      ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
+; Total registers               ; N/A until Partition Merge                      ;
+; Total pins                    ; N/A until Partition Merge                      ;
+; Total virtual pins            ; N/A until Partition Merge                      ;
+; Total block memory bits       ; N/A until Partition Merge                      ;
+; Total PLLs                    ; N/A until Partition Merge                      ;
+; Total DLLs                    ; N/A until Partition Merge                      ;
++-------------------------------+------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vga_controller:vgaCont ;
++----------------+------------+---------------------------------------+
+; Parameter Name ; Value      ; Type                                  ;
++----------------+------------+---------------------------------------+
+; HACTIVE        ; 1010000000 ; Unsigned Binary                       ;
+; HFP            ; 0000010000 ; Unsigned Binary                       ;
+; HSYN           ; 0001100000 ; Unsigned Binary                       ;
+; HBP            ; 0000110000 ; Unsigned Binary                       ;
+; HMAX           ; 1100100000 ; Unsigned Binary                       ;
+; VBP            ; 0000100001 ; Unsigned Binary                       ;
+; VACTIVE        ; 0111100000 ; Unsigned Binary                       ;
+; VFP            ; 0000001010 ; Unsigned Binary                       ;
+; VSYN           ; 0000000010 ; Unsigned Binary                       ;
+; VMAX           ; 1000001101 ; Unsigned Binary                       ;
++----------------+------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -162,238 +179,6 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 2           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-+----------------------------+-------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                          ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                                      ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; FiniteStateMachine.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/FiniteStateMachine.sv      ;         ;
-; TopModule.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv               ;         ;
-; pll.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/pll.sv                     ;         ;
-; vga_controller.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/vga_controller.sv          ;         ;
-; generate_rectangle.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_rectangle.sv      ;         ;
-; generate_graphic.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv        ;         ;
-; display.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/display.sv                 ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf                                                                          ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/abs_divider.inc                                                                         ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                                                                     ;         ;
-; aglobal221.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                                                                          ;         ;
-; db/lpm_divide_n3m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/db/lpm_divide_n3m.tdf      ;         ;
-; db/sign_div_unsign_qlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/db/sign_div_unsign_qlh.tdf ;         ;
-; db/alt_u_div_qve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/db/alt_u_div_qve.tdf       ;         ;
-; db/lpm_divide_j3m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/db/lpm_divide_j3m.tdf      ;         ;
-; db/sign_div_unsign_mlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/db/sign_div_unsign_mlh.tdf ;         ;
-; db/alt_u_div_ive.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/db/alt_u_div_ive.tdf       ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-
-
-+-------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                       ;
-+---------------------------------------------+---------------------+
-; Resource                                    ; Usage               ;
-+---------------------------------------------+---------------------+
-; Estimate of Logic utilization (ALMs needed) ; 169                 ;
-;                                             ;                     ;
-; Combinational ALUT usage for logic          ; 316                 ;
-;     -- 7 input functions                    ; 2                   ;
-;     -- 6 input functions                    ; 19                  ;
-;     -- 5 input functions                    ; 47                  ;
-;     -- 4 input functions                    ; 62                  ;
-;     -- <=3 input functions                  ; 186                 ;
-;                                             ;                     ;
-; Dedicated logic registers                   ; 23                  ;
-;                                             ;                     ;
-; I/O pins                                    ; 51                  ;
-;                                             ;                     ;
-; Total DSP Blocks                            ; 2                   ;
-;                                             ;                     ;
-; Maximum fan-out node                        ; pll:vga_pll|divider ;
-; Maximum fan-out                             ; 22                  ;
-; Total fan-out                               ; 1185                ;
-; Average fan-out                             ; 2.67                ;
-+---------------------------------------------+---------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                            ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                  ; Entity Name         ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |TopModule                                ; 316 (6)             ; 23 (0)                    ; 0                 ; 2          ; 51   ; 0            ; |TopModule                                                                                                                           ; TopModule           ; work         ;
-;    |FiniteStateMachine:fsm|               ; 3 (3)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|FiniteStateMachine:fsm                                                                                                    ; FiniteStateMachine  ; work         ;
-;    |display:display|                      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|display:display                                                                                                           ; display             ; work         ;
-;    |generate_graphic:gen_grid|            ; 268 (43)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid                                                                                                 ; generate_graphic    ; work         ;
-;       |generate_rectangle:rectBGLeft|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|generate_rectangle:rectBGLeft                                                                   ; generate_rectangle  ; work         ;
-;       |generate_rectangle:rectPlayer|     ; 19 (19)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|generate_rectangle:rectPlayer                                                                   ; generate_rectangle  ; work         ;
-;       |lpm_divide:Mod0|                   ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_n3m:auto_generated|  ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|lpm_divide:Mod0|lpm_divide_n3m:auto_generated                                                   ; lpm_divide_n3m      ; work         ;
-;             |sign_div_unsign_qlh:divider| ; 139 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|lpm_divide:Mod0|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider                       ; sign_div_unsign_qlh ; work         ;
-;                |alt_u_div_qve:divider|    ; 139 (139)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|lpm_divide:Mod0|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_qve:divider ; alt_u_div_qve       ; work         ;
-;       |lpm_divide:Mod1|                   ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_j3m:auto_generated|  ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|lpm_divide:Mod1|lpm_divide_j3m:auto_generated                                                   ; lpm_divide_j3m      ; work         ;
-;             |sign_div_unsign_mlh:divider| ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|lpm_divide:Mod1|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider                       ; sign_div_unsign_mlh ; work         ;
-;                |alt_u_div_ive:divider|    ; 65 (65)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|generate_graphic:gen_grid|lpm_divide:Mod1|lpm_divide_j3m:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_ive:divider ; alt_u_div_ive       ; work         ;
-;    |pll:vga_pll|                          ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|pll:vga_pll                                                                                                               ; pll                 ; work         ;
-;    |vga_controller:vgaCont|               ; 31 (31)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |TopModule|vga_controller:vgaCont                                                                                                    ; vga_controller      ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-----------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary  ;
-+---------------------------------+-------------+
-; Statistic                       ; Number Used ;
-+---------------------------------+-------------+
-; Independent 9x9                 ; 2           ;
-; Total number of DSP blocks      ; 2           ;
-;                                 ;             ;
-; Fixed Point Unsigned Multiplier ; 2           ;
-+---------------------------------+-------------+
-
-
-Encoding Type:  One-Hot
-+-----------------------------------------------------------+
-; State Machine - |TopModule|FiniteStateMachine:fsm|state   ;
-+-----------+-----------+-----------+-----------+-----------+
-; Name      ; state.011 ; state.010 ; state.001 ; state.000 ;
-+-----------+-----------+-----------+-----------+-----------+
-; state.000 ; 0         ; 0         ; 0         ; 0         ;
-; state.001 ; 0         ; 0         ; 1         ; 1         ;
-; state.010 ; 0         ; 1         ; 0         ; 1         ;
-; state.011 ; 1         ; 0         ; 0         ; 1         ;
-+-----------+-----------+-----------+-----------+-----------+
-
-
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; FiniteStateMachine:fsm|state~2        ; Lost fanout                            ;
-; FiniteStateMachine:fsm|state~3        ; Lost fanout                            ;
-; FiniteStateMachine:fsm|state~4        ; Lost fanout                            ;
-; FiniteStateMachine:fsm|state.011      ; Lost fanout                            ;
-; FiniteStateMachine:fsm|state.010      ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 5 ;                                        ;
-+---------------------------------------+----------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                  ;
-+--------------------------------+--------------------+----------------------------------------+
-; Register name                  ; Reason for Removal ; Registers Removed due to This Register ;
-+--------------------------------+--------------------+----------------------------------------+
-; FiniteStateMachine:fsm|state~2 ; Lost Fanouts       ; FiniteStateMachine:fsm|state.011       ;
-+--------------------------------+--------------------+----------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 23    ;
-; Number of registers using Synchronous Clear  ; 20    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 10    ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |TopModule|generate_graphic:gen_grid|blue[4]  ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |TopModule|generate_graphic:gen_grid|green[5] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: vga_controller:vgaCont ;
-+----------------+------------+---------------------------------------+
-; Parameter Name ; Value      ; Type                                  ;
-+----------------+------------+---------------------------------------+
-; HACTIVE        ; 1010000000 ; Unsigned Binary                       ;
-; HFP            ; 0000010000 ; Unsigned Binary                       ;
-; HSYN           ; 0001100000 ; Unsigned Binary                       ;
-; HBP            ; 0000110000 ; Unsigned Binary                       ;
-; HMAX           ; 1100100000 ; Unsigned Binary                       ;
-; VBP            ; 0000100001 ; Unsigned Binary                       ;
-; VACTIVE        ; 0111100000 ; Unsigned Binary                       ;
-; VFP            ; 0000001010 ; Unsigned Binary                       ;
-; VSYN           ; 0000000010 ; Unsigned Binary                       ;
-; VMAX           ; 1000001101 ; Unsigned Binary                       ;
-+----------------+------------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: generate_graphic:gen_grid|lpm_divide:Mod0 ;
-+------------------------+----------------+--------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                             ;
-+------------------------+----------------+--------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                          ;
-; LPM_WIDTHD             ; 6              ; Untyped                                          ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
-; LPM_PIPELINE           ; 0              ; Untyped                                          ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                          ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                          ;
-; CBXI_PARAMETER         ; lpm_divide_n3m ; Untyped                                          ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                          ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                          ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                       ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                     ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                     ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                   ;
-+------------------------+----------------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: generate_graphic:gen_grid|lpm_divide:Mod1 ;
-+------------------------+----------------+--------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                             ;
-+------------------------+----------------+--------------------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                          ;
-; LPM_WIDTHD             ; 6              ; Untyped                                          ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
-; LPM_PIPELINE           ; 0              ; Untyped                                          ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                          ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                          ;
-; CBXI_PARAMETER         ; lpm_divide_j3m ; Untyped                                          ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                          ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                          ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                       ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                     ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                     ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                   ;
-+------------------------+----------------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "generate_graphic:gen_grid|generate_rectangle:rectPlayer"                                                                                                                             ;
 +--------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -451,56 +236,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-----------------------------+
 
 
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 23                          ;
-;     ENA SCLR          ; 10                          ;
-;     SCLR              ; 10                          ;
-;     plain             ; 3                           ;
-; arriav_lcell_comb     ; 320                         ;
-;     arith             ; 160                         ;
-;         0 data inputs ; 21                          ;
-;         1 data inputs ; 81                          ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 14                          ;
-;         4 data inputs ; 37                          ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 158                         ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 53                          ;
-;         3 data inputs ; 9                           ;
-;         4 data inputs ; 25                          ;
-;         5 data inputs ; 47                          ;
-;         6 data inputs ; 19                          ;
-; arriav_mac            ; 2                           ;
-; boundary_port         ; 51                          ;
-;                       ;                             ;
-; Max LUT depth         ; 27.20                       ;
-; Average LUT depth     ; 16.35                       ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:02     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Wed Oct 18 03:56:22 2023
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Buscaminas -c Buscaminas
+    Info: Processing started: Wed Oct 18 20:19:47 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Buscaminas -c Buscaminas --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file finitestatemachine.sv
@@ -534,52 +277,16 @@ Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:
 Info (12128): Elaborating entity "FiniteStateMachine" for hierarchy "FiniteStateMachine:fsm" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 38
 Info (12128): Elaborating entity "display" for hierarchy "display:display" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 43
 Info (12128): Elaborating entity "generate_graphic" for hierarchy "generate_graphic:gen_grid" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/TopModule.sv Line: 46
-Warning (10230): Verilog HDL assignment warning at generate_graphic.sv(38): truncated value with size 32 to match size of target (1) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 38
-Warning (10230): Verilog HDL assignment warning at generate_graphic.sv(40): truncated value with size 32 to match size of target (1) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 40
-Warning (10230): Verilog HDL assignment warning at generate_graphic.sv(42): truncated value with size 32 to match size of target (1) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 42
-Warning (10230): Verilog HDL assignment warning at generate_graphic.sv(44): truncated value with size 32 to match size of target (1) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 44
-Info (12128): Elaborating entity "generate_rectangle" for hierarchy "generate_graphic:gen_grid|generate_rectangle:rectBGLeft" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 23
-Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "generate_graphic:gen_grid|Mod0" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 36
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "generate_graphic:gen_grid|Mod1" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 36
-Info (12130): Elaborated megafunction instantiation "generate_graphic:gen_grid|lpm_divide:Mod0" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 36
-Info (12133): Instantiated megafunction "generate_graphic:gen_grid|lpm_divide:Mod0" with the following parameter: File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 36
-    Info (12134): Parameter "LPM_WIDTHN" = "32"
-    Info (12134): Parameter "LPM_WIDTHD" = "6"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_n3m.tdf
-    Info (12023): Found entity 1: lpm_divide_n3m File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/db/lpm_divide_n3m.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_qlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_qlh File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/db/sign_div_unsign_qlh.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qve.tdf
-    Info (12023): Found entity 1: alt_u_div_qve File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/db/alt_u_div_qve.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "generate_graphic:gen_grid|lpm_divide:Mod1" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 36
-Info (12133): Instantiated megafunction "generate_graphic:gen_grid|lpm_divide:Mod1" with the following parameter: File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 36
-    Info (12134): Parameter "LPM_WIDTHN" = "10"
-    Info (12134): Parameter "LPM_WIDTHD" = "6"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_j3m.tdf
-    Info (12023): Found entity 1: lpm_divide_j3m File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/db/lpm_divide_j3m.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_mlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_mlh File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/db/sign_div_unsign_mlh.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ive.tdf
-    Info (12023): Found entity 1: alt_u_div_ive File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/db/alt_u_div_ive.tdf Line: 23
+Warning (10230): Verilog HDL assignment warning at generate_graphic.sv(26): truncated value with size 32 to match size of target (1) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 26
+Warning (10230): Verilog HDL assignment warning at generate_graphic.sv(27): truncated value with size 32 to match size of target (1) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 27
+Warning (10230): Verilog HDL assignment warning at generate_graphic.sv(28): truncated value with size 32 to match size of target (1) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 28
+Warning (10230): Verilog HDL assignment warning at generate_graphic.sv(29): truncated value with size 32 to match size of target (1) File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 29
+Info (12128): Elaborating entity "generate_rectangle" for hierarchy "generate_graphic:gen_grid|generate_rectangle:rectBGLeft" File: C:/Users/Bojtronic/Documents/TEC/Taller de digitales/Laboratorios/vsm_digital-design-lab-2023/Laboratorio 4/Buscaminas/generate_graphic.sv Line: 18
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (286030): Timing-Driven Synthesis is running
-Info (17049): 4 registers lost all their fanouts during netlist optimizations.
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 389 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 15 input pins
-    Info (21059): Implemented 36 output pins
-    Info (21061): Implemented 336 logic cells
-    Info (21062): Implemented 2 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4831 megabytes
-    Info: Processing ended: Wed Oct 18 03:56:51 2023
-    Info: Elapsed time: 00:00:29
-    Info: Total CPU time (on all processors): 00:00:44
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4780 megabytes
+    Info: Processing ended: Wed Oct 18 20:20:15 2023
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:41
 
 
